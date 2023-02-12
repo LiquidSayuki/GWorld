@@ -1,0 +1,14 @@
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\Common.dll
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\Common.pdb
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\log4net.dll
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\protobuf-net.dll
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\Protocol.dll
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\UnityEngine.dll
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\Protocol.pdb
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\log4net.xml
+C:\u3d\mmorpg\Src\Lib\Common\bin\Debug\protobuf-net.xml
+C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.csprojAssemblyReference.cache
+C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
+C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.dll
+C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.pdb
