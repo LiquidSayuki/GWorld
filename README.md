@@ -9,3 +9,5 @@ Lib/proto/message.proto
 双击 Tools/genproto.cmd 生成一套协议
 
 生成的 protocal 位于 Lib/Protocol/message.cs
+
+此后，被修改的协议可以在SkillBridge.Message下的请求中得到

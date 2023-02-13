@@ -12,3 +12,17 @@ C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
 C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.dll
 C:\u3d\mmorpg\Src\Lib\Common\obj\Debug\Common.pdb
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\Common.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\Common.pdb
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\log4net.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\protobuf-net.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\Protocol.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\UnityEngine.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\Protocol.pdb
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\log4net.xml
+F:\Unity\GWorld\GWorld\Src\Lib\Common\bin\Debug\protobuf-net.xml
+F:\Unity\GWorld\GWorld\Src\Lib\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+F:\Unity\GWorld\GWorld\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+F:\Unity\GWorld\GWorld\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
+F:\Unity\GWorld\GWorld\Src\Lib\Common\obj\Debug\Common.dll
+F:\Unity\GWorld\GWorld\Src\Lib\Common\obj\Debug\Common.pdb
