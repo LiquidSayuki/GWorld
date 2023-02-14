@@ -25,10 +25,18 @@ namespace GameServer
             int Port = Properties.Settings.Default.ServerPort;
             network = new NetService();
             network.Init(Port);
+
+            // 主入口，初始化service
             DBService.Instance.Init();
-            DataManager.Instance.Load();
-            MapService.Instance.Init();
             UserService.Instance.Init();
+            //var a = DBService.Instance.Entities.Characters.Where(x => x.TID == 1);
+            // DataManager.Instance.Load();
+            // MapService.Instance.Init();
+            
+
+            // 第一堂课测试Helloworld
+            HelloWorldService.Instance.Init();
+
             thread = new Thread(new ThreadStart(this.Update));
 
             return true;
@@ -39,6 +47,10 @@ namespace GameServer
             network.Start();
             running = true;
             thread.Start();
+
+
+            // 第一堂课测试Helloworld
+            HelloWorldService.Instance.Start();
         }
 
 

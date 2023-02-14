@@ -119,6 +119,9 @@ message NetMessageRequest{
 
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
+
+	// ≤‚ ‘∑¢ÀÕ¡¥Ω”
+	FirstTestRequest FirstTestRequest = 10;
 }
 
 message NetMessageResponse{
@@ -137,6 +140,14 @@ message NetMessageResponse{
 
 
 // User Protocol
+
+// ≤‚ ‘∑¢ÀÕ
+message FirstTestRequest{
+	string msg = 1;
+	string pwd = 2;
+}
+
+
 message UserLoginRequest {
 	string user = 1;
 	string passward = 2;

@@ -30,6 +30,7 @@ namespace GameServer.Services
 
         }
 
+        #region 登录 login
         void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
         {
             Log.InfoFormat("UserLoginRequest: User:{0}  Pass:{1}", request.User, request.Passward);
@@ -52,6 +53,9 @@ namespace GameServer.Services
             }
             else
             {
+                // 将当前的user绑定进入本session的User中
+                // 在之后需要调用时，就可以使用了
+                // 如果不将此处user存入Session中，无法进行类似于查找属于用户的角色之类的操作
                 sender.Session.User = user;
 
                 message.Response.userLogin.Result = Result.Success;
@@ -73,7 +77,9 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+        #endregion
 
+        #region 注册 register
         void OnRegister(NetConnection<NetSession> sender, UserRegisterRequest request)
         {
             Log.InfoFormat("UserRegisterRequest: User:{0}  Pass:{1}", request.User, request.Passward);
@@ -101,7 +107,9 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+        #endregion
 
+        #region 创建角色 create character
         private void OnCreateCharacter(NetConnection<NetSession> sender, UserCreateCharacterRequest request)
         {
             Log.InfoFormat("UserCreateCharacterRequest: Name:{0}  Class:{1}", request.Name, request.Class);
@@ -117,20 +125,23 @@ namespace GameServer.Services
                 MapPosZ = 820,
             };
 
-
+            // 操作DB，将新角色保存至数据库
             DBService.Instance.Entities.Characters.Add(character);
             sender.Session.User.Player.Characters.Add(character);
             DBService.Instance.Entities.SaveChanges();
 
+            //回发消息
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.createChar = new UserCreateCharacterResponse();
             message.Response.createChar.Result = Result.Success;
             message.Response.createChar.Errormsg = "None";
 
+            // 服务器使用session（sender）管理回发给哪一个用户
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
         }
+        #endregion
 
         void OnGameEnter(NetConnection<NetSession> sender, UserGameEnterRequest request)
         {

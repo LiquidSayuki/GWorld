@@ -1,4 +1,0 @@
-repository "Gworld@liuqidsayuki@cloud.cn"
-  path "/"
-    br "/main"
-    co "/main"

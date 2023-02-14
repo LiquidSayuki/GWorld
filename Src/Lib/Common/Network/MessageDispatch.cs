@@ -27,7 +27,9 @@ namespace Network
             if (message.mapCharacterEnter != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapCharacterEnter); }
             if (message.mapEntitySync != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapEntitySync); }
             if (message.mapTeleport != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.mapTeleport); }
-            
+
+            // 每新增消息类型，需要来此处添加分发
+            if (message.FirstTestRequest != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.FirstTestRequest); }
         }
     }
 }
