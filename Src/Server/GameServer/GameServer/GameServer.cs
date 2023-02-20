@@ -29,9 +29,12 @@ namespace GameServer
             // 主入口，初始化service
             DBService.Instance.Init();
             UserService.Instance.Init();
-            //var a = DBService.Instance.Entities.Characters.Where(x => x.TID == 1);
-            // DataManager.Instance.Load();
-            // MapService.Instance.Init();
+            
+
+            //初始化manager
+            DataManager.Instance.Load();
+
+            MapService.Instance.Init();
             
 
             // 第一堂课测试Helloworld

@@ -22,7 +22,7 @@ msg.Request.FirstTestRequest.Pwd = "1234567";
 
 
 
-#角色、地图表格文件
+# 角色、地图表格文件
 Src\Data\Tables下有配置数据表
 修改后，运行Excel2Json.cmd
 将Sec\Data\Data下的Json格式文件复制到服务端的Src\Server\GameServer\Gameserver\bin\Debug\Data下，供服务端读取

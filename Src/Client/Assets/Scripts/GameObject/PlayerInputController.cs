@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Entities;
 using SkillBridge.Message;
+using Services;
 
 public class PlayerInputController : MonoBehaviour {
 
@@ -117,6 +118,7 @@ public class PlayerInputController : MonoBehaviour {
         //Debug.LogFormat("LateUpdate velocity {0} : {1}", this.rb.velocity.magnitude, this.speed);
         this.lastPos = this.rb.transform.position;
         
+        // 当角色位置和服务器位置偏移过大，进行重新定位
         if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
         {
             this.character.SetPosition(GameObjectTool.WorldToLogic(this.rb.transform.position));
@@ -129,5 +131,6 @@ public class PlayerInputController : MonoBehaviour {
     {
         if (entityController != null)
             entityController.OnEntityEvent(entityEvent);
+        MapService.Instance.SendMapEntitySync(entityEvent, this.character.EntityData);
     }
 }

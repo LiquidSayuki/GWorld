@@ -5,7 +5,7 @@ using System.Text;
 using Common;
 using Network;
 using UnityEngine;
-
+using Models;
 using SkillBridge.Message;
 
 namespace Services
@@ -31,8 +31,14 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            
+
+           // 已经交给Mapservice
+           // MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+           //MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnCharacterLeave);
+
         }
+
+
 
         public void Dispose()
         {
@@ -41,6 +47,10 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
+
+            //MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnCharacterLeave);
+
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
@@ -118,7 +128,6 @@ namespace Services
             return false;
         }
         #endregion
-
 
         #region 登录\注册
         public void SendLogin(string user, string psw)
@@ -233,6 +242,7 @@ namespace Services
         }
         #endregion
 
+        #region 游戏进入\退出
         public void SendGameEnter(int characterIdx)
         {
             Debug.LogFormat("UserGameEnterRequest::characterId :{0}", characterIdx);
@@ -265,7 +275,28 @@ namespace Services
 
         void OnGameLeave(object sender, UserGameLeaveResponse response)
         {
+            MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacter = null;
             Debug.LogFormat("OnGameLeave:{0} [{1}]", response.Result, response.Errormsg);
         }
-    }
+        #endregion
+
+        /*
+        private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
+            {
+                Debug.LogFormat("OnMapCharacterEnter:{0}", message.mapId);
+                NCharacterInfo info = message.Characters[0];
+                User.Instance.CurrentCharacter = info;
+                // 加载信息对应的地图场景
+                // SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
+            }
+
+        private void OnCharacterLeave(object sender, MapCharacterLeaveResponse message)
+        {
+            Debug.LogFormat("OnMapCharacterLeave:{0}",message.characterId);
+
+        }
+        */
+
+    } 
 }

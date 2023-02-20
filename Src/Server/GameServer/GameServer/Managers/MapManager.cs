@@ -23,7 +23,7 @@ namespace GameServer.Managers
         }
 
 
-
+        // 使外部可以通过在单例实体后直接[index]的方法访问到对应地图
         public Map this[int key]
         {
             get

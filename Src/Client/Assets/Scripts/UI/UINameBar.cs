@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UINameBar : MonoBehaviour {
 
     public Text avaverName;
+    public Image avaterImage;
 
 
 
@@ -33,6 +34,7 @@ public class UINameBar : MonoBehaviour {
         if (this.character != null)
         {
             string name = this.character.Name + " Lv." + this.character.Info.Level;
+            // UI无需更新时不重绘，提高性能
             if(name != this.avaverName.text)
             {
                 this.avaverName.text = name;

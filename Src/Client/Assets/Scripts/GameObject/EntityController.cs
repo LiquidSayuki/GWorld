@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entities;
+using Assets.Scripts.Managers;
 
-
-public class EntityController : MonoBehaviour
+public class EntityController : MonoBehaviour, IEntityNotify
 {
 
     public Animator anim;
@@ -31,6 +31,7 @@ public class EntityController : MonoBehaviour
     void Start () {
         if (entity != null)
         {
+            EntityManager.Instance.RegisterEntityNotify(entity.entityId, this);
             this.UpdateTransform();
         }
 
@@ -40,6 +41,7 @@ public class EntityController : MonoBehaviour
 
     void UpdateTransform()
     {
+
         this.position = GameObjectTool.LogicToWorld(entity.position);
         this.direction = GameObjectTool.LogicToWorld(entity.direction);
 
@@ -54,6 +56,7 @@ public class EntityController : MonoBehaviour
         if (entity != null)
             Debug.LogFormat("{0} OnDestroy :ID:{1} POS:{2} DIR:{3} SPD:{4} ", this.name, entity.entityId, entity.position, entity.direction, entity.speed);
 
+        // 将物体的头顶UI进行移除
         if(UIWorldElementManager.Instance!=null)
         {
             UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
@@ -92,5 +95,19 @@ public class EntityController : MonoBehaviour
                 anim.SetTrigger("Jump");
                 break;
         }
+    }
+
+    public void OnEntityRemoved()
+    {
+        if(UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
+        }
+        Destroy(this.gameObject);
+    }
+
+    public void OnEntityChanged(Entity entity)
+    {
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +9,13 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
     public Transform viewPoint;
 
     public GameObject player;
-	// Use this for initialization
-	void Start () {
+
+/*
+ * Mono Singleton中start会导致重载父类函数，导致问题
+ * void Start () {
 		
 	}
+*/
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,6 +24,10 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     private void LateUpdate()
     {
+        if (player == null)
+        {
+            player = User.Instance.CurrentCharacterObject;
+        }
         if (player == null)
             return;
 

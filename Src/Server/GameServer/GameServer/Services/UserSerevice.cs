@@ -61,18 +61,19 @@ namespace GameServer.Services
                 message.Response.userLogin.Result = Result.Success;
                 message.Response.userLogin.Errormsg = "None";
                 message.Response.userLogin.Userinfo = new NUserInfo();
-                message.Response.userLogin.Userinfo.Id = 1;
+                message.Response.userLogin.Userinfo.Id = (int)user.ID;
                 message.Response.userLogin.Userinfo.Player = new NPlayerInfo();
                 message.Response.userLogin.Userinfo.Player.Id = user.Player.ID;
                 foreach (var c in user.Player.Characters)
                 {
                     NCharacterInfo info = new NCharacterInfo();
                     info.Id = c.ID;
+                    info.Tid = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
+                    info.Type = CharacterType.Player;
                     message.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
-
             }
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
@@ -137,6 +138,18 @@ namespace GameServer.Services
             message.Response.createChar.Result = Result.Success;
             message.Response.createChar.Errormsg = "None";
 
+            //所有已有角色都回发给用户
+            foreach(var c in sender.Session.User.Player.Characters)
+            {
+                NCharacterInfo info = new NCharacterInfo();
+                info.Id = 0;
+                info.Tid = c.ID;
+                info.Name = c.Name;
+                info.Class = (CharacterClass)c.Class;
+                info.Type = CharacterType.Player;
+                message.Response.createChar.Characters.Add(info);
+            }
+
             // 服务器使用session（sender）管理回发给哪一个用户
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
@@ -147,6 +160,7 @@ namespace GameServer.Services
         {
             TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
             Log.InfoFormat("UserGameEnterRequest: characterID:{0}:{1} Map:{2}", dbchar.ID, dbchar.Name, dbchar.MapID);
+            //在角色管理器中添加角色
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
 
             NetMessage message = new NetMessage();
@@ -163,7 +177,20 @@ namespace GameServer.Services
 
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
-           
+            Character character = sender.Session.Character;
+            Log.InfoFormat("UserGameLeave:{0},CharacterID{1}:{2},Map{3}", sender.Session.User.Username, character.Id,character.Info.Name,character.Info.mapId);
+            // 调用角色管理器，移除角色
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            //让地图移除角色
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.gameLeave = new UserGameLeaveResponse();
+            message.Response.gameLeave.Result = Result.Success;
+            message.Response.gameLeave.Errormsg = "None";
+
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data, 0, data.Length);
         }
     }
 }
