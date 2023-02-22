@@ -11,11 +11,7 @@ public class TeleporterObject : MonoBehaviour {
 
 	void Start () {
 		this.mesh= this.GetComponent<MeshFilter>().sharedMesh;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		// Debug.LogFormat("传送门{0}号初始化完成", this.ID);
 	}
 
 #if UNITY_EDITOR
@@ -33,6 +29,7 @@ public class TeleporterObject : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
+		// Debug.LogFormat("触发器触发了");
 		PlayerInputController pc = other.GetComponent<PlayerInputController>();
 		if(pc != null && pc.isActiveAndEnabled) 
 		{

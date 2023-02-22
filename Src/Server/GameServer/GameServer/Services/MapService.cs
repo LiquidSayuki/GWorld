@@ -17,13 +17,11 @@ namespace GameServer.Services
     {
         public MapService()
         {
-           MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapCharacterEnterRequest>(this.OnMapCharacterEnter);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapEntitySync);
 
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport) ;
         }
-
-
-
 
 
         public void Init()
@@ -60,6 +58,31 @@ namespace GameServer.Services
 
             Log.InfoFormat("同步发出 Session信息 :  CharacterID : {0}, UserID: {1}", conn.Session.Character.Id, conn.Session.User.ID);
             Log.InfoFormat("同步发出 Entity信息: Entity: ID : {0} - {1}", entity.Id, entity.Entity.Id);
+        }
+
+
+        private void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)
+        {
+            Character character = sender.Session.Character;
+            Log.InfoFormat("MapService-OnMapTelepor - Character ID :{0}:{1} - TeleporterID: {2}",character.Id,character.Data, request.teleporterId);
+
+            if (!DataManager.Instance.Teleporters.ContainsKey(request.teleporterId))
+            {
+                Log.WarningFormat("Source Teleporter ID : {0} Does not exist", request.teleporterId);
+                return;
+            }
+            TeleporterDefine source = DataManager.Instance.Teleporters[request.teleporterId];
+            if(source.LinkTo == 0 || !DataManager.Instance.Teleporters.ContainsKey(source.LinkTo))
+            {
+                Log.WarningFormat("Target Teleporter ID : {0} Does not exist", source.LinkTo);
+            }
+
+            TeleporterDefine target = DataManager.Instance.Teleporters[source.LinkTo];
+
+            MapManager.Instance[source.MapID].CharacterLeave(character);
+            character.Position= target.Position;
+            character.Direction= target.Direction;
+            MapManager.Instance[target.MapID].CharacterEnter(sender, character);
         }
 
     }

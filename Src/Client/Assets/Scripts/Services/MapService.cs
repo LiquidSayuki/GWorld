@@ -89,7 +89,7 @@ namespace Services
         // 地图同步请求
         public void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
         {
-            Debug.LogFormat("MapService-SendMapEntitySync: ID{0}, Position{1}, DIR:{2}, Speed:{3}", entity.Id, entity.Position.String(), entity.Direction.String(), entity.Speed);
+            // Debug.LogFormat("MapService-SendMapEntitySync: ID{0}, Position{1}, DIR:{2}, Speed:{3}", entity.Id, entity.Position.String(), entity.Direction.String(), entity.Speed);
 
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();

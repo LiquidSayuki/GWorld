@@ -1,0 +1,320 @@
+2023-02-21 10:47:52,325 [ 1] INFO  Unity: LoadingManager start
+2023-02-21 10:47:55,350 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-21 10:48:01,928 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-02-21 10:48:01,930 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-21 10:48:01,933 [ 1] INFO  Unity: DoConnect
+2023-02-21 10:48:01,934 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-21 10:48:01,937 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-21 10:48:01,941 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-21 10:48:02,302 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-02-21 10:48:02,303 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-21 10:48:02,454 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-21 10:48:02,922 [ 1] INFO  Unity: Select Char:[1]TestCharacter001[Wizard]
+2023-02-21 10:48:03,468 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-02-21 10:48:03,484 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-02-21 10:48:03,485 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-02-21 10:48:03,486 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:TestCharacter001MapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-21 10:48:03,488 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-02-21 10:48:03,866 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-21 10:48:03,866 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-21 10:48:03,949 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-21 10:48:03,950 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-02-21 10:48:03,950 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-02-21 10:48:03,951 [ 1] INFO  Unity: 收到character信息,ID:1,Name:TestCharacter001
+2023-02-21 10:48:03,952 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有0
+2023-02-21 10:48:03,954 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-21 10:48:03,954 [ 1] INFO  Unity: 传送门3号初始化完成
+2023-02-21 10:48:03,954 [ 1] INFO  Unity: 传送门2号初始化完成
+2023-02-21 10:48:03,954 [ 1] INFO  Unity: 传送门1号初始化完成
+2023-02-21 10:48:03,956 [ 1] INFO  Unity: 传送门4号初始化完成
+2023-02-21 10:48:04,368 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:04,373 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:04,639 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
+2023-02-21 10:48:04,640 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:04,735 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2023-02-21 10:48:04,735 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:04,817 [ 1] INFO  Unity: SetDirection:(85, -52, 0)
+2023-02-21 10:48:04,818 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:04,920 [ 1] INFO  Unity: SetDirection:(73, -69, 0)
+2023-02-21 10:48:04,920 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,022 [ 1] INFO  Unity: SetDirection:(57, -82, 0)
+2023-02-21 10:48:05,023 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,104 [ 1] INFO  Unity: SetDirection:(42, -91, 0)
+2023-02-21 10:48:05,105 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,186 [ 1] INFO  Unity: SetDirection:(25, -97, 0)
+2023-02-21 10:48:05,187 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,290 [ 1] INFO  Unity: SetDirection:(5, -100, 0)
+2023-02-21 10:48:05,290 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,374 [ 1] INFO  Unity: SetDirection:(-13, -99, 0)
+2023-02-21 10:48:05,374 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,470 [ 1] INFO  Unity: SetDirection:(-33, -94, 0)
+2023-02-21 10:48:05,471 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,572 [ 1] INFO  Unity: SetDirection:(-49, -87, 0)
+2023-02-21 10:48:05,572 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:05,804 [ 1] INFO  Unity: SetDirection:(-64, -77, 0)
+2023-02-21 10:48:05,805 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:06,003 [ 1] INFO  Unity: SetDirection:(-77, -64, 0)
+2023-02-21 10:48:06,003 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:06,126 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
+2023-02-21 10:48:06,127 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:06,356 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:06,356 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:06,959 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:06,959 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:08,130 [ 1] INFO  Unity: SetPosition:(4739, 3457, 805)
+2023-02-21 10:48:08,130 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:09,598 [ 1] INFO  Unity: SetPosition:(4356, 3241, 805)
+2023-02-21 10:48:09,599 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:10,211 [ 1] INFO  Unity: SetDirection:(-95, -32, 0)
+2023-02-21 10:48:10,212 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:12,785 [ 1] INFO  Unity: SetPosition:(3461, 2904, 805)
+2023-02-21 10:48:12,785 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:14,209 [ 1] INFO  Unity: SetDirection:(-99, -15, 0)
+2023-02-21 10:48:14,209 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:14,386 [ 1] INFO  Unity: SetDirection:(-100, 4, 0)
+2023-02-21 10:48:14,386 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:14,523 [ 1] INFO  Unity: SetDirection:(-97, 23, 0)
+2023-02-21 10:48:14,523 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:14,927 [ 1] INFO  Unity: SetDirection:(-100, 4, 0)
+2023-02-21 10:48:14,927 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:15,105 [ 1] INFO  Unity: SetPosition:(2791, 2791, 805)
+2023-02-21 10:48:15,106 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:15,762 [ 1] INFO  Unity: SetDirection:(-99, -15, 0)
+2023-02-21 10:48:15,762 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:18,597 [ 1] INFO  Unity: SetPosition:(1752, 2671, 805)
+2023-02-21 10:48:18,598 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:19,384 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:19,385 [ 1] INFO  Unity: TeleporterObject ID:3 - Character NameTestCharacter001
+2023-02-21 10:48:19,668 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:19,669 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:22,570 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:22,571 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:24,092 [ 1] INFO  Unity: SetDirection:(-100, 3, 0)
+2023-02-21 10:48:24,092 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:24,776 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:24,776 [ 1] INFO  Unity: TeleporterObject ID:1 - Character NameTestCharacter001
+2023-02-21 10:48:24,777 [ 1] INFO  Unity: Mapservice - SendMapTeleport 发送出传送请求
+2023-02-21 10:48:24,791 [ 1] INFO  Unity: MapService: OnMapCharacterLeave: charID:1
+2023-02-21 10:48:24,791 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:2 Count:1
+2023-02-21 10:48:24,792 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:TestCharacter001MapID:2 Entity:(1:pos:(2735,4018,129),dir:(100,2,0),spd:300
+2023-02-21 10:48:24,792 [ 1] INFO  Unity: 收到character信息,ID:1,Name:TestCharacter001
+2023-02-21 10:48:24,793 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有1
+2023-02-21 10:48:24,793 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-21 10:48:24,794 [ 1] INFO  Unity: LoadLevel: Map01
+2023-02-21 10:48:25,043 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-21 10:48:25,137 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-21 10:48:25,137 [ 1] INFO  Unity: 传送门6号初始化完成
+2023-02-21 10:48:25,137 [ 1] INFO  Unity: 传送门5号初始化完成
+2023-02-21 10:48:25,184 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:25,184 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:25,185 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:25,185 [ 1] INFO  Unity: TeleporterObject ID:6 - Character NameTestCharacter001
+2023-02-21 10:48:25,360 [ 1] INFO  Unity: SetPosition:(2807, 4019, 79)
+2023-02-21 10:48:25,360 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:25,537 [ 1] INFO  Unity: SetPosition:(2807, 4019, 25)
+2023-02-21 10:48:25,538 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:26,221 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:26,222 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:26,372 [ 1] INFO  Unity: SetDirection:(99, -17, 0)
+2023-02-21 10:48:26,373 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:26,475 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2023-02-21 10:48:26,475 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:26,571 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
+2023-02-21 10:48:26,572 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:26,755 [ 1] INFO  Unity: SetDirection:(76, -65, 0)
+2023-02-21 10:48:26,755 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:27,391 [ 1] INFO  Unity: SetDirection:(87, -50, 0)
+2023-02-21 10:48:27,392 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,391 [ 1] INFO  Unity: SetDirection:(94, -33, 0)
+2023-02-21 10:48:28,391 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,507 [ 1] INFO  Unity: SetDirection:(99, -16, 0)
+2023-02-21 10:48:28,507 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,610 [ 1] INFO  Unity: SetDirection:(100, 5, 0)
+2023-02-21 10:48:28,610 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,713 [ 1] INFO  Unity: SetDirection:(97, 25, 0)
+2023-02-21 10:48:28,713 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,795 [ 1] INFO  Unity: SetDirection:(91, 42, 0)
+2023-02-21 10:48:28,795 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,897 [ 1] INFO  Unity: SetDirection:(80, 60, 0)
+2023-02-21 10:48:28,898 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:28,993 [ 1] INFO  Unity: SetDirection:(66, 75, 0)
+2023-02-21 10:48:28,993 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,096 [ 1] INFO  Unity: SetDirection:(49, 87, 0)
+2023-02-21 10:48:29,096 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,178 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:29,178 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,192 [ 1] INFO  Unity: SetDirection:(30, 95, 0)
+2023-02-21 10:48:29,192 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,281 [ 1] INFO  Unity: SetDirection:(13, 99, 0)
+2023-02-21 10:48:29,281 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,363 [ 1] INFO  Unity: SetDirection:(-5, 100, 0)
+2023-02-21 10:48:29,363 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,458 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
+2023-02-21 10:48:29,458 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,548 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2023-02-21 10:48:29,548 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,643 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
+2023-02-21 10:48:29,643 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,745 [ 1] INFO  Unity: SetDirection:(-75, 66, 0)
+2023-02-21 10:48:29,746 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,794 [ 1] INFO  Unity: MoveBack
+2023-02-21 10:48:29,794 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,848 [ 1] INFO  Unity: SetDirection:(-87, 50, 0)
+2023-02-21 10:48:29,848 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:29,980 [ 1] INFO  Unity: SetDirection:(-94, 34, 0)
+2023-02-21 10:48:29,980 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:30,479 [ 1] INFO  Unity: SetPosition:(3746, 3686, 5)
+2023-02-21 10:48:30,480 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,184 [ 1] INFO  Unity: SetDirection:(-86, 51, 0)
+2023-02-21 10:48:31,184 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,280 [ 1] INFO  Unity: SetDirection:(-76, 66, 0)
+2023-02-21 10:48:31,280 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,383 [ 1] INFO  Unity: SetDirection:(-60, 80, 0)
+2023-02-21 10:48:31,383 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,485 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2023-02-21 10:48:31,485 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,581 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:31,581 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,582 [ 1] INFO  Unity: SetDirection:(-23, 97, 0)
+2023-02-21 10:48:31,582 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,601 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:31,602 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,684 [ 1] INFO  Unity: SetDirection:(-5, 100, 0)
+2023-02-21 10:48:31,684 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:31,732 [ 1] INFO  Unity: SetPosition:(3993, 3587, 5)
+2023-02-21 10:48:31,732 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,019 [ 1] INFO  Unity: SetDirection:(-23, 97, 0)
+2023-02-21 10:48:32,019 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,114 [ 1] INFO  Unity: SetDirection:(-42, 91, 0)
+2023-02-21 10:48:32,114 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,204 [ 1] INFO  Unity: SetDirection:(-57, 82, 0)
+2023-02-21 10:48:32,205 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,286 [ 1] INFO  Unity: SetDirection:(-71, 71, 0)
+2023-02-21 10:48:32,286 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,368 [ 1] INFO  Unity: SetDirection:(-82, 57, 0)
+2023-02-21 10:48:32,368 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,471 [ 1] INFO  Unity: SetDirection:(-92, 40, 0)
+2023-02-21 10:48:32,471 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:32,601 [ 1] INFO  Unity: SetDirection:(-97, 23, 0)
+2023-02-21 10:48:32,601 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:33,004 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:33,004 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:33,018 [ 1] INFO  Unity: MoveBack
+2023-02-21 10:48:33,018 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:34,256 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:34,257 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:34,271 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:34,271 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:35,140 [ 1] INFO  Unity: SetDirection:(-100, 5, 0)
+2023-02-21 10:48:35,140 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:37,880 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:37,880 [ 1] INFO  Unity: TeleporterObject ID:6 - Character NameTestCharacter001
+2023-02-21 10:48:37,928 [ 1] INFO  Unity: SetPosition:(3009, 3847, 5)
+2023-02-21 10:48:37,929 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:40,132 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:40,132 [ 1] INFO  Unity: TeleporterObject ID:5 - Character NameTestCharacter001
+2023-02-21 10:48:40,132 [ 1] INFO  Unity: Mapservice - SendMapTeleport 发送出传送请求
+2023-02-21 10:48:40,146 [ 1] INFO  Unity: MapService: OnMapCharacterLeave: charID:1
+2023-02-21 10:48:40,147 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-02-21 10:48:40,147 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:TestCharacter001MapID:1 Entity:(1:pos:(1235,2619,927),dir:(100,8,0),spd:300
+2023-02-21 10:48:40,148 [ 1] INFO  Unity: 收到character信息,ID:1,Name:TestCharacter001
+2023-02-21 10:48:40,148 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有1
+2023-02-21 10:48:40,149 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-21 10:48:40,149 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-02-21 10:48:40,540 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-21 10:48:40,626 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-21 10:48:40,627 [ 1] INFO  Unity: 传送门3号初始化完成
+2023-02-21 10:48:40,627 [ 1] INFO  Unity: 传送门2号初始化完成
+2023-02-21 10:48:40,627 [ 1] INFO  Unity: 传送门1号初始化完成
+2023-02-21 10:48:40,628 [ 1] INFO  Unity: 传送门4号初始化完成
+2023-02-21 10:48:40,628 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:40,628 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:40,630 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:40,630 [ 1] INFO  Unity: TeleporterObject ID:3 - Character NameTestCharacter001
+2023-02-21 10:48:40,768 [ 1] INFO  Unity: SetPosition:(1318, 2626, 877)
+2023-02-21 10:48:40,768 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:40,986 [ 1] INFO  Unity: SetPosition:(1318, 2626, 821)
+2023-02-21 10:48:40,987 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,102 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:41,103 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,274 [ 1] INFO  Unity: SetDirection:(99, -11, 0)
+2023-02-21 10:48:41,274 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,370 [ 1] INFO  Unity: SetDirection:(96, -29, 0)
+2023-02-21 10:48:41,371 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,472 [ 1] INFO  Unity: SetDirection:(88, -48, 0)
+2023-02-21 10:48:41,473 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,554 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:41,554 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,555 [ 1] INFO  Unity: SetDirection:(78, -62, 0)
+2023-02-21 10:48:41,555 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,636 [ 1] INFO  Unity: SetDirection:(66, -75, 0)
+2023-02-21 10:48:41,636 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,739 [ 1] INFO  Unity: SetDirection:(49, -87, 0)
+2023-02-21 10:48:41,739 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,821 [ 1] INFO  Unity: SetDirection:(33, -94, 0)
+2023-02-21 10:48:41,821 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:41,924 [ 1] INFO  Unity: SetDirection:(13, -99, 0)
+2023-02-21 10:48:41,925 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,006 [ 1] INFO  Unity: SetDirection:(-5, -100, 0)
+2023-02-21 10:48:42,006 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,108 [ 1] INFO  Unity: SetDirection:(-25, -97, 0)
+2023-02-21 10:48:42,109 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,143 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:42,144 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,191 [ 1] INFO  Unity: SetDirection:(-42, -91, 0)
+2023-02-21 10:48:42,192 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,286 [ 1] INFO  Unity: SetDirection:(-60, -80, 0)
+2023-02-21 10:48:42,287 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,389 [ 1] INFO  Unity: SetDirection:(-75, -66, 0)
+2023-02-21 10:48:42,389 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,492 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
+2023-02-21 10:48:42,492 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,574 [ 1] INFO  Unity: SetDirection:(-94, -33, 0)
+2023-02-21 10:48:42,574 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,676 [ 1] INFO  Unity: SetDirection:(-99, -13, 0)
+2023-02-21 10:48:42,677 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:42,772 [ 1] INFO  Unity: SetDirection:(-100, 5, 0)
+2023-02-21 10:48:42,773 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:44,545 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:44,545 [ 1] INFO  Unity: TeleporterObject ID:1 - Character NameTestCharacter001
+2023-02-21 10:48:44,546 [ 1] INFO  Unity: Mapservice - SendMapTeleport 发送出传送请求
+2023-02-21 10:48:44,559 [ 1] INFO  Unity: MapService: OnMapCharacterLeave: charID:1
+2023-02-21 10:48:44,560 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:2 Count:1
+2023-02-21 10:48:44,561 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:TestCharacter001MapID:2 Entity:(1:pos:(2735,4018,129),dir:(100,2,0),spd:300
+2023-02-21 10:48:44,561 [ 1] INFO  Unity: 收到character信息,ID:1,Name:TestCharacter001
+2023-02-21 10:48:44,562 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有1
+2023-02-21 10:48:44,562 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-21 10:48:44,563 [ 1] INFO  Unity: LoadLevel: Map01
+2023-02-21 10:48:44,800 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-21 10:48:44,906 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-21 10:48:44,906 [ 1] INFO  Unity: 传送门6号初始化完成
+2023-02-21 10:48:44,906 [ 1] INFO  Unity: 传送门5号初始化完成
+2023-02-21 10:48:44,907 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:44,907 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:44,908 [ 1] INFO  Unity: 触发器触发了
+2023-02-21 10:48:44,908 [ 1] INFO  Unity: TeleporterObject ID:6 - Character NameTestCharacter001
+2023-02-21 10:48:45,182 [ 1] INFO  Unity: SetPosition:(2787, 4019, 77)
+2023-02-21 10:48:45,183 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:45,332 [ 1] INFO  Unity: SetPosition:(2787, 4019, 25)
+2023-02-21 10:48:45,333 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:45,381 [ 1] INFO  Unity: MoveForward
+2023-02-21 10:48:45,381 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:45,483 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2023-02-21 10:48:45,484 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:45,634 [ 1] INFO  Unity: SetDirection:(93, -36, 0)
+2023-02-21 10:48:45,634 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:46,254 [ 1] INFO  Unity: Stop
+2023-02-21 10:48:46,254 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-21 10:48:49,805 [ 1] INFO  Unity: Character_1_TestCharacter001 OnDestroy :ID:1 POS:(3047, 3936, 25) DIR:(93, -36, 0) SPD:0 
+2023-02-21 10:48:49,806 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-21 10:48:49,806 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:180)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:175)
+

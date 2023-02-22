@@ -36,6 +36,9 @@ namespace GameServer.Managers
             json = File.ReadAllText(this.DataPath + "TeleporterDefine.txt");
             this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
 
+            //json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
+            //this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, SpawnPointDefine>>(json);
+
         }
     }
 }
