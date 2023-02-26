@@ -18,6 +18,7 @@ namespace GameServer.Entities
     {
        
         public TCharacter Data;
+        public ItemManager ItemManager;
         
 
         public Character(CharacterType type,TCharacter cha):
@@ -34,6 +35,12 @@ namespace GameServer.Entities
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
 
+            this.ItemManager = new ItemManager(this);
+            this.ItemManager.GetItemInfos(this.Info.Items);
+
+            this.Info.Bag = new NBagInfo();
+            this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
+            this.Info.Bag.Items = this.Data.Bag.Items;
         }
     }
 }

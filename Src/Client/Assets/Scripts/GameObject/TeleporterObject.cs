@@ -3,6 +3,7 @@ using Services;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.Managers;
 
 public class TeleporterObject : MonoBehaviour {
 

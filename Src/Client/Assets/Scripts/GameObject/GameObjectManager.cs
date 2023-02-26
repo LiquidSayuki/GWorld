@@ -6,7 +6,7 @@ using Entities;
 using Services;
 using SkillBridge.Message;
 using Models;
-using Managers;
+using Assets.Scripts.Managers;
 
 public class GameObjectManager : MonoSingleton<GameObjectManager>
 {

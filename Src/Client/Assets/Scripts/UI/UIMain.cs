@@ -1,10 +1,11 @@
-﻿using Models;
+﻿using Managers;
+using Models;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIMainCity : MonoSingleton<UIMainCity>
+public class UIMain : MonoSingleton<UIMain>
 {
 
     public Text avatarName;
@@ -31,5 +32,10 @@ public class UIMainCity : MonoSingleton<UIMainCity>
     {
         SceneManager.Instance.LoadScene("CharSelect");
         Services.UserService.Instance.SendGameLeave();
+    }
+
+    public void OnClickBag()
+    {
+        UIManager.Instance.Show<UIBag>();
     }
 }

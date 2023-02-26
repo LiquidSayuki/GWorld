@@ -9,9 +9,8 @@ using UnityEngine.Events;
 
 using Entities;
 using SkillBridge.Message;
-using Assets.Scripts.Managers;
 
-namespace Managers
+namespace Assets.Scripts.Managers
 {
     class CharacterManager : Singleton<CharacterManager>, IDisposable
     {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Managers;
+using Assets.Scripts.Managers;
 
 public class UIMinimap : MonoBehaviour {
 
@@ -15,18 +16,21 @@ public class UIMinimap : MonoBehaviour {
     private Transform playerTransform;
 	// Use this for initialization
 	void Start () {
-        this.InitMap();
+        MinimapManager.Instance.minimap = this;
+        this.UpdateMap();
     }
 
-    void InitMap()
+    public void UpdateMap()
     {
         this.mapName.text = User.Instance.CurrentMapData.Name;
-        if (this.minimap.overrideSprite == null)
-            // 加载小地图图片
-            this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
+        // 加载小地图图片
+        this.minimap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
         // image组件加载新的sprite后，需要设置原大小，否则可能新进入的小地图，图片大小还是原来的图片大小
         this.minimap.SetNativeSize();
         this.minimap.transform.localPosition = Vector3.zero;
+        this.minimapBoundingBox = MinimapManager.Instance.MinimapBoundingBox;
+
+        this.playerTransform = null;
     }
 	
 	// Update is called once per frame

@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System;
 using System.IO;
-
 using Common;
 using Common.Data;
-
 using Newtonsoft.Json;
+
 namespace GameServer.Managers
 {
     public class DataManager : Singleton<DataManager>
@@ -16,6 +15,8 @@ namespace GameServer.Managers
         internal Dictionary<int, MapDefine> Maps = null;
         internal Dictionary<int, CharacterDefine> Characters = null;
         internal Dictionary<int, TeleporterDefine> Teleporters = null;
+        internal Dictionary<int, NpcDefine> Npcs = null;
+        internal Dictionary<int, ItemDefine> Items = null;
         public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
         public Dictionary<int, Dictionary<int,SpawnRuleDefine>> SpawnRules = null;
 
@@ -35,6 +36,13 @@ namespace GameServer.Managers
 
             json = File.ReadAllText(this.DataPath + "TeleporterDefine.txt");
             this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
+
+            json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
+            this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
+
+            json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+            this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
+
 
             //json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
             //this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, SpawnPointDefine>>(json);

@@ -69,6 +69,7 @@ namespace Network
         {
             //Performance.ServerConnect = Interlocked.Decrement(ref Performance.ServerConnect);
             Log.WarningFormat("Client[{0}] Disconnected", e.RemoteEndPoint);
+            sender.Session.Disconnected();
         }
 
 

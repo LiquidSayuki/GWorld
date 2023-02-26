@@ -1,0 +1,61 @@
+2023-02-26 14:12:55,750 [ 1] INFO  Unity: LoadingManager start
+2023-02-26 14:12:59,280 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-26 14:13:04,336 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-02-26 14:13:04,342 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-26 14:13:04,352 [ 1] INFO  Unity: DoConnect
+2023-02-26 14:13:04,354 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-26 14:13:04,362 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-26 14:13:04,375 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-26 14:13:04,548 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-02-26 14:13:04,552 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-26 14:13:04,724 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-26 14:13:05,694 [ 1] INFO  Unity: Select Char:[2]88888[Wizard]
+2023-02-26 14:13:06,265 [ 1] INFO  Unity: UserGameEnterRequest::characterId :1
+2023-02-26 14:13:06,295 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-02-26 14:13:06,368 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Assets.Scripts.Models.Item..ctor (SkillBridge.Message.NItemInfo item) [0x00030] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Models\Item.cs:22 
+  at Assets.Scripts.Managers.ItemManager.Init (System.Collections.Generic.List`1 items) [0x00023] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\ItemManager.cs:20 
+  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x00050] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\UserService.cs:265 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2023-02-26 14:13:06,371 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Assets.Scripts.Models.Item..ctor (SkillBridge.Message.NItemInfo item) (at Assets/Scripts/Models/Item.cs:22)
+Assets.Scripts.Managers.ItemManager.Init (System.Collections.Generic.List`1 items) (at Assets/Scripts/Managers/ItemManager.cs:20)
+Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:265)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
+}</args></log4net.Error>
+2023-02-26 14:13:06,513 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-02-26 14:13:06,519 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:8Name:88888MapID:1 Entity:(8:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-26 14:13:06,531 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-02-26 14:13:06,904 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-26 14:13:06,973 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+2023-02-26 14:13:06,974 [ 1] WARN  Unity: [MainPlayerCamera][-2721074] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-26 14:13:06,976 [ 1] WARN  Unity: [GameObjectManager][-2721026] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-26 14:13:06,976 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-02-26 14:13:06,978 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-02-26 14:13:06,986 [ 1] INFO  Unity: 收到character信息,ID:8,Name:88888
+2023-02-26 14:13:06,987 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有0
+2023-02-26 14:13:06,992 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-26 14:13:06,993 [ 1] WARN  Unity: [UIMain][494626] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-26 14:13:06,993 [ 1] WARN  Unity: [UIWorldElementManager][495484] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-26 14:13:07,027 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-26 14:13:23,633 [ 1] INFO  Unity: Character_8_88888 OnDestroy :ID:8 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-02-26 14:13:23,634 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-26 14:13:23,634 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
+

@@ -125,9 +125,16 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
             };
+            // 初始化新角色的背包
+            var bag = new TCharacterBag();
+            bag.Owner = character;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            TCharacterItem it = new TCharacterItem();
+            character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
 
             // 操作DB，将新角色保存至数据库
-            DBService.Instance.Entities.Characters.Add(character);
+            character = DBService.Instance.Entities.Characters.Add(character);
             sender.Session.User.Player.Characters.Add(character);
             DBService.Instance.Entities.SaveChanges();
 
@@ -168,21 +175,37 @@ namespace GameServer.Services
             message.Response.gameEnter = new UserGameEnterResponse();
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
+            // 进入游戏成功，发送初始角色信息
+            message.Response.gameEnter.Character = character.Info;
+
+            //测试道具系统，发放道具给角色
+            int itemId = 1;
+            bool hasItem = character.ItemManager.HasItem(itemId);
+            Log.InfoFormat("HasItem: [{0}] [{1}] ", itemId, hasItem);
+            if(!hasItem)
+            {
+                character.ItemManager.AddItem(1, 100);
+                character.ItemManager.AddItem(2, 200);
+                character.ItemManager.AddItem(3, 30);
+                character.ItemManager.AddItem(4, 120);
+            }
+            DBService.Instance.Save();
+
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
             sender.Session.Character = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
+
+
+
         }
 
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("UserGameLeave:{0},CharacterID{1}:{2},Map{3}", sender.Session.User.Username, character.Id,character.Info.Name,character.Info.mapId);
-            // 调用角色管理器，移除角色
-            CharacterManager.Instance.RemoveCharacter(character.Id);
-            //让地图移除角色
-            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            Log.InfoFormat("UserGameLeave:{0},CharacterID{1}:{2},Map{3}", sender.Session.User.Username, character.Id, character.Info.Name, character.Info.mapId);
+            CharacterLeave(character);
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.gameLeave = new UserGameLeaveResponse();
@@ -191,6 +214,14 @@ namespace GameServer.Services
 
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
+        }
+
+        public void CharacterLeave(Character character)
+        {
+            // 调用角色管理器，移除角色
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            //让地图移除角色
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
 }

@@ -7,6 +7,7 @@ using Network;
 using UnityEngine;
 using Models;
 using SkillBridge.Message;
+using Assets.Scripts.Managers;
 
 namespace Services
 {
@@ -259,7 +260,11 @@ namespace Services
 
             if (response.Result == Result.Success)
             {
-
+                if (response.Character != null)
+                {
+                    ItemManager.Instance.Init(response.Character.Items);
+                    BagManager.Instance.Init(response.Character.Bag);
+                }
             }
         }
 

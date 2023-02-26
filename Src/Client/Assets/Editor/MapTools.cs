@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using Common.Data;
+using Assets.Scripts.Managers;
 
 /// <summary>
 /// 将场景中的传送点的位置保存到传送点定义文件中
