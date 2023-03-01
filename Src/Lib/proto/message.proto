@@ -71,7 +71,7 @@ message NCharacterInfo {
 	int32 level = 6;
 	int32 mapId = 7;
 	NEntity entity = 8;
-
+	int64 gold = 9;
 	repeated NItemInfo Items = 10;
 	NBagInfo Bag = 11;
 }
@@ -91,6 +91,38 @@ message NVector3
 	int32 x = 1;
 	int32 y = 2;
 	int32 z = 3;
+}
+
+
+// 同步消息
+enum STATUS_ACTION{
+	UPDATE = 0;
+	ADD = 1;
+	DELETE = 2;
+}
+
+enum STATUS_TYPE{
+	MONEY = 0;
+	EXP = 1;
+	SKILL_POINT = 2;
+	ITEM = 3;
+}
+
+enum STATUS_SOURCE{
+	UPDATE = 0;
+	ADD = 1;
+	DELETE = 2;
+}
+
+message NStatus{
+	STATUS_TYPE type = 1;
+	STATUS_ACTION action = 2;
+	int32 id = 3;
+	int32 value = 4;
+}
+
+message StatusNotify{
+	repeated NStatus status = 1;
 }
 
 ////////////////////////////////////////////////////////////////
@@ -137,8 +169,10 @@ message NetMessageRequest{
 	MapEntitySyncRequest mapEntitySync = 8;
 	MapTeleportRequest mapTeleport = 9;
 
+	ItemBuyRequest itemBuy = 10;
+
 	// 测试发送链接
-	FirstTestRequest FirstTestRequest = 10;
+	FirstTestRequest FirstTestRequest = 99;
 }
 
 message NetMessageResponse{
@@ -152,6 +186,10 @@ message NetMessageResponse{
 	MapCharacterLeaveResponse mapCharacterLeave = 7;
 
 	MapEntitySyncResponse mapEntitySync = 8;
+
+	ItemBuyResponse itemBuy = 10;
+
+	StatusNotify statusNotify = 100;
 	
 }
 
@@ -255,6 +293,7 @@ message MapTeleportRequest
 	int32 teleporterId = 1;
 }
 
+// 背包
 message BagSaveRequest{
 	NBagInfo BagInfo = 1;
 }
@@ -262,4 +301,13 @@ message BagSaveRequest{
 message BagSaveResponse{
 	RESULT result = 1;
 	string errormsg = 2;
+}
+// 商店
+message ItemBuyRequest{
+	int32 shopId = 1;
+	int32 shopitemId = 2;
+}
+message ItemBuyResponse{
+	RESULT result= 1;
+	string errormsg =2;
 }

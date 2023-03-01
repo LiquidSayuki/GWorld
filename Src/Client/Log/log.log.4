@@ -1,7 +1,60 @@
-2023-02-26 14:15:16,216 [ 1] INFO  Unity: LoadingManager start
-2023-02-26 14:15:41,661 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-26 14:19:43,051 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-02-26 14:19:43,052 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-02-28 21:11:11,103 [ 1] INFO  Unity: LoadingManager start
+2023-02-28 21:11:14,423 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-28 21:11:14,744 [ 1] INFO  Unity: MapLOAD
+2023-02-28 21:11:14,757 [ 1] INFO  Unity: CharacterLOAD
+2023-02-28 21:11:14,770 [ 1] INFO  Unity: TeleporterLOAD
+2023-02-28 21:11:14,782 [ 1] INFO  Unity: NPCLOAD
+2023-02-28 21:11:14,802 [ 1] INFO  Unity: ITEMLOAD
+2023-02-28 21:11:14,829 [ 1] INFO  Unity: SPAWNLOAD
+2023-02-28 21:11:54,575 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-02-28 21:11:54,582 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-28 21:11:54,592 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:11:54,593 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:11:54,609 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-28 21:11:54,622 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-28 21:11:55,096 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-02-28 21:11:55,101 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-28 21:11:55,273 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-28 21:11:55,890 [ 1] INFO  Unity: Select Char:[1]again[Archer]
+2023-02-28 21:11:56,629 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-02-28 21:16:45,229 [ 1] INFO  Unity: Select Char:[1]again[Archer]
+2023-02-28 21:16:45,775 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-02-28 21:17:16,432 [ 1] WARN  Unity: CloseConnection(), errorCode: 1002
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:339)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+
+2023-02-28 21:17:16,439 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:17:16,440 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:17:16,441 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-28 21:17:18,485 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2023-02-28 21:17:18,487 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2023-02-28 21:17:18,522 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:17:18,522 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:17:18,523 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2023-02-28 21:17:20,043 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-28 21:17:21,543 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-28 21:17:21,543 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

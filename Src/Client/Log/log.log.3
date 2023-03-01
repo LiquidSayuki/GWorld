@@ -1,28 +1,1089 @@
-2023-02-26 14:25:15,613 [ 1] INFO  Unity: LoadingManager start
-2023-02-26 14:25:54,759 [ 1] INFO  Unity: DataManager > DataManager()
-2023-02-26 14:26:17,820 [ 1] INFO  Unity: MapLOAD
-2023-02-26 14:26:43,959 [ 1] INFO  Unity: CharacterLOAD
-2023-02-26 14:26:45,628 [ 1] INFO  Unity: TeleporterLOAD
-2023-02-26 14:26:46,927 [ 1] INFO  Unity: NPCLOAD
-2023-02-26 14:26:50,117 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{IndexOutOfRangeException: Index has to be between upper and lower bound of the array., System.Array.GetValue (Int32 index) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Array.cs:487)
-System.Enum.Parse (System.Type enumType, System.String value, Boolean ignoreCase) (at /Users/builduser/buildslave/mono/build/mcs/class/corlib/System/Enum.cs:625)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Rethrow as JsonSerializationException: Error converting value "RecoverHP" to type 'Common.Data.ItemFunction'. Path '1.Function', line 12, position 27.
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.EnsureType (Newtonsoft.Json.JsonReader reader, System.Object value, System.Globalization.CultureInfo culture, Newtonsoft.Json.Serialization.JsonContract contract, System.Type targetType)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal (Newtonsoft.Json.JsonReader reader, System.Type objectType, Newtonsoft.Json.Serialization.JsonContract contract, Newtonsoft.Json.Serialization.JsonProperty member, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerMember, System.Object existingValue)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.SetPropertyValue (Newtonsoft.Json.Serialization.JsonProperty property, Newtonsoft.Json.JsonConverter propertyConverter, Newtonsoft.Json.Serialization.JsonContainerContract containerContract, Newtonsoft.Json.Serialization.JsonProperty containerProperty, Newtonsoft.Json.JsonReader reader, System.Object target)
-Newtonsoft.Json.Serialization.JsonSerializerInternalReader.PopulateObject (System.Object newObject, Newtonsoft.Json.JsonReader reader, Newtonsoft.Json.Serialization.JsonObjectContract contract, Newtonsoft.Json.Serialization.JsonProperty member, System.String id)
-}</args></log4net.Error>
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Scripts/GameObject/MainPlayerCamera.cs(8,19): warning CS0108: `MainPlayerCamera.camera' hides inherited member `UnityEngine.Component.camera'. Use the new keyword if hiding was intended
+2023-02-28 21:17:28,377 [ 1] INFO  Unity: LoadingManager start
+2023-02-28 21:17:31,709 [ 1] INFO  Unity: DataManager > DataManager()
+2023-02-28 21:17:32,026 [ 1] INFO  Unity: MapLOAD
+2023-02-28 21:17:32,041 [ 1] INFO  Unity: CharacterLOAD
+2023-02-28 21:17:32,055 [ 1] INFO  Unity: TeleporterLOAD
+2023-02-28 21:17:32,067 [ 1] INFO  Unity: NPCLOAD
+2023-02-28 21:17:32,087 [ 1] INFO  Unity: ITEMLOAD
+2023-02-28 21:17:32,117 [ 1] INFO  Unity: SPAWNLOAD
+2023-02-28 21:18:19,765 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-02-28 21:18:19,772 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-02-28 21:18:19,782 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:18:19,783 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:18:19,798 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Scripts/GameObject/NpcController.cs(13,22): warning CS0108: `NpcController.renderer' hides inherited member `UnityEngine.Component.renderer'. Use the new keyword if hiding was intended
+2023-02-28 21:18:19,812 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-28 21:18:20,301 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-02-28 21:18:20,305 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-28 21:18:20,478 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-28 21:18:21,963 [ 1] INFO  Unity: Select Char:[1]again[Archer]
+2023-02-28 21:18:23,139 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-02-28 21:18:53,236 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-02-28 21:18:53,248 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-02-28 21:18:53,249 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-02-28 21:18:53,249 [ 1] INFO  Unity: ItemManager: Init[4], Count: 15
+2023-02-28 21:18:53,250 [ 1] INFO  Unity: ItemManager: Init[3], Count: 10
+2023-02-28 21:18:53,250 [ 1] INFO  Unity: ItemManager: Init[5], Count: 1
+2023-02-28 21:19:10,348 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-02-28 21:19:30,317 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-02-28 21:19:30,743 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:againMapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-28 21:19:31,315 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-02-28 21:19:32,722 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(19,16): warning CS0649: Field `EntityController.rotation' is never assigned to, and will always have its default value
+2023-02-28 21:19:33,580 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Scripts/GameObject/EntityController.cs(22,16): warning CS0414: The private field `EntityController.lastRotation' is assigned but its value is never used
+2023-02-28 21:19:33,724 [ 1] WARN  Unity: [MainPlayerCamera][-969744] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Scripts/GameObject/PlayerInputController.cs(112,11): warning CS0414: The private field `PlayerInputController.lastSync' is assigned but its value is never used
+2023-02-28 21:19:33,871 [ 1] WARN  Unity: [GameObjectManager][-969696] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-02-26 14:29:30,065 [ 1] WARN  Unity: Assets/Editor/MapTools.cs(28,32): warning CS0219: The variable `allTeleporters' is assigned but its value is never used
+2023-02-28 21:19:34,058 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-02-28 21:19:34,348 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-02-28 21:19:34,705 [ 1] INFO  Unity: 收到character信息,ID:1,Name:again
+2023-02-28 21:19:35,043 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有0
+2023-02-28 21:19:35,423 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-02-28 21:19:35,597 [ 1] WARN  Unity: [UIMain][202938] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:19:35,759 [ 1] WARN  Unity: [UIWorldElementManager][203796] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:19:38,862 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-28 21:19:44,945 [ 1] INFO  Unity: SetDirection:(98, 19, 0)
+2023-02-28 21:19:45,198 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:19:45,944 [ 1] INFO  Unity: SetDirection:(93, 37, 0)
+2023-02-28 21:19:46,195 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:19:46,974 [ 1] INFO  Unity: SetDirection:(83, 55, 0)
+2023-02-28 21:19:47,226 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:11,070 [ 1] INFO  Unity: SetDirection:(71, 70, 0)
+2023-02-28 21:20:11,332 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:11,948 [ 1] INFO  Unity: SetDirection:(57, 82, 0)
+2023-02-28 21:20:12,194 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:12,949 [ 1] INFO  Unity: SetDirection:(42, 91, 0)
+2023-02-28 21:20:13,192 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:13,931 [ 1] INFO  Unity: SetDirection:(22, 98, 0)
+2023-02-28 21:20:14,182 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:14,924 [ 1] INFO  Unity: SetDirection:(1, 100, 0)
+2023-02-28 21:20:15,174 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:15,915 [ 1] INFO  Unity: SetDirection:(-19, 98, 0)
+2023-02-28 21:20:16,162 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:16,913 [ 1] INFO  Unity: SetDirection:(-36, 93, 0)
+2023-02-28 21:20:17,155 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:17,900 [ 1] INFO  Unity: SetDirection:(-52, 86, 0)
+2023-02-28 21:20:18,162 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:18,923 [ 1] INFO  Unity: SetDirection:(-66, 75, 0)
+2023-02-28 21:20:19,172 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:20,032 [ 1] INFO  Unity: SetDirection:(-80, 60, 0)
+2023-02-28 21:20:20,278 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:20,891 [ 1] INFO  Unity: SetDirection:(-90, 44, 0)
+2023-02-28 21:20:21,149 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:21,936 [ 1] INFO  Unity: SetDirection:(-96, 27, 0)
+2023-02-28 21:20:22,194 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:23,789 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
+2023-02-28 21:20:24,036 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:24,635 [ 1] INFO  Unity: SetDirection:(-100, -10, 0)
+2023-02-28 21:20:24,882 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:29,197 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-02-28 21:20:29,198 [ 1] INFO  Unity: UserGameLeaveRequest
+2023-02-28 21:20:29,264 [ 1] INFO  Unity: MapService: OnMapCharacterLeave: charID:1
+2023-02-28 21:20:29,265 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2023-02-28 21:20:29,289 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-28 21:20:29,545 [ 1] INFO  Unity: SetPosition:(5000, 4000, 766)
+2023-02-28 21:20:29,546 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:29,696 [ 1] INFO  Unity: SetPosition:(5000, 4000, 715)
+2023-02-28 21:20:29,697 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:29,812 [ 1] INFO  Unity: SetPosition:(5000, 4000, 659)
+2023-02-28 21:20:29,813 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:29,916 [ 1] INFO  Unity: SetPosition:(5000, 4000, 601)
+2023-02-28 21:20:29,916 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:29,997 [ 1] INFO  Unity: SetPosition:(5000, 4000, 545)
+2023-02-28 21:20:29,997 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,079 [ 1] INFO  Unity: SetPosition:(5000, 4000, 482)
+2023-02-28 21:20:30,081 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,100 [ 1] INFO  Unity: Select Char:[1]again[Archer]
+2023-02-28 21:20:30,148 [ 1] INFO  Unity: SetPosition:(5000, 4000, 427)
+2023-02-28 21:20:30,149 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,216 [ 1] INFO  Unity: SetPosition:(5000, 4000, 367)
+2023-02-28 21:20:30,217 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,280 [ 1] INFO  Unity: SetPosition:(5000, 4000, 303)
+2023-02-28 21:20:30,280 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,334 [ 1] INFO  Unity: SetPosition:(5000, 4000, 252)
+2023-02-28 21:20:30,335 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,382 [ 1] INFO  Unity: SetPosition:(5000, 4000, 199)
+2023-02-28 21:20:30,382 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,430 [ 1] INFO  Unity: SetPosition:(5000, 4000, 143)
+2023-02-28 21:20:30,431 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,484 [ 1] INFO  Unity: SetPosition:(5000, 4000, 85)
+2023-02-28 21:20:30,485 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,532 [ 1] INFO  Unity: SetPosition:(5000, 4000, 24)
+2023-02-28 21:20:30,533 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,567 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-02-28 21:20:30,581 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39)
+2023-02-28 21:20:30,581 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,633 [ 1] INFO  Unity: SetPosition:(5000, 4000, -105)
+2023-02-28 21:20:30,633 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,680 [ 1] INFO  Unity: SetPosition:(5000, 4000, -173)
+2023-02-28 21:20:30,681 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,736 [ 1] INFO  Unity: SetPosition:(5000, 4000, -244)
+2023-02-28 21:20:30,736 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,783 [ 1] INFO  Unity: SetPosition:(5000, 4000, -317)
+2023-02-28 21:20:30,783 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,835 [ 1] INFO  Unity: SetPosition:(5000, 4000, -392)
+2023-02-28 21:20:30,836 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,869 [ 1] INFO  Unity: SetPosition:(5000, 4000, -444)
+2023-02-28 21:20:30,869 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,903 [ 1] INFO  Unity: SetPosition:(5000, 4000, -497)
+2023-02-28 21:20:30,903 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,930 [ 1] INFO  Unity: SetPosition:(5000, 4000, -551)
+2023-02-28 21:20:30,931 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,964 [ 1] INFO  Unity: SetPosition:(5000, 4000, -606)
+2023-02-28 21:20:30,965 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:30,998 [ 1] INFO  Unity: SetPosition:(5000, 4000, -662)
+2023-02-28 21:20:30,999 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,033 [ 1] INFO  Unity: SetPosition:(5000, 4000, -719)
+2023-02-28 21:20:31,034 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,067 [ 1] INFO  Unity: SetPosition:(5000, 4000, -777)
+2023-02-28 21:20:31,067 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,101 [ 1] INFO  Unity: SetPosition:(5000, 4000, -837)
+2023-02-28 21:20:31,102 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,131 [ 1] INFO  Unity: SetPosition:(5000, 4000, -897)
+2023-02-28 21:20:31,131 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,165 [ 1] INFO  Unity: SetPosition:(5000, 4000, -959)
+2023-02-28 21:20:31,166 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,199 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1021)
+2023-02-28 21:20:31,201 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,234 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1085)
+2023-02-28 21:20:31,234 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,269 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1150)
+2023-02-28 21:20:31,269 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,298 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1216)
+2023-02-28 21:20:31,298 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,332 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1283)
+2023-02-28 21:20:31,333 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,367 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1351)
+2023-02-28 21:20:31,367 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1420)
+2023-02-28 21:20:31,401 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,435 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1490)
+2023-02-28 21:20:31,436 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,469 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1562)
+2023-02-28 21:20:31,470 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,504 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1634)
+2023-02-28 21:20:31,505 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,538 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1708)
+2023-02-28 21:20:31,538 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,565 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1783)
+2023-02-28 21:20:31,566 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,599 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1858)
+2023-02-28 21:20:31,600 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,633 [ 1] INFO  Unity: SetPosition:(5000, 4000, -1935)
+2023-02-28 21:20:31,634 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,669 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2013)
+2023-02-28 21:20:31,669 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,702 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2092)
+2023-02-28 21:20:31,703 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,736 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2173)
+2023-02-28 21:20:31,736 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,771 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2254)
+2023-02-28 21:20:31,772 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,798 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2336)
+2023-02-28 21:20:31,799 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,832 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2420)
+2023-02-28 21:20:31,832 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,866 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2504)
+2023-02-28 21:20:31,867 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,900 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2590)
+2023-02-28 21:20:31,901 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,935 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2677)
+2023-02-28 21:20:31,935 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:31,969 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2764)
+2023-02-28 21:20:31,970 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,003 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2853)
+2023-02-28 21:20:32,004 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,038 [ 1] INFO  Unity: SetPosition:(5000, 4000, -2943)
+2023-02-28 21:20:32,039 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,072 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3034)
+2023-02-28 21:20:32,073 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,099 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3127)
+2023-02-28 21:20:32,101 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,133 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3220)
+2023-02-28 21:20:32,134 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,167 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3314)
+2023-02-28 21:20:32,168 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,202 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3410)
+2023-02-28 21:20:32,203 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,237 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3506)
+2023-02-28 21:20:32,237 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,270 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3604)
+2023-02-28 21:20:32,270 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,305 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3703)
+2023-02-28 21:20:32,305 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,338 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3803)
+2023-02-28 21:20:32,339 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,367 [ 1] INFO  Unity: SetPosition:(5000, 4000, -3904)
+2023-02-28 21:20:32,367 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,401 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4006)
+2023-02-28 21:20:32,401 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,420 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4057)
+2023-02-28 21:20:32,421 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,435 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4109)
+2023-02-28 21:20:32,435 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,455 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4161)
+2023-02-28 21:20:32,456 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,469 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4213)
+2023-02-28 21:20:32,469 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,490 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4266)
+2023-02-28 21:20:32,490 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,503 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4318)
+2023-02-28 21:20:32,503 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:32,519 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-02-28 21:20:32,519 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-02-28 21:20:32,520 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-02-28 21:20:32,520 [ 1] INFO  Unity: ItemManager: Init[4], Count: 15
+2023-02-28 21:20:32,521 [ 1] INFO  Unity: ItemManager: Init[3], Count: 10
+2023-02-28 21:20:32,521 [ 1] INFO  Unity: ItemManager: Init[5], Count: 1
+2023-02-28 21:20:44,419 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-02-28 21:20:44,419 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-02-28 21:20:44,419 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:againMapID:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-02-28 21:20:44,420 [ 1] INFO  Unity: 收到character信息,ID:2,Name:again
+2023-02-28 21:20:44,420 [ 1] INFO  Unity: GameObjectManager创建角色物体，目前共有1
+2023-02-28 21:20:44,422 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
+2023-02-28 21:20:44,422 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-02-28 21:20:44,424 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-551),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,424 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-244),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,425 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-662),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,425 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-105),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,426 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-392),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,426 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[1 event: None entity :(1:pos:(5000,4000,-317),dir:(-100,-10,0),spd:0 ]
+
+2023-02-28 21:20:44,493 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4371)
+2023-02-28 21:20:44,493 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:44,791 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
+
+2023-02-28 21:20:44,791 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+
+2023-02-28 21:20:44,792 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4641)
+2023-02-28 21:20:44,793 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:44,793 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:20:44,794 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:20:44,795 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-28 21:20:44,795 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-28 21:20:44,795 [ 1] INFO  Unity: Connect Server before Send Message!
+2023-02-28 21:20:44,841 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4861)
+2023-02-28 21:20:44,841 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:44,882 [ 1] INFO  Unity: SetPosition:(5000, 4000, -4973)
+2023-02-28 21:20:44,882 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:44,920 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-02-28 21:20:44,921 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5143)
+2023-02-28 21:20:44,921 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,022 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+2023-02-28 21:20:45,022 [ 1] WARN  Unity: [MainPlayerCamera][-980542] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:20:45,023 [ 1] WARN  Unity: [GameObjectManager][-980494] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:20:45,023 [ 1] WARN  Unity: [UIMain][207002] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:20:45,023 [ 1] WARN  Unity: [UIWorldElementManager][207860] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-02-28 21:20:45,053 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-02-28 21:20:45,055 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5258)
+2023-02-28 21:20:45,056 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,117 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5316)
+2023-02-28 21:20:45,117 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,123 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5374)
+2023-02-28 21:20:45,124 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,137 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5432)
+2023-02-28 21:20:45,138 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,158 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5490)
+2023-02-28 21:20:45,158 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,171 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5549)
+2023-02-28 21:20:45,172 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,187 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5608)
+2023-02-28 21:20:45,188 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,208 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5668)
+2023-02-28 21:20:45,209 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,222 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5727)
+2023-02-28 21:20:45,222 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,242 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5787)
+2023-02-28 21:20:45,243 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,252 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5847)
+2023-02-28 21:20:45,253 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,273 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5908)
+2023-02-28 21:20:45,274 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,287 [ 1] INFO  Unity: SetPosition:(5000, 4000, -5969)
+2023-02-28 21:20:45,287 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,307 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6030)
+2023-02-28 21:20:45,307 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,327 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6091)
+2023-02-28 21:20:45,328 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,342 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6152)
+2023-02-28 21:20:45,343 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,360 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6214)
+2023-02-28 21:20:45,360 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,371 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6276)
+2023-02-28 21:20:45,372 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,393 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6339)
+2023-02-28 21:20:45,394 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,410 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6401)
+2023-02-28 21:20:45,411 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,424 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6464)
+2023-02-28 21:20:45,424 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,440 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6528)
+2023-02-28 21:20:45,444 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,456 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6591)
+2023-02-28 21:20:45,456 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,470 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6655)
+2023-02-28 21:20:45,471 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,490 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6719)
+2023-02-28 21:20:45,491 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,504 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6783)
+2023-02-28 21:20:45,505 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,524 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6848)
+2023-02-28 21:20:45,525 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,538 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6913)
+2023-02-28 21:20:45,538 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,559 [ 1] INFO  Unity: SetPosition:(5000, 4000, -6978)
+2023-02-28 21:20:45,560 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,573 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7043)
+2023-02-28 21:20:45,573 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,586 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7109)
+2023-02-28 21:20:45,587 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,607 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7175)
+2023-02-28 21:20:45,607 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,620 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7241)
+2023-02-28 21:20:45,621 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,642 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7307)
+2023-02-28 21:20:45,642 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,655 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7374)
+2023-02-28 21:20:45,655 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,676 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7441)
+2023-02-28 21:20:45,676 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,689 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7508)
+2023-02-28 21:20:45,690 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,709 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7576)
+2023-02-28 21:20:45,710 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,723 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7644)
+2023-02-28 21:20:45,724 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,737 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7712)
+2023-02-28 21:20:45,738 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,757 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7780)
+2023-02-28 21:20:45,758 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,771 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7849)
+2023-02-28 21:20:45,771 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,791 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7918)
+2023-02-28 21:20:45,792 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,805 [ 1] INFO  Unity: SetPosition:(5000, 4000, -7987)
+2023-02-28 21:20:45,806 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,825 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8057)
+2023-02-28 21:20:45,826 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,839 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8126)
+2023-02-28 21:20:45,840 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,860 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8196)
+2023-02-28 21:20:45,861 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,874 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8267)
+2023-02-28 21:20:45,875 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,887 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8337)
+2023-02-28 21:20:45,888 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,908 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8408)
+2023-02-28 21:20:45,909 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,922 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8479)
+2023-02-28 21:20:45,923 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,942 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8551)
+2023-02-28 21:20:45,942 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,956 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8622)
+2023-02-28 21:20:45,957 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,976 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8694)
+2023-02-28 21:20:45,977 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:45,992 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8767)
+2023-02-28 21:20:45,992 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,004 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8839)
+2023-02-28 21:20:46,005 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,024 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8912)
+2023-02-28 21:20:46,025 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,039 [ 1] INFO  Unity: SetPosition:(5000, 4000, -8985)
+2023-02-28 21:20:46,039 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,059 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9058)
+2023-02-28 21:20:46,059 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,072 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9132)
+2023-02-28 21:20:46,073 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,093 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9206)
+2023-02-28 21:20:46,093 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,107 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9280)
+2023-02-28 21:20:46,107 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,127 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9354)
+2023-02-28 21:20:46,128 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,141 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9429)
+2023-02-28 21:20:46,142 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,155 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9504)
+2023-02-28 21:20:46,155 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,175 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9579)
+2023-02-28 21:20:46,176 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,189 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9655)
+2023-02-28 21:20:46,189 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,209 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9731)
+2023-02-28 21:20:46,210 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,223 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9807)
+2023-02-28 21:20:46,224 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,243 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9883)
+2023-02-28 21:20:46,244 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,257 [ 1] INFO  Unity: SetPosition:(5000, 4000, -9960)
+2023-02-28 21:20:46,257 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,270 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10036)
+2023-02-28 21:20:46,272 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,291 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10114)
+2023-02-28 21:20:46,292 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,305 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10191)
+2023-02-28 21:20:46,306 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10269)
+2023-02-28 21:20:46,327 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,340 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10347)
+2023-02-28 21:20:46,340 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,360 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10425)
+2023-02-28 21:20:46,360 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,373 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10503)
+2023-02-28 21:20:46,374 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,394 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10582)
+2023-02-28 21:20:46,394 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,408 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10661)
+2023-02-28 21:20:46,408 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,421 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10741)
+2023-02-28 21:20:46,422 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,442 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10820)
+2023-02-28 21:20:46,443 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,456 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10900)
+2023-02-28 21:20:46,456 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,476 [ 1] INFO  Unity: SetPosition:(5000, 4000, -10980)
+2023-02-28 21:20:46,477 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,490 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11061)
+2023-02-28 21:20:46,490 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,511 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11141)
+2023-02-28 21:20:46,511 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,524 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11222)
+2023-02-28 21:20:46,524 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,544 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11304)
+2023-02-28 21:20:46,545 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,558 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11385)
+2023-02-28 21:20:46,559 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,572 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11467)
+2023-02-28 21:20:46,572 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,592 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11549)
+2023-02-28 21:20:46,593 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,607 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11631)
+2023-02-28 21:20:46,608 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,627 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11714)
+2023-02-28 21:20:46,628 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,640 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11797)
+2023-02-28 21:20:46,641 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,661 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11880)
+2023-02-28 21:20:46,662 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,675 [ 1] INFO  Unity: SetPosition:(5000, 4000, -11964)
+2023-02-28 21:20:46,676 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,688 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12047)
+2023-02-28 21:20:46,689 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,709 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12131)
+2023-02-28 21:20:46,710 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,723 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12216)
+2023-02-28 21:20:46,724 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,744 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12300)
+2023-02-28 21:20:46,744 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,757 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12385)
+2023-02-28 21:20:46,757 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,778 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12470)
+2023-02-28 21:20:46,779 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,791 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12555)
+2023-02-28 21:20:46,792 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,812 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12641)
+2023-02-28 21:20:46,813 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,825 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12727)
+2023-02-28 21:20:46,826 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,839 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12813)
+2023-02-28 21:20:46,839 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,860 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12900)
+2023-02-28 21:20:46,860 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,873 [ 1] INFO  Unity: SetPosition:(5000, 4000, -12986)
+2023-02-28 21:20:46,873 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,893 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13073)
+2023-02-28 21:20:46,894 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,908 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13161)
+2023-02-28 21:20:46,908 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,928 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13248)
+2023-02-28 21:20:46,929 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,941 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13336)
+2023-02-28 21:20:46,942 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,956 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13424)
+2023-02-28 21:20:46,957 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,976 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13512)
+2023-02-28 21:20:46,977 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:46,990 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13601)
+2023-02-28 21:20:46,990 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,010 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13690)
+2023-02-28 21:20:47,011 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,024 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13779)
+2023-02-28 21:20:47,025 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,045 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13869)
+2023-02-28 21:20:47,046 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,058 [ 1] INFO  Unity: SetPosition:(5000, 4000, -13958)
+2023-02-28 21:20:47,058 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,078 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14048)
+2023-02-28 21:20:47,080 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,092 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14139)
+2023-02-28 21:20:47,093 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,106 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14229)
+2023-02-28 21:20:47,107 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,126 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14320)
+2023-02-28 21:20:47,127 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,140 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14411)
+2023-02-28 21:20:47,141 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,161 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14502)
+2023-02-28 21:20:47,162 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,174 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14594)
+2023-02-28 21:20:47,175 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,195 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14686)
+2023-02-28 21:20:47,195 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,209 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14778)
+2023-02-28 21:20:47,209 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,229 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14871)
+2023-02-28 21:20:47,230 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,243 [ 1] INFO  Unity: SetPosition:(5000, 4000, -14963)
+2023-02-28 21:20:47,243 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,257 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15057)
+2023-02-28 21:20:47,257 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,277 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15150)
+2023-02-28 21:20:47,278 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,291 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15243)
+2023-02-28 21:20:47,292 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,311 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15337)
+2023-02-28 21:20:47,312 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,326 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15431)
+2023-02-28 21:20:47,326 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,346 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15526)
+2023-02-28 21:20:47,347 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,360 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15620)
+2023-02-28 21:20:47,361 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,374 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15715)
+2023-02-28 21:20:47,375 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,396 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15811)
+2023-02-28 21:20:47,396 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,410 [ 1] INFO  Unity: SetPosition:(5000, 4000, -15906)
+2023-02-28 21:20:47,411 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,425 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16002)
+2023-02-28 21:20:47,425 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,444 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16098)
+2023-02-28 21:20:47,445 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,458 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16194)
+2023-02-28 21:20:47,459 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,479 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16291)
+2023-02-28 21:20:47,479 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,492 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16388)
+2023-02-28 21:20:47,493 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,513 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16485)
+2023-02-28 21:20:47,513 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,527 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16582)
+2023-02-28 21:20:47,527 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,540 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16680)
+2023-02-28 21:20:47,541 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,561 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16778)
+2023-02-28 21:20:47,561 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,574 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16876)
+2023-02-28 21:20:47,575 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,595 [ 1] INFO  Unity: SetPosition:(5000, 4000, -16974)
+2023-02-28 21:20:47,595 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,609 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17073)
+2023-02-28 21:20:47,609 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,630 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17172)
+2023-02-28 21:20:47,631 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,644 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17272)
+2023-02-28 21:20:47,645 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,657 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17371)
+2023-02-28 21:20:47,657 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,677 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17471)
+2023-02-28 21:20:47,678 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,691 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17571)
+2023-02-28 21:20:47,692 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,712 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17671)
+2023-02-28 21:20:47,713 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,726 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17772)
+2023-02-28 21:20:47,726 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,746 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17873)
+2023-02-28 21:20:47,746 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,759 [ 1] INFO  Unity: SetPosition:(5000, 4000, -17974)
+2023-02-28 21:20:47,760 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,780 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18076)
+2023-02-28 21:20:47,780 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,793 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18178)
+2023-02-28 21:20:47,794 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,809 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18280)
+2023-02-28 21:20:47,810 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,830 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18382)
+2023-02-28 21:20:47,830 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,844 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18485)
+2023-02-28 21:20:47,844 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,857 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18587)
+2023-02-28 21:20:47,858 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,877 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18691)
+2023-02-28 21:20:47,878 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,891 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18794)
+2023-02-28 21:20:47,892 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,912 [ 1] INFO  Unity: SetPosition:(5000, 4000, -18898)
+2023-02-28 21:20:47,913 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,925 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19002)
+2023-02-28 21:20:47,926 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,946 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19106)
+2023-02-28 21:20:47,946 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,960 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19210)
+2023-02-28 21:20:47,960 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,980 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19315)
+2023-02-28 21:20:47,980 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:47,994 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19420)
+2023-02-28 21:20:47,995 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,008 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19526)
+2023-02-28 21:20:48,008 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,028 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19631)
+2023-02-28 21:20:48,029 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,042 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19737)
+2023-02-28 21:20:48,043 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,062 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19843)
+2023-02-28 21:20:48,063 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,076 [ 1] INFO  Unity: SetPosition:(5000, 4000, -19950)
+2023-02-28 21:20:48,077 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,096 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20056)
+2023-02-28 21:20:48,097 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,110 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20163)
+2023-02-28 21:20:48,111 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,130 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20271)
+2023-02-28 21:20:48,131 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,144 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20378)
+2023-02-28 21:20:48,145 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,158 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20486)
+2023-02-28 21:20:48,158 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,178 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20594)
+2023-02-28 21:20:48,179 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,193 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20702)
+2023-02-28 21:20:48,193 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,213 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20811)
+2023-02-28 21:20:48,214 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,227 [ 1] INFO  Unity: SetPosition:(5000, 4000, -20920)
+2023-02-28 21:20:48,227 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,247 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21029)
+2023-02-28 21:20:48,248 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,261 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21138)
+2023-02-28 21:20:48,261 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,281 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21248)
+2023-02-28 21:20:48,282 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,295 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21358)
+2023-02-28 21:20:48,295 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,309 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21468)
+2023-02-28 21:20:48,309 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,329 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21579)
+2023-02-28 21:20:48,330 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,343 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21690)
+2023-02-28 21:20:48,343 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,364 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21801)
+2023-02-28 21:20:48,364 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,377 [ 1] INFO  Unity: SetPosition:(5000, 4000, -21912)
+2023-02-28 21:20:48,378 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,398 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22024)
+2023-02-28 21:20:48,398 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,412 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22136)
+2023-02-28 21:20:48,413 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,425 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22248)
+2023-02-28 21:20:48,426 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,446 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22360)
+2023-02-28 21:20:48,447 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,459 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22473)
+2023-02-28 21:20:48,460 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,480 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22586)
+2023-02-28 21:20:48,481 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,494 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22699)
+2023-02-28 21:20:48,495 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,514 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22813)
+2023-02-28 21:20:48,515 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,528 [ 1] INFO  Unity: SetPosition:(5000, 4000, -22927)
+2023-02-28 21:20:48,529 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,548 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23041)
+2023-02-28 21:20:48,549 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,562 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23155)
+2023-02-28 21:20:48,562 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,576 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23270)
+2023-02-28 21:20:48,577 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,596 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23385)
+2023-02-28 21:20:48,597 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,610 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23500)
+2023-02-28 21:20:48,610 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,630 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23615)
+2023-02-28 21:20:48,630 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,644 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23731)
+2023-02-28 21:20:48,644 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,664 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23847)
+2023-02-28 21:20:48,665 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,678 [ 1] INFO  Unity: SetPosition:(5000, 4000, -23963)
+2023-02-28 21:20:48,679 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,692 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24080)
+2023-02-28 21:20:48,693 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,713 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24197)
+2023-02-28 21:20:48,713 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,726 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24314)
+2023-02-28 21:20:48,727 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,747 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24431)
+2023-02-28 21:20:48,747 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,760 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24549)
+2023-02-28 21:20:48,761 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,781 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24667)
+2023-02-28 21:20:48,781 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,794 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24785)
+2023-02-28 21:20:48,795 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,815 [ 1] INFO  Unity: SetPosition:(5000, 4000, -24903)
+2023-02-28 21:20:48,816 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,829 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25022)
+2023-02-28 21:20:48,829 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,842 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25141)
+2023-02-28 21:20:48,843 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,863 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25260)
+2023-02-28 21:20:48,864 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,877 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25380)
+2023-02-28 21:20:48,878 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,897 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25500)
+2023-02-28 21:20:48,898 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,911 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25620)
+2023-02-28 21:20:48,912 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,932 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25740)
+2023-02-28 21:20:48,933 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,945 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25861)
+2023-02-28 21:20:48,946 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,965 [ 1] INFO  Unity: SetPosition:(5000, 4000, -25982)
+2023-02-28 21:20:48,966 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,979 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26103)
+2023-02-28 21:20:48,979 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:48,993 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26224)
+2023-02-28 21:20:48,994 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,014 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26346)
+2023-02-28 21:20:49,015 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,027 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26468)
+2023-02-28 21:20:49,027 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,048 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26591)
+2023-02-28 21:20:49,048 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,062 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26713)
+2023-02-28 21:20:49,062 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,082 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26836)
+2023-02-28 21:20:49,083 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,096 [ 1] INFO  Unity: SetPosition:(5000, 4000, -26959)
+2023-02-28 21:20:49,097 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,117 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27082)
+2023-02-28 21:20:49,117 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,130 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27206)
+2023-02-28 21:20:49,131 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,144 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27330)
+2023-02-28 21:20:49,145 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,164 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27454)
+2023-02-28 21:20:49,165 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,178 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27579)
+2023-02-28 21:20:49,179 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,199 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27704)
+2023-02-28 21:20:49,199 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,212 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27829)
+2023-02-28 21:20:49,212 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,232 [ 1] INFO  Unity: SetPosition:(5000, 4000, -27954)
+2023-02-28 21:20:49,233 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,246 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28079)
+2023-02-28 21:20:49,247 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,260 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28205)
+2023-02-28 21:20:49,261 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,280 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28331)
+2023-02-28 21:20:49,282 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,294 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28458)
+2023-02-28 21:20:49,295 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,315 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28584)
+2023-02-28 21:20:49,316 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,329 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28711)
+2023-02-28 21:20:49,329 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,349 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28839)
+2023-02-28 21:20:49,349 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,363 [ 1] INFO  Unity: SetPosition:(5000, 4000, -28966)
+2023-02-28 21:20:49,364 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,383 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29094)
+2023-02-28 21:20:49,384 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,397 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29222)
+2023-02-28 21:20:49,398 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,410 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29350)
+2023-02-28 21:20:49,411 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,432 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29479)
+2023-02-28 21:20:49,432 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,445 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29608)
+2023-02-28 21:20:49,446 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,466 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29737)
+2023-02-28 21:20:49,466 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,480 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29866)
+2023-02-28 21:20:49,480 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,500 [ 1] INFO  Unity: SetPosition:(5000, 4000, -29996)
+2023-02-28 21:20:49,500 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,514 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30126)
+2023-02-28 21:20:49,514 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,527 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30256)
+2023-02-28 21:20:49,528 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,547 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30387)
+2023-02-28 21:20:49,548 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,561 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30517)
+2023-02-28 21:20:49,562 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,582 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30648)
+2023-02-28 21:20:49,582 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,596 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30780)
+2023-02-28 21:20:49,596 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,616 [ 1] INFO  Unity: SetPosition:(5000, 4000, -30911)
+2023-02-28 21:20:49,617 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,629 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31043)
+2023-02-28 21:20:49,630 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,650 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31175)
+2023-02-28 21:20:49,650 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,663 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31308)
+2023-02-28 21:20:49,664 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,677 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31440)
+2023-02-28 21:20:49,678 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,698 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31573)
+2023-02-28 21:20:49,699 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,712 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31707)
+2023-02-28 21:20:49,712 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,733 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31840)
+2023-02-28 21:20:49,734 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,746 [ 1] INFO  Unity: SetPosition:(5000, 4000, -31974)
+2023-02-28 21:20:49,747 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,766 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32108)
+2023-02-28 21:20:49,767 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,780 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32242)
+2023-02-28 21:20:49,781 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,801 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32377)
+2023-02-28 21:20:49,802 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,814 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32512)
+2023-02-28 21:20:49,815 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,828 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32647)
+2023-02-28 21:20:49,829 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,849 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32782)
+2023-02-28 21:20:49,849 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,862 [ 1] INFO  Unity: SetPosition:(5000, 4000, -32918)
+2023-02-28 21:20:49,863 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,883 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33054)
+2023-02-28 21:20:49,884 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,897 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33190)
+2023-02-28 21:20:49,897 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,917 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33327)
+2023-02-28 21:20:49,917 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,931 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33464)
+2023-02-28 21:20:49,931 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,951 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33601)
+2023-02-28 21:20:49,952 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,965 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33738)
+2023-02-28 21:20:49,965 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:49,979 [ 1] INFO  Unity: SetPosition:(5000, 4000, -33876)
+2023-02-28 21:20:49,980 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,001 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34014)
+2023-02-28 21:20:50,001 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,016 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34152)
+2023-02-28 21:20:50,017 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,030 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34290)
+2023-02-28 21:20:50,031 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,050 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34429)
+2023-02-28 21:20:50,051 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,065 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34568)
+2023-02-28 21:20:50,066 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,085 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34707)
+2023-02-28 21:20:50,086 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,099 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34847)
+2023-02-28 21:20:50,099 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,112 [ 1] INFO  Unity: SetPosition:(5000, 4000, -34986)
+2023-02-28 21:20:50,113 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,132 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35127)
+2023-02-28 21:20:50,133 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,146 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35267)
+2023-02-28 21:20:50,147 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,167 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35408)
+2023-02-28 21:20:50,167 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,181 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35548)
+2023-02-28 21:20:50,182 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,201 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35690)
+2023-02-28 21:20:50,201 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,215 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35831)
+2023-02-28 21:20:50,215 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,229 [ 1] INFO  Unity: SetPosition:(5000, 4000, -35973)
+2023-02-28 21:20:50,229 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,250 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36115)
+2023-02-28 21:20:50,250 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,263 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36257)
+2023-02-28 21:20:50,264 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,285 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36400)
+2023-02-28 21:20:50,286 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,298 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36542)
+2023-02-28 21:20:50,298 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,319 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36685)
+2023-02-28 21:20:50,319 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,332 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36829)
+2023-02-28 21:20:50,333 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,346 [ 1] INFO  Unity: SetPosition:(5000, 4000, -36972)
+2023-02-28 21:20:50,346 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,367 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37116)
+2023-02-28 21:20:50,368 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,380 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37261)
+2023-02-28 21:20:50,381 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,400 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37405)
+2023-02-28 21:20:50,401 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,414 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37550)
+2023-02-28 21:20:50,415 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,435 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37695)
+2023-02-28 21:20:50,435 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,448 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37840)
+2023-02-28 21:20:50,449 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,469 [ 1] INFO  Unity: SetPosition:(5000, 4000, -37986)
+2023-02-28 21:20:50,470 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,483 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38131)
+2023-02-28 21:20:50,483 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,497 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38278)
+2023-02-28 21:20:50,498 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,517 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38424)
+2023-02-28 21:20:50,518 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,532 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38571)
+2023-02-28 21:20:50,532 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,547 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38717)
+2023-02-28 21:20:50,548 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,569 [ 1] INFO  Unity: SetPosition:(5000, 4000, -38865)
+2023-02-28 21:20:50,569 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,583 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39012)
+2023-02-28 21:20:50,583 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,597 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39160)
+2023-02-28 21:20:50,597 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,617 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39308)
+2023-02-28 21:20:50,617 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,631 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39456)
+2023-02-28 21:20:50,632 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,651 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39605)
+2023-02-28 21:20:50,652 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,665 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39754)
+2023-02-28 21:20:50,665 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,685 [ 1] INFO  Unity: SetPosition:(5000, 4000, -39903)
+2023-02-28 21:20:50,686 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,699 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40052)
+2023-02-28 21:20:50,700 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,713 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40202)
+2023-02-28 21:20:50,713 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,733 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40352)
+2023-02-28 21:20:50,734 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,747 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40502)
+2023-02-28 21:20:50,748 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,768 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40652)
+2023-02-28 21:20:50,768 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,781 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40803)
+2023-02-28 21:20:50,782 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,802 [ 1] INFO  Unity: SetPosition:(5000, 4000, -40954)
+2023-02-28 21:20:50,802 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,815 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41105)
+2023-02-28 21:20:50,816 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,836 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41257)
+2023-02-28 21:20:50,836 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,850 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41409)
+2023-02-28 21:20:50,851 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,863 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41561)
+2023-02-28 21:20:50,864 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,885 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41713)
+2023-02-28 21:20:50,885 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,898 [ 1] INFO  Unity: SetPosition:(5000, 4000, -41866)
+2023-02-28 21:20:50,899 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,918 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42019)
+2023-02-28 21:20:50,919 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,932 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42172)
+2023-02-28 21:20:50,933 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,953 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42326)
+2023-02-28 21:20:50,953 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,966 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42479)
+2023-02-28 21:20:50,966 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:50,980 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host.
+
+  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
+  at Network.NetClient.ProcessRecv () [0x00084] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
+
+2023-02-28 21:20:50,980 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+
+2023-02-28 21:20:50,987 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:20:50,987 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:20:50,988 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+
+2023-02-28 21:20:53,031 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2023-02-28 21:20:53,032 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it.
+
+  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
+  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
+UnityEngine.Debug:LogErrorFormat(String, Object[])
+Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
+Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
+Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
+Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
+
+2023-02-28 21:20:53,033 [ 1] INFO  Unity: SetPosition:(5000, 4000, -42633)
+2023-02-28 21:20:53,033 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:53,033 [ 1] INFO  Unity: DoConnect
+2023-02-28 21:20:53,034 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-02-28 21:20:53,035 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+
+2023-02-28 21:20:54,057 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-02-28 21:20:54,058 [ 1] INFO  Unity: Connect Server before Send Message!
+2023-02-28 21:20:54,118 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43563)
+2023-02-28 21:20:54,119 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,161 [ 1] INFO  Unity: SetPosition:(5000, 4000, -43875)
+2023-02-28 21:20:54,161 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,177 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44032)
+2023-02-28 21:20:54,177 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,184 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44189)
+2023-02-28 21:20:54,185 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,198 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44346)
+2023-02-28 21:20:54,199 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,213 [ 1] INFO  Unity: SetPosition:(5000, 4000, -44503)
+2023-02-28 21:20:54,214 [ 1] INFO  Unity: MapService-SendMapEntitySync: nEntitySync ID:1
+2023-02-28 21:20:54,259 [ 1] INFO  Unity: Character_1_again OnDestroy :ID:1 POS:(5000, 4000, -44503) DIR:(-100, -10, 0) SPD:0 
+2023-02-28 21:20:54,259 [ 1] INFO  Unity: Character_2_again OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-02-28 21:20:54,264 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-02-28 21:20:54,264 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+UnityEngine.Debug:LogWarning(Object)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
 

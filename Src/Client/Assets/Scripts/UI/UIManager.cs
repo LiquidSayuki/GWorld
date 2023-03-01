@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,7 +21,8 @@ namespace Managers
         public UIManager()
         {
             //this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true });
-            this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = true});
+            this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = false});
+            this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/UIShop", Cache = false });
         }
 
         ~UIManager()

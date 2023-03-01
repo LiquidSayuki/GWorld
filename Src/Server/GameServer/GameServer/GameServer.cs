@@ -29,7 +29,7 @@ namespace GameServer
             // 主入口，初始化service
             DBService.Instance.Init();
             UserService.Instance.Init();
-            
+            ItemService.Instance.Init();
 
             //初始化manager
             DataManager.Instance.Load();

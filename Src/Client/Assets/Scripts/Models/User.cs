@@ -30,5 +30,10 @@ namespace Models
 
         public GameObject CurrentCharacterObject { get; set; }
 
+        public void AddGold(int gold)
+        {
+            this.CurrentCharacter.Gold += gold;
+        }
+
     }
 }

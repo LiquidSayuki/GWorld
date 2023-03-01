@@ -10,6 +10,8 @@ namespace Assets.Scripts.Managers
         public delegate bool NpcActionHandler(NpcDefine npc);
         Dictionary<NpcFunction, NpcActionHandler> eventMap = new Dictionary<NpcFunction, NpcActionHandler>();
 
+        // 在其他类中将一个方法绑定在NPC事件中（监听npc事件）
+        // npc被唤醒时，会通过delegate唤醒其它类的对应方法
         public void RegisterNpcEvent(NpcFunction function, NpcActionHandler action)
         {
             if (!eventMap.ContainsKey(function))
@@ -66,6 +68,7 @@ namespace Assets.Scripts.Managers
             {
                 return false;
             }
+            
             return eventMap[npc.Function](npc);
         }
     }

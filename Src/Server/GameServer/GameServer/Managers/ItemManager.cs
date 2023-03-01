@@ -80,6 +80,8 @@ namespace GameServer.Managers
                 item = new Item(dbItem);
                 this.Items.Add(itemId, item);
             }
+            // 通知状态管理器
+            this.Owner.StatusManager.AddItemChange(itemId, count, StatusAction.Add);
             Log.InfoFormat("[{0}]AddItem[{1}] addCount: {2}" ,this.Owner.Data.ID, item, count);
 
             //DBService.Instance.Save();
@@ -99,6 +101,8 @@ namespace GameServer.Managers
                 return false;
             }
             item.Remove(count);
+            // 通知状态管理器
+            this.Owner.StatusManager.AddItemChange(itemId, count, StatusAction.Delete);
             Log.InfoFormat("[{0}]RemoveItem[{1}] RemoveCount: {2}", this.Owner.Data.ID, item, count);
 
             //DBService.Instance.Save();

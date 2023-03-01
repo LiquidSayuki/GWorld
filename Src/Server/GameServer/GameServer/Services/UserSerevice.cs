@@ -8,6 +8,8 @@ using Network;
 using SkillBridge.Message;
 using GameServer.Entities;
 using GameServer.Managers;
+using Newtonsoft.Json.Linq;
+using static System.Collections.Specialized.BitVector32;
 
 namespace GameServer.Services
 {
@@ -124,6 +126,7 @@ namespace GameServer.Services
                 MapPosX = 5000,
                 MapPosY = 4000,
                 MapPosZ = 820,
+                Gold = 100000,
             };
             // 初始化新角色的背包
             var bag = new TCharacterBag();
@@ -132,6 +135,21 @@ namespace GameServer.Services
             bag.Unlocked = 20;
             TCharacterItem it = new TCharacterItem();
             character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
+
+            // 赋予初始道具
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemId = 1,
+                ItemCount = 10,
+            });
+
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemId = 2,
+                ItemCount = 10,
+            });
 
             // 操作DB，将新角色保存至数据库
             character = DBService.Instance.Entities.Characters.Add(character);
@@ -170,30 +188,46 @@ namespace GameServer.Services
             //在角色管理器中添加角色
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
 
-            NetMessage message = new NetMessage();
+           
+           /* 
+            * Legacy
+            * 
+            * NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();
             message.Response.gameEnter = new UserGameEnterResponse();
-            message.Response.gameEnter.Result = Result.Success;
-            message.Response.gameEnter.Errormsg = "None";
+           */
+            sender.Session.Response.gameEnter = new UserGameEnterResponse();
+            sender.Session.Response.gameEnter.Result = Result.Success;
+            sender.Session.Response.gameEnter.Errormsg = "None";
             // 进入游戏成功，发送初始角色信息
-            message.Response.gameEnter.Character = character.Info;
+            sender.Session.Response.gameEnter.Character = character.Info;
 
             //测试道具系统，发放道具给角色
-            int itemId = 1;
-            bool hasItem = character.ItemManager.HasItem(itemId);
-            Log.InfoFormat("HasItem: [{0}] [{1}] ", itemId, hasItem);
-            if(!hasItem)
-            {
-                character.ItemManager.AddItem(1, 100);
-                character.ItemManager.AddItem(2, 200);
-                character.ItemManager.AddItem(3, 30);
-                character.ItemManager.AddItem(4, 120);
-            }
-            DBService.Instance.Save();
+            /* 
+             * int itemId = 1;
+             bool hasItem = character.ItemManager.HasItem(itemId);
+             Log.InfoFormat("HasItem: [{0}] [{1}] ", itemId, hasItem);
+             if(!hasItem)
+             {
+                 character.ItemManager.AddItem(1, 100);
+                 character.ItemManager.AddItem(2, 200);
+                 character.ItemManager.AddItem(3, 30);
+                 character.ItemManager.AddItem(4, 120);
+             }
+             DBService.Instance.Save();
+            */
 
 
-            byte[] data = PackageHandler.PackMessage(message);
+            /*
+             * Legacy
+             * byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
+            */
+
+            // 测试Status发送
+            //sender.Session.Character.StatusManager.AddGoldChange(500);
+
+            sender.SendResponse();
             sender.Session.Character = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
 

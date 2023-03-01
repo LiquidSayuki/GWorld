@@ -14,12 +14,15 @@ namespace Assets.Scripts.Models
         public int Count;
         public ItemDefine Define;
 
+        //可以重载自己的构造函数
+        public Item(NItemInfo item):
+            this(item.Id, item.Count){ }
 
-        public Item(NItemInfo item)
+        public Item(int id, int count)
         {
-            this.Id = item.Id;
-            this.Count = item.Count;
-            this.Define = DataManager.Instance.Items[item.Id];
+            this.Id = id;
+            this.Count = count;
+            this.Define = DataManager.Instance.Items[this.Id];
         }
 
         public override string ToString()

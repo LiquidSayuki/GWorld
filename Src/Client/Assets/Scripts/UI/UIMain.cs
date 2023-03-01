@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.UI;
 
 public class UIMain : MonoSingleton<UIMain>
 {
