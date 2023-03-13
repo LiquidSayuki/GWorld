@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865119113577650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.278423, y: 8, z: 27.935814}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4803807019765412}
@@ -64,13 +64,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1699072701709414}
-  m_LocalRotation: {x: 0.12650318, y: -0, z: -0, w: 0.99196625}
-  m_LocalPosition: {x: 0, y: 2.4, z: -4}
+  m_LocalRotation: {x: 0.21034732, y: -0, z: -0, w: 0.97762674}
+  m_LocalPosition: {x: 0, y: 3.06, z: -4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4341760909876430}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 14.535001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.285002, y: 0, z: 0}
 --- !u!20 &20652036606558768
 Camera:
   m_ObjectHideFlags: 1
@@ -129,7 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf17f3ecd1591241972e1bec735fc6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  global: 0
-  camera: {fileID: 0}
-  viewPoint: {fileID: 0}
+  global: 1
+  camera: {fileID: 20652036606558768}
   player: {fileID: 0}
+  invertPicth: 1
+  pitchLimit: {x: -40, y: 70}
+  distance: 4
+  speed: 120
+  offset: {x: 0, y: 1.5, z: 0}

@@ -72,8 +72,8 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
     private void CreateCharacterObject(Character character)
     {
         // 是否已经存在，避免重复创建
-        Debug.LogFormat("收到character信息,ID:{0},Name:{1}", character.entityId, character.Name);
-        Debug.LogFormat("GameObjectManager创建角色物体，目前共有{0}", Characters.Count);
+        Debug.LogFormat("CreatCharacterObject ,ID:{0},Name:{1}", character.entityId, character.Name);
+        Debug.LogFormat("GameObjectManager开始创建角色物体，目前已经有{0}个角色/怪物", Characters.Count);
         if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
         {
             Object obj = Resloader.Load<Object>(character.Define.Resource);

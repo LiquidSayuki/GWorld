@@ -9,24 +9,20 @@ public class UINameBar : MonoBehaviour {
     public Text avaverName;
     public Image avaterImage;
 
-
-
     public Character character;
 
-
-    // Use this for initialization
     void Start () {
 		if(this.character!=null)
         {
-            
+            if (character.Info.Type == SkillBridge.Message.CharacterType.Monster)
+                this.avaterImage.gameObject.SetActive(false);
+            else
+                this.avaterImage.gameObject.SetActive(true);
         }
 	}
 	
-	// Update is called once per frame
 	void Update () {
         this.UpdateInfo();
-
-        this.transform.forward = Camera.main.transform.forward;
 	}
 
     void UpdateInfo()

@@ -24,6 +24,9 @@ namespace Assets.Scripts.UI
                     slots.AddRange(this.pages[page].GetComponentsInChildren<Image>(true));
                 }
             }
+
+            BagManager.Instance.onBagChange += OnReset;
+
             StartCoroutine(InitBags());
         }
 
@@ -47,17 +50,33 @@ namespace Assets.Scripts.UI
                 slots[i].color = Color.gray;
             }
             yield return null;
+
+            SetMoney();
+            yield return null;
         }
 
         // 点击整理背包时
         public void OnReset()
         {
             BagManager.Instance.Reset();
+            this.Clear();
+            StartCoroutine(InitBags());
         }
 
-        public void SetTitle(string title)
+        void Clear()
         {
-            this.money.text = User.Instance.CurrentCharacter.Id.ToString();
+            for(int i = 0; i < slots.Count; i++)
+            {
+                if (slots[i].transform.childCount > 0)
+                {
+                    Destroy(slots[i].transform.GetChild(0).gameObject);
+                }
+            }
+        }
+
+        public void SetMoney()
+        {
+            this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
         }
     }
 }

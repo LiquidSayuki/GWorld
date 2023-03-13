@@ -11,18 +11,19 @@ public class PlayerInputController : MonoBehaviour {
 
     public Rigidbody rb;
     SkillBridge.Message.CharacterState state;
-
     public Character character;
-
     public float rotateSpeed = 2.0f;
-
     public float turnAngle = 10;
-
     public int speed;
 
     public EntityController entityController;
 
+    public bool lockMode; // 玩家索敌视角开关
+    public Transform targetLocked; // 玩家面朝敌人
+
     public bool onAir = false;
+
+    private MainPlayerCamera mainPlayerCamera;
 
     // Use this for initialization
     void Start () {
@@ -43,6 +44,8 @@ public class PlayerInputController : MonoBehaviour {
             this.character = new Character(cinfo);
 
             if (entityController != null) entityController.entity = this.character;
+
+            this.mainPlayerCamera = GameObject.FindObjectOfType<MainPlayerCamera>();
         }
     }
 
@@ -52,9 +55,9 @@ public class PlayerInputController : MonoBehaviour {
         if (character == null)
             return;
 
-        
         float v = Input.GetAxis("Vertical");
-        if (v > 0.01)
+        float h = Input.GetAxis("Horizontal");
+        if (v > 0.01 || h> 0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
@@ -62,17 +65,17 @@ public class PlayerInputController : MonoBehaviour {
                 this.character.MoveForward();
                 this.SendEntityEvent(EntityEvent.MoveFwd);
             }
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            // this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
         else if (v < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
                 state = SkillBridge.Message.CharacterState.Move;
-                this.character.MoveBack();
+                this.character.MoveForward();
                 this.SendEntityEvent(EntityEvent.MoveBack);
             }
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            //this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
         }
         else
         {
@@ -85,13 +88,63 @@ public class PlayerInputController : MonoBehaviour {
             }
         }
 
+        // 实现相对相机方向而非角色方向的移动
+        Vector3 targetDirection = new Vector3(h, 0, v);
+        // 摄像机看向玩家，就会有相对世界的旋转角度
+        float y = Camera.main.transform.rotation.eulerAngles.y;
+        // 让目标方向绕y轴（世界垂直）旋转y（相机旋转角度）度
+        targetDirection = Quaternion.Euler(0, y, 0) * targetDirection;
+        targetDirection = targetDirection.normalized;
+
+        // 使角色持续面朝摄像机反方向
+        // this.rb.transform.rotation = Quaternion.Slerp(this.rb.transform.rotation, Quaternion.Euler(0,y,0), 5.0f * Time.deltaTime);
+
+        if (lockMode)
+        {
+            // 使角色面朝目标方向
+            Vector3 targetDir = targetLocked.transform.position - this.rb.transform.position;
+            targetDir = Vector3.ProjectOnPlane(targetDir, Vector3.up);
+            this.rb.transform.rotation = Quaternion.Slerp(this.rb.transform.rotation, Quaternion.LookRotation(targetDir), 9.0f * Time.deltaTime);
+        }
+        else
+        {
+            if (h > 0.01 || h < -0.01 || v > 0.01 || v < -0.01)
+            {
+                // 角色面朝自身前进方向
+                this.rb.transform.rotation = Quaternion.Slerp(this.rb.transform.rotation, Quaternion.LookRotation(targetDirection), 8.0f * Time.deltaTime);
+            }
+        }
+        // 执行移动
+        this.rb.transform.Translate(targetDirection * Time.deltaTime * this.character.speed / 30f, Space.World);
+
         if (Input.GetButtonDown("Jump"))
         {
             this.SendEntityEvent(EntityEvent.Jump);
+        }    
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (!this.lockMode)
+            {
+                var targets = GetTargets();
+                if (targets.Count > 0)
+                {
+                    this.targetLocked = targets[0];
+                    this.mainPlayerCamera.targetLocked = targets[0];
+                    this.lockMode = true;
+                    this.mainPlayerCamera.lockMode = true;
+                }
+            }
+            else
+            {
+                this.lockMode = false;
+                this.mainPlayerCamera.lockMode = false;
+            }
         }
 
-        float h = Input.GetAxis("Horizontal");
-        if (h<-0.1 || h>0.1)
+
+
+/*        if (h<-0.1 || h>0.1)
         {
             this.transform.Rotate(0, h * rotateSpeed, 0);
             Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
@@ -105,9 +158,26 @@ public class PlayerInputController : MonoBehaviour {
                 this.SendEntityEvent(EntityEvent.None);
             }
 
-        }
+        }*/
         //Debug.LogFormat("velocity {0}", this.rb.velocity.magnitude);
     }
+
+    private List<Transform> GetTargets()
+    {
+        List<Transform> listTargets = new List<Transform> ();
+        RaycastHit[] raycastHits = Physics.SphereCastAll(this.rb.position, 200f, this.rb.transform.forward);
+
+        foreach (var target in raycastHits)
+        {
+            if (target.transform.CompareTag("Enemy"))
+            {
+                listTargets.Add(target.transform);
+            }
+        }
+        return listTargets;
+    }
+
+
     Vector3 lastPos;
     float lastSync = 0;
     private void LateUpdate()

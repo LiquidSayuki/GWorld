@@ -35,11 +35,9 @@ namespace GameServer
             DataManager.Instance.Load();
 
             MapService.Instance.Init();
-            
+            QuestService.Instance.Init();
 
-            // 第一堂课测试Helloworld
-            HelloWorldService.Instance.Init();
-
+            //此线程模拟一种unity Update函数
             thread = new Thread(new ThreadStart(this.Update));
 
             return true;
@@ -50,10 +48,6 @@ namespace GameServer
             network.Start();
             running = true;
             thread.Start();
-
-
-            // 第一堂课测试Helloworld
-            HelloWorldService.Instance.Start();
         }
 
 
@@ -64,13 +58,16 @@ namespace GameServer
             network.Stop();
         }
 
+        // 每隔一段时间执行一次，呼叫需要每隔一段时间运行一次的内容
         public void Update()
         {
+            var mapManager = MapManager.Instance;
             while (running)
             {
                 Time.Tick();
                 Thread.Sleep(100);
                 //Console.WriteLine("{0} {1} {2} {3} {4}", Time.deltaTime, Time.frameCount, Time.ticks, Time.time, Time.realtimeSinceStartup);
+                mapManager.Update();
             }
         }
     }

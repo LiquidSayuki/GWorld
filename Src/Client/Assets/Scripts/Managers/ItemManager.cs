@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using Common.Data;
 using Models;
-using Assets.Scripts.Services;
+using Services;
 
 namespace Assets.Scripts.Managers
 {

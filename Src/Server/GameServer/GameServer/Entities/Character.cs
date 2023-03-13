@@ -20,6 +20,7 @@ namespace GameServer.Entities
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
+        public QuestManager QuestManager;
 
 
         public Character(CharacterType type, TCharacter cha) :
@@ -30,20 +31,24 @@ namespace GameServer.Entities
             this.Info.Type = type;
             this.Info.Id = cha.ID;
             this.Info.Name = cha.Name;
-            this.Info.Level = 1;//cha.Level;
+            this.Info.Level = 10;//cha.Level;
             this.Info.Tid = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
 
-            this.ItemManager = new ItemManager(this);
-            this.ItemManager.GetItemInfos(this.Info.Items);
-
             this.Info.Bag = new NBagInfo();
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
+            this.Info.Equips = this.Data.Equips;
+
+            this.ItemManager = new ItemManager(this);
+            this.ItemManager.GetItemInfos(this.Info.Items);
 
             this.StatusManager = new StatusManager(this);
+
+            this.QuestManager = new QuestManager(this);
+            this.QuestManager.GetQuestInfos(this.Info.Quests);
         }
 
         public long Gold

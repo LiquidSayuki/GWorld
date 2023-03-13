@@ -36,7 +36,7 @@ namespace GameServer.Entities
             this.Info.Tid = tid;
             this.Info.Entity = this.EntityData;
 
-            this.Info.Name = this.Define.Name;
+           // this.Info.Name = this.Define.Name;
         }
     }
 }

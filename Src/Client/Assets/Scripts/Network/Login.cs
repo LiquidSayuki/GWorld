@@ -11,15 +11,15 @@ public class Login : MonoBehaviour {
 		Network.NetClient.Instance.Connect();
 
 		// 创建主消息
-		SkillBridge.Message.NetMessage msg = new SkillBridge.Message.NetMessage();
-		msg.Request = new SkillBridge.Message.NetMessageRequest();
+		//SkillBridge.Message.NetMessage msg = new SkillBridge.Message.NetMessage();
+		//msg.Request = new SkillBridge.Message.NetMessageRequest();
 		// 创建自定义消息（请求，回复）
-		msg.Request.FirstTestRequest = new SkillBridge.Message.FirstTestRequest();
+		//msg.Request.FirstTestRequest = new SkillBridge.Message.FirstTestRequest();
 		// 修改消息内容
-		msg.Request.FirstTestRequest.Msg = "message";
-		msg.Request.FirstTestRequest.Pwd = "1234567";
+		//msg.Request.FirstTestRequest.Msg = "message";
+		//msg.Request.FirstTestRequest.Pwd = "1234567";
 		// 消息发送
-		Network.NetClient.Instance.SendMessage(msg);
+		//Network.NetClient.Instance.SendMessage(msg);
 	}
 	
 	// Update is called once per frame

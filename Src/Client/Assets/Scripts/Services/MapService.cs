@@ -45,13 +45,13 @@ namespace Services
             Debug.LogFormat("MapService: OnMapCharacterEnter:Map:{0} Count:{1}", response.mapId, response.Characters.Count);
             foreach (var cha in response.Characters)
             {
-                // 确认地图内角色列表中，玩家所属的角色
-                // 首次进入地图没有EntityID，所以为空也应当判断
+                // 判断地图内角色列表中，归属玩家所控制的角色
+                // 玩家首次进入地图没有EntityID，所以为如果玩家空也应当注册当前角色给玩家
                 if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
-                // 对于所有角色，都需要交给角色管理器
+                // 对于所有角色（怪物），都需要交给角色管理器处理
                 CharacterManager.Instance.AddCharacter(cha);
             }
             //当前角色切换地图
@@ -105,7 +105,9 @@ namespace Services
             };
 
             message.Request.mapEntitySync.entitySync = nEntitySync;
-            Debug.LogFormat("MapService-SendMapEntitySync: nEntitySync ID:{0}", nEntitySync.Id);
+
+            //Debug.LogFormat("MapService-SendMapEntitySync: nEntitySync ID:{0}", nEntitySync.Id);
+
             NetClient.Instance.SendMessage(message);
         }
 

@@ -16,11 +16,15 @@ namespace GameServer.Managers
         internal Dictionary<int, CharacterDefine> Characters = null;
         internal Dictionary<int, TeleporterDefine> Teleporters = null;
         internal Dictionary<int, NpcDefine> Npcs = null;
+
         internal Dictionary<int, ItemDefine> Items = null;
         internal Dictionary<int, ShopDefine> Shops = null;
         public Dictionary<int,Dictionary<int, ShopItemDefine>> ShopItems = null;
+
         public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
         public Dictionary<int, Dictionary<int,SpawnRuleDefine>> SpawnRules = null;
+
+        internal Dictionary<int, QuestDefine> Quests = null;
 
         public DataManager()
         {
@@ -44,15 +48,18 @@ namespace GameServer.Managers
 
             json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
             this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
-
             json = File.ReadAllText(this.DataPath + "ShopDefine.txt");
             this.Shops = JsonConvert.DeserializeObject<Dictionary<int, ShopDefine>>(json);
-
             json = File.ReadAllText(this.DataPath + "ShopItemDefine.txt");
             this.ShopItems = JsonConvert.DeserializeObject<Dictionary<int,Dictionary<int,ShopItemDefine>>>(json);
 
-            //json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
-            //this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, SpawnPointDefine>>(json);
+            json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
+            this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int,Dictionary <int,SpawnPointDefine>>>(json);
+            json = File.ReadAllText(this.DataPath + "SpawnRuleDefine.txt");
+            this.SpawnRules = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnRuleDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
+            this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
 
         }
     }

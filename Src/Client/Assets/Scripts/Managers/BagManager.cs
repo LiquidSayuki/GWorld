@@ -15,6 +15,9 @@ namespace Assets.Scripts.Managers
         public BagItem[] Items;
         NBagInfo Info;
 
+        public delegate void BagChangeHandler();
+        public event BagChangeHandler onBagChange;
+
 
         unsafe public void Init(NBagInfo info)
         {
@@ -96,7 +99,8 @@ namespace Assets.Scripts.Managers
 
         internal void RemoveItem(int itemId, int count)
         {
-            throw new NotImplementedException();
+            // TODO: Remove Item
+            this.onBagChange();
         }
 
         public void AddItem(int itemId, int count)
@@ -129,9 +133,12 @@ namespace Assets.Scripts.Managers
                     {
                         this.Items[i].ItemId = (ushort)itemId;
                         this.Items[i].Count = addCount;
+                        break;
                     }
                 }
             }
+
+            this.onBagChange();
         }
     }
 }

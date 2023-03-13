@@ -9917,6 +9917,7 @@ GameObject:
   - component: {fileID: 1153071698}
   - component: {fileID: 1153071697}
   - component: {fileID: 1153071696}
+  - component: {fileID: 1153071700}
   m_Layer: 0
   m_Name: SpawnPoint1
   m_TagString: Untagged
@@ -10003,6 +10004,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1153071694}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1153071700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1153071694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 1
 --- !u!1001 &1153205956
 Prefab:
   m_ObjectHideFlags: 0
@@ -13450,6 +13463,7 @@ GameObject:
   - component: {fileID: 1583917075}
   - component: {fileID: 1583917074}
   - component: {fileID: 1583917073}
+  - component: {fileID: 1583917077}
   m_Layer: 0
   m_Name: SpawnPoint6
   m_TagString: Untagged
@@ -13536,6 +13550,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1583917071}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1583917077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1583917071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 6
 --- !u!1 &1583932877
 GameObject:
   m_ObjectHideFlags: 0
@@ -15331,6 +15357,7 @@ GameObject:
   - component: {fileID: 1719572896}
   - component: {fileID: 1719572895}
   - component: {fileID: 1719572894}
+  - component: {fileID: 1719572898}
   m_Layer: 0
   m_Name: SpawnPoint2
   m_TagString: Untagged
@@ -15417,6 +15444,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1719572892}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1719572898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1719572892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 2
 --- !u!1 &1721958390
 GameObject:
   m_ObjectHideFlags: 0
@@ -17333,6 +17372,7 @@ GameObject:
   - component: {fileID: 1923025548}
   - component: {fileID: 1923025547}
   - component: {fileID: 1923025546}
+  - component: {fileID: 1923025550}
   m_Layer: 0
   m_Name: SpawnPoint4
   m_TagString: Untagged
@@ -17419,6 +17459,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1923025544}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1923025550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1923025544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 4
 --- !u!1001 &1949493934
 Prefab:
   m_ObjectHideFlags: 0
@@ -18224,6 +18276,7 @@ GameObject:
   - component: {fileID: 2007677320}
   - component: {fileID: 2007677319}
   - component: {fileID: 2007677318}
+  - component: {fileID: 2007677322}
   m_Layer: 0
   m_Name: SpawnPoint5
   m_TagString: Untagged
@@ -18310,6 +18363,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2007677316}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2007677322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007677316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 5
 --- !u!1 &2009821886
 GameObject:
   m_ObjectHideFlags: 0
@@ -19225,6 +19290,7 @@ GameObject:
   - component: {fileID: 2110615294}
   - component: {fileID: 2110615293}
   - component: {fileID: 2110615292}
+  - component: {fileID: 2110615296}
   m_Layer: 0
   m_Name: SpawnPoint3
   m_TagString: Untagged
@@ -19311,6 +19377,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110615290}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2110615296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110615290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcdd15a89c125345bf3c909df845b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 3
 --- !u!1 &2112232717
 GameObject:
   m_ObjectHideFlags: 0

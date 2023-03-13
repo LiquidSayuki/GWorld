@@ -43,8 +43,10 @@ namespace Assets.Scripts.Managers
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
 
+            // 交给实体管理器
             EntityManager.Instance.AddEntity(character);
 
+            // 事件调用，游戏物体管理器创建游戏物体
             if(OnCharacterEnter!=null)
             {
                 OnCharacterEnter(character);

@@ -17,15 +17,40 @@ public class NpcController : MonoBehaviour {
 
 	NpcDefine npc;
 
-	void Start () {
+	NpcQuestStatus questStatus;
+
+    void Start () {
 		renderer = this.gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
 		animator = this.gameObject.GetComponentInChildren<Animator>();
 		originColor = renderer.sharedMaterial.color;
 		npc = NpcManager.Instance.GetNpcDefine(ID);
 		this.StartCoroutine(Actions());
+
+		//questStatus
+		RefreshNpcStatus();
+		QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
+	}
+    #region Add status UI display
+    void OnQuestStatusChanged(Quest quest) {
+		this.RefreshNpcStatus();
+	}
+	void RefreshNpcStatus()
+	{
+		questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.ID);
+		UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
 	}
 
-	IEnumerator Actions()
+	void OnDestroy()
+	{
+		QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
+		if (UIWorldElementManager.Instance != null)
+		{
+			UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+		}
+	}
+    #endregion
+
+    IEnumerator Actions()
 	{
 		while (true)
 		{

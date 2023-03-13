@@ -13,6 +13,7 @@ namespace Assets.Scripts.Models
         public int Id;
         public int Count;
         public ItemDefine Define;
+        public EquipDefine EquipInfo;
 
         //可以重载自己的构造函数
         public Item(NItemInfo item):
@@ -22,7 +23,8 @@ namespace Assets.Scripts.Models
         {
             this.Id = id;
             this.Count = count;
-            this.Define = DataManager.Instance.Items[this.Id];
+            DataManager.Instance.Items.TryGetValue(this.Id, out this.Define);
+            DataManager.Instance.Equipments.TryGetValue(this.Id, out this.EquipInfo);
         }
 
         public override string ToString()
