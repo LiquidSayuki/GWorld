@@ -9,9 +9,13 @@ using UnityEngine.EventSystems;
 
 public class ListView : MonoBehaviour
 {
-    public UnityAction<ListViewItem> onItemSelected;
+    /// <summary>
+    /// 每一个需要在ListView中展示的单个物体需要继承的类
+    /// </summary>
     public class ListViewItem : MonoBehaviour, IPointerClickHandler
     {
+        public ListView owner;
+
         private bool selected;
         public bool Selected
         {
@@ -22,13 +26,12 @@ public class ListView : MonoBehaviour
                 onSelected(selected);
             }
         }
-        public virtual void onSelected(bool selected)
-        {
-        }
-
-        public ListView owner;
+        public virtual void onSelected(bool selected){}
         public void OnPointerClick(PointerEventData eventData)
         {
+            // 点击时如果已经选中就不反应
+            // 未选中时，改变自己选中状态
+            // 直接改变主人ListView的选中ListViewItem状态
             if (!this.selected)
             {
                 this.Selected = true;
@@ -40,8 +43,9 @@ public class ListView : MonoBehaviour
         }
     }
 
+    // ListView本体从此开始
     List<ListViewItem> items = new List<ListViewItem>();
-
+    public UnityAction<ListViewItem> onItemSelected;
     private ListViewItem selectedItem = null;
     public ListViewItem SelectedItem
     {
@@ -53,6 +57,7 @@ public class ListView : MonoBehaviour
                 selectedItem.Selected = false;
             }
             selectedItem = value;
+            // 每当SelectedItem被修改，都会发送被新的选中item给订阅者
             if (onItemSelected != null)
                 onItemSelected.Invoke((ListViewItem)value);
         }

@@ -1,63 +1,507 @@
-2023-03-12 23:43:41,813 [ 1] INFO  Unity: LoadingManager start
-2023-03-12 23:43:45,160 [ 1] INFO  Unity: DataManager > DataManager()
-2023-03-12 23:43:45,218 [ 1] INFO  Unity: MapLOAD
-2023-03-12 23:43:45,230 [ 1] INFO  Unity: CharacterLOAD
-2023-03-12 23:43:45,241 [ 1] INFO  Unity: TeleporterLOAD
-2023-03-12 23:43:45,251 [ 1] INFO  Unity: NPCLOAD
-2023-03-12 23:43:45,267 [ 1] INFO  Unity: ITEMLOAD
-2023-03-12 23:43:45,293 [ 1] INFO  Unity: SPAWNLOAD
-2023-03-12 23:43:50,909 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
-2023-03-12 23:43:50,910 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-03-12 23:43:50,914 [ 1] INFO  Unity: DoConnect
-2023-03-12 23:43:50,915 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-12 23:43:50,924 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-03-26 14:03:44,490 [ 1] INFO  Unity: LoadingManager start
+2023-03-26 14:03:47,522 [ 1] INFO  Unity: DataManager > DataManager()
+2023-03-26 14:03:56,495 [ 1] INFO  Unity: UserRegisterRequest::user :user002 psw:12345
+2023-03-26 14:03:56,496 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-03-26 14:03:56,499 [ 1] INFO  Unity: DoConnect
+2023-03-26 14:03:56,500 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-03-26 14:03:56,503 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-03-12 23:43:50,927 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-12 23:43:51,353 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-03-12 23:43:51,354 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-03-12 23:43:51,503 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-12 23:43:52,298 [ 1] INFO  Unity: Select Char:[1]12345[Warrior]
-2023-03-12 23:43:52,965 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-03-12 23:43:53,079 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-03-12 23:43:53,081 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
-2023-03-12 23:43:53,081 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
-2023-03-12 23:43:53,084 [ 1] INFO  Unity: BagInit: System.Byte[]
-2023-03-12 23:43:53,090 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-12 23:43:53,091 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:12345MapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-12 23:43:53,095 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-03-12 23:43:53,571 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-03-26 14:03:56,506 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-03-26 14:03:56,594 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2023-03-26 14:04:02,432 [ 1] INFO  Unity: UserLoginRequest::user :user002 psw:12345
+2023-03-26 14:04:02,460 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-03-26 14:04:02,461 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-03-26 14:04:02,611 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-03-26 14:04:13,744 [ 1] INFO  Unity: UserCreateCharacterRequest::name :User002Fashi class:Wizard
+2023-03-26 14:04:13,784 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
+2023-03-26 14:04:14,605 [ 1] INFO  Unity: Select Char:[2]User002Fashi[Wizard]
+2023-03-26 14:04:15,129 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-03-26 14:04:15,146 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-03-26 14:04:15,148 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-03-26 14:04:15,148 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-03-26 14:04:15,150 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-03-26 14:04:15,156 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:2
+2023-03-26 14:04:15,157 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:士001MapID:1 Entity:(6:pos:(4976,3855,806),dir:(100,0,0),spd:0
+2023-03-26 14:04:15,159 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:User002FashiMapID:1 Entity:(7:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-03-26 14:04:15,160 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-03-26 14:04:15,522 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-03-12 23:43:53,647 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+2023-03-26 14:04:15,592 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-03-12 23:43:53,648 [ 1] WARN  Unity: [MainPlayerCamera][-976014] Awake
+2023-03-26 14:04:15,593 [ 1] WARN  Unity: [MainPlayerCamera][-4770236] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-12 23:43:53,650 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+2023-03-26 14:04:15,595 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
 {1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
 You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:38)
 }</args></log4net.Error>
-2023-03-12 23:43:53,653 [ 1] WARN  Unity: [GameObjectManager][-975966] Awake
+2023-03-26 14:04:15,598 [ 1] WARN  Unity: [GameObjectManager][-4770188] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-12 23:43:53,653 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
-2023-03-12 23:43:53,654 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
-2023-03-12 23:43:53,655 [ 1] INFO  Unity: CreatCharacterObject ,ID:1,Name:12345
-2023-03-12 23:43:53,656 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
-2023-03-12 23:43:53,658 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
-2023-03-12 23:43:53,658 [ 1] WARN  Unity: [UIMain][253356] Awake
+2023-03-26 14:04:15,598 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-03-26 14:04:15,599 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-03-26 14:04:15,600 [ 1] INFO  Unity: CreatCharacterObject ,ID:6,Name:士001
+2023-03-26 14:04:15,601 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
+2023-03-26 14:04:15,602 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-03-26 14:04:15,604 [ 1] WARN  Unity: [UIMain][133508] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-12 23:43:53,659 [ 1] WARN  Unity: [UIWorldElementManager][254234] Awake
+2023-03-26 14:04:15,605 [ 1] WARN  Unity: [UIWorldElementManager][134378] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-12 23:43:53,679 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-12 23:44:32,702 [ 1] INFO  Unity: Character_1_12345 OnDestroy :ID:1 POS:(5118, 4484, 806) DIR:(100, 0, 0) SPD:0 
-2023-03-12 23:44:32,705 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-03-12 23:44:32,706 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-03-26 14:04:15,625 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-03-26 14:04:15,632 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
+You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.LateUpdate () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:51)
+}</args></log4net.Error>
+2023-03-26 14:04:15,653 [ 1] INFO  Unity: CreatCharacterObject ,ID:7,Name:User002Fashi
+2023-03-26 14:04:15,653 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
+2023-03-26 14:04:15,662 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
+2023-03-26 14:04:19,919 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(4976,3855,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:19,930 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4957,3807,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:19,992 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4979,3743,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,054 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5000,3680,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,129 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5022,3617,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,198 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5044,3554,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,259 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5066,3491,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,327 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5087,3428,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,376 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5085,3378,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,424 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5056,3337,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,478 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5007,3334,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,532 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4983,3371,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,581 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4985,3421,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,647 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4998,3486,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,714 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5016,3551,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,782 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5040,3613,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,843 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5077,3668,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,911 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5125,3715,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:20,981 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5179,3754,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,062 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5256,3787,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,145 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5334,3815,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,228 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5413,3842,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,249 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(5418,3842,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:21,686 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(5418,3842,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,734 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5366,3826,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,782 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5319,3809,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,826 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5271,3793,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,840 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(5276,3793,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:21,853 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(5276,3793,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:21,935 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5350,3820,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,018 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5426,3855,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,099 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5505,3882,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,189 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5583,3910,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,208 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(5593,3910,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:22,222 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(5593,3910,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,263 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5552,3899,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,311 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5505,3882,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,360 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5457,3866,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,421 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5410,3850,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,468 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5362,3834,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,517 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5315,3817,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,565 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5268,3801,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,612 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5220,3785,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,661 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5173,3769,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,715 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5125,3752,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,763 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5078,3736,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,811 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5030,3721,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,866 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4981,3712,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,920 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4931,3711,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:22,969 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4882,3720,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,017 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4837,3741,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,064 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4797,3772,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,119 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4763,3808,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,167 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4734,3849,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,215 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4714,3895,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,269 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4705,3942,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,337 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4705,4005,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:23,351 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(4710,4005,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:24,626 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(4710,4005,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:24,682 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4768,4031,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:24,771 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4845,4064,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:24,852 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4922,4096,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:24,941 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4998,4129,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:25,010 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(5023,4129,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:25,811 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(5023,4129,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:25,831 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5062,4172,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:25,873 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5060,4221,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:25,919 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5038,4266,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:25,974 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4997,4294,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,022 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4948,4303,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,069 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4898,4309,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,118 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4848,4315,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,174 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4799,4321,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,223 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4749,4324,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,277 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4705,4311,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,346 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4704,4264,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,407 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,4200,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,456 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,4150,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,510 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,4100,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,559 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4707,4050,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,620 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4717,3984,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,689 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4733,3921,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,736 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4735,3871,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,785 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4739,3821,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,840 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4736,3771,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,887 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4733,3721,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,944 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4729,3671,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:26,985 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4726,3621,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,046 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4723,3571,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,095 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4723,3521,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,156 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4734,3455,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,227 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4759,3394,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,288 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4800,3341,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,371 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4879,3333,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,460 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4957,3362,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,521 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5006,3406,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,589 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5036,3466,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,664 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5049,3531,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,712 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5046,3581,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,760 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5037,3630,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,808 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5021,3678,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,856 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(5000,3723,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,911 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4974,3766,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:27,959 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4944,3806,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,009 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4911,3844,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,090 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4904,3885,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,159 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4907,3939,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,208 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4885,3986,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,257 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4854,4025,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,305 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4823,4065,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,359 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4793,4105,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,408 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4764,4145,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,461 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4739,4189,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:28,503 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(4754,4189,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:29,119 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveFwd entity :(6:pos:(4754,4189,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,132 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4736,4238,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,174 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4740,4288,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,229 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4743,4338,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,280 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4746,4388,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,327 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4750,4438,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,355 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(4760,4438,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:04:29,369 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: MoveBack entity :(6:pos:(4760,4438,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,425 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4746,4388,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,479 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4743,4338,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,527 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4740,4288,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,574 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4736,4238,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,623 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4733,4188,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,684 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4729,4138,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,732 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4726,4088,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,780 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4722,4038,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,828 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4719,3988,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,878 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4715,3938,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,932 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4712,3888,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:29,980 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4709,3838,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,030 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,3788,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,079 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,3738,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,127 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4706,3688,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,181 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4707,3638,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,244 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4719,3573,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,298 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4726,3523,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,345 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4725,3473,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,401 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4721,3423,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,447 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4714,3374,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,495 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: None entity :(6:pos:(4703,3325,806),dir:(100,0,0),spd:300 ]
+
+2023-03-26 14:04:30,524 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[6 event: Idle entity :(6:pos:(4713,3325,806),dir:(100,0,0),spd:0 ]
+
+2023-03-26 14:05:16,568 [ 1] INFO  Unity: Send Friend Add Request
+2023-03-26 14:07:16,042 [ 1] INFO  Unity: On Friend List Change
+2023-03-26 14:08:48,167 [ 1] INFO  Unity: Character_1_士001 OnDestroy :ID:6 POS:(4713, 3325, 806) DIR:(100, 0, 0) SPD:0 
+2023-03-26 14:08:48,167 [ 1] INFO  Unity: Character_2_User002Fashi OnDestroy :ID:7 POS:(3821, 2753, 805) DIR:(100, 0, 0) SPD:0 
+2023-03-26 14:08:48,172 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-03-26 14:08:48,172 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)

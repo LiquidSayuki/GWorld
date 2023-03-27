@@ -265,8 +265,10 @@ namespace Services
                     User.Instance.CurrentCharacter= response.Character;
                     ItemManager.Instance.Init(response.Character.Items);
                     BagManager.Instance.Init(response.Character.Bag);
+                    ShopManager.Instance.Init();
                     EquipManager.Instance.Init(response.Character.Equips);
                     QuestManager.Instance.Init(response.Character.Quests);
+                    FriendManager.Instance.Init(response.Character.Friends);
                 }
             }
         }

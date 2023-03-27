@@ -40,7 +40,7 @@
   },
   "1002": {
     "TID": 1002,
-    "Name": "-",
+    "Name": "1002号怪物",
     "Type": "Normal",
     "Class": "WIZARD",
     "Resource": "Monster/M1002",
@@ -49,10 +49,19 @@
   },
   "1003": {
     "TID": 1003,
-    "Name": "-",
+    "Name": "1003号怪物",
     "Type": "Normal",
     "Class": "ARCHER",
     "Resource": "Monster/M1003",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1005": {
+    "TID": 1005,
+    "Name": "1005号怪物",
+    "Type": "Normal",
+    "Class": "WARRIOR",
+    "Resource": "Monsetr/M1005",
     "InitLevel": 1,
     "Speed": 300
   }

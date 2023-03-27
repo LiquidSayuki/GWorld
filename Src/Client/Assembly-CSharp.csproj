@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EntityManager.cs" />
      <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\FriendManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ItemManager.cs" />
      <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
      <Compile Include="Assets\Scripts\Managers\NpcManager.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\Network\Login.cs" />
      <Compile Include="Assets\Scripts\Network\NetClient.cs" />
      <Compile Include="Assets\Scripts\Scene\SceneManager.cs" />
+     <Compile Include="Assets\Scripts\Services\FriendService.cs" />
      <Compile Include="Assets\Scripts\Services\ItemService.cs" />
      <Compile Include="Assets\Scripts\Services\MapService.cs" />
      <Compile Include="Assets\Scripts\Services\QuestService.cs" />
@@ -92,8 +94,13 @@
      <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
      <Compile Include="Assets\Scripts\UI\Equipment\UICharEquip.cs" />
      <Compile Include="Assets\Scripts\UI\Equipment\UIEquipItem.cs" />
+     <Compile Include="Assets\Scripts\UI\Friend\UIFriend.cs" />
+     <Compile Include="Assets\Scripts\UI\Friend\UIFriendItem.cs" />
      <Compile Include="Assets\Scripts\UI\ListView\ListView.cs" />
-     <Compile Include="Assets\Scripts\UI\MessageBox.cs" />
+     <Compile Include="Assets\Scripts\UI\Message\InputBox.cs" />
+     <Compile Include="Assets\Scripts\UI\Message\MessageBox.cs" />
+     <Compile Include="Assets\Scripts\UI\Message\UIInputBox.cs" />
+     <Compile Include="Assets\Scripts\UI\Message\UIMessageBox.cs" />
      <Compile Include="Assets\Scripts\UI\Minimap\UIMinimap.cs" />
      <Compile Include="Assets\Scripts\UI\Monster\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\UI\Quest\UIQuestDialog.cs" />
@@ -112,7 +119,6 @@
      <Compile Include="Assets\Scripts\UI\UILogin.cs" />
      <Compile Include="Assets\Scripts\UI\UIMain.cs" />
      <Compile Include="Assets\Scripts\UI\UIManager.cs" />
-     <Compile Include="Assets\Scripts\UI\UIMessageBox.cs" />
      <Compile Include="Assets\Scripts\UI\UINameBar.cs" />
      <Compile Include="Assets\Scripts\UI\UIRegister.cs" />
      <Compile Include="Assets\Scripts\UI\UIWindow.cs" />

@@ -90,16 +90,16 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
             // 缓动跟随
             // 会抖动
-            float xVelocity = 0;
+/*            float xVelocity = 0;
             float yVelocity = 0;
             float zVelocity = 0;
             float newPositionX = Mathf.SmoothDamp(transform.position.x, to.x, ref xVelocity, 0.01f);
             float newPositionY = Mathf.SmoothDamp(transform.position.y, to.y, ref yVelocity, 0.01f);
             float newPositionZ = Mathf.SmoothDamp(transform.position.z, to.z, ref zVelocity, 0.01f);
-            transform.position = new Vector3(newPositionX, newPositionY, newPositionZ);
+            transform.position = new Vector3(newPositionX, newPositionY, newPositionZ);*/
 
             // 无缓动请注释上方缓动模式
-            //transform.position = to;
+            transform.position = to;
             transform.LookAt(from);
         }
     }

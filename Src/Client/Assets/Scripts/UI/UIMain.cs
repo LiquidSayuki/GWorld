@@ -24,7 +24,7 @@ public class UIMain : MonoSingleton<UIMain>
         this.avatarLevel.text = User.Instance.CurrentCharacter.Level.ToString();
     }
 
-    public void BackToCharSelect()
+    public void OnClickCharSelect()
     {
         SceneManager.Instance.LoadScene("CharSelect");
         Services.UserService.Instance.SendGameLeave();
@@ -35,7 +35,7 @@ public class UIMain : MonoSingleton<UIMain>
         UIManager.Instance.Show<UIBag>();
     }
 
-    public void OnCLickEquipment()
+    public void OnClickEquipment()
     {
         UIManager.Instance.Show<UICharEquip>();
     }
@@ -43,5 +43,10 @@ public class UIMain : MonoSingleton<UIMain>
     public void OnClickQuest()
     {
         UIManager.Instance.Show<UIQuestSystem>();
+    }
+
+    public void OnClickFriend()
+    {
+        UIManager.Instance.Show<UIFriend>();
     }
 }

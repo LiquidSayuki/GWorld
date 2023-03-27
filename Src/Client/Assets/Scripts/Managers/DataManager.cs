@@ -70,27 +70,27 @@ namespace Assets.Scripts.Managers
         {
             string json = File.ReadAllText(this.DataPath + "MapDefine.txt");
             this.Maps = JsonConvert.DeserializeObject<Dictionary<int, MapDefine>>(json);
-            Debug.LogFormat("MapLOAD");
+            //Debug.LogFormat("MapLOAD");
             yield return null;
 
             json = File.ReadAllText(this.DataPath + "CharacterDefine.txt");
             this.Characters = JsonConvert.DeserializeObject<Dictionary<int, CharacterDefine>>(json);
-            Debug.LogFormat("CharacterLOAD");
+            //Debug.LogFormat("CharacterLOAD");
             yield return null;
 
             json = File.ReadAllText(this.DataPath + "TeleporterDefine.txt");
             this.Teleporters = JsonConvert.DeserializeObject<Dictionary<int, TeleporterDefine>>(json);
-            Debug.LogFormat("TeleporterLOAD");
+            //Debug.LogFormat("TeleporterLOAD");
             yield return null;
 
             json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
             this.Npcs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
-            Debug.LogFormat("NPCLOAD");
+            //Debug.LogFormat("NPCLOAD");
             yield return null;
 
             json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
             this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
-            Debug.LogFormat("ITEMLOAD");
+            //Debug.LogFormat("ITEMLOAD");
             json = File.ReadAllText(this.DataPath + "EquipDefine.txt");
             this.Equipments = JsonConvert.DeserializeObject<Dictionary<int, EquipDefine>>(json);
             yield return null;
@@ -103,7 +103,7 @@ namespace Assets.Scripts.Managers
 
             json = File.ReadAllText(this.DataPath + "SpawnPointDefine.txt");
             this.SpawnPoints = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SpawnPointDefine>>>(json);
-            Debug.LogFormat("SPAWNLOAD");
+            //Debug.LogFormat("SPAWNLOAD");
 
             yield return null;
 

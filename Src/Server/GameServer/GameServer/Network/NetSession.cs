@@ -16,16 +16,18 @@ namespace Network
         public TUser User { get; set; }
         public Character Character { get; set; }
         public NEntity Entity { get; set; }
+        public IPostResponser PostResponser { get; set; }
 
-        internal void Disconnected()
+        public void Disconnected()
         {
+            this.PostResponser = null;
             if (this.Character != null)
-            {
                 UserService.Instance.CharacterLeave(this.Character);
-            }
         }
 
+
         NetMessage response;
+
         public NetMessageResponse Response
         {
             get
@@ -35,9 +37,7 @@ namespace Network
                     response = new NetMessage();
                 }
                 if (response.Response == null)
-                {
                     response.Response = new NetMessageResponse();
-                }
                 return response.Response;
             }
         }
@@ -46,14 +46,21 @@ namespace Network
         {
             if (response != null)
             {
-                if (this.Character != null && this.Character.StatusManager.HasStatus)
+                if (PostResponser != null)
                 {
-                    // 从状态管理器得到所有待发送的状态
-                    this.Character.StatusManager.ApplyResponse(Response);
+                    this.PostResponser.PostProcess(Response);
                 }
-                //在发送消息时调用
+
+               
+/*             Legacy Code
+*              if (this.Character != null && this.Character.StatusManager.HasStatus)
+*              {
+*                   从状态管理器得到所有待发送的状态
+*                   this.Character.StatusManager.ApplyResponse(Response);
+*              }
+*/
+
                 byte[] data = PackageHandler.PackMessage(response);
-                // 打包发送过response后，清空旧response
                 response = null;
                 return data;
             }

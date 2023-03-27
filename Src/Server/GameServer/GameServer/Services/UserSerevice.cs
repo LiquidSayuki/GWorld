@@ -70,7 +70,7 @@ namespace GameServer.Services
                 {
                     NCharacterInfo info = new NCharacterInfo();
                     info.Id = c.ID;
-                    info.Tid = c.ID;
+                    info.ConfigId = c.ID;
                     info.Name = c.Name;
                     info.Class = (CharacterClass)c.Class;
                     info.Type = CharacterType.Player;
@@ -122,6 +122,7 @@ namespace GameServer.Services
                 Name = request.Name,
                 Class = (int)request.Class,
                 TID = (int)request.Class,
+                Level = 1,
                 MapID = 1,
                 MapPosX = 5000,
                 MapPosY = 4000,
@@ -168,8 +169,8 @@ namespace GameServer.Services
             foreach(var c in sender.Session.User.Player.Characters)
             {
                 NCharacterInfo info = new NCharacterInfo();
-                info.Id = 0;
-                info.Tid = c.ID;
+                info.Id = c.ID;
+                info.ConfigId = c.TID;
                 info.Name = c.Name;
                 info.Class = (CharacterClass)c.Class;
                 info.Type = CharacterType.Player;
@@ -188,6 +189,8 @@ namespace GameServer.Services
             Log.InfoFormat("UserGameEnterRequest: characterID:{0}:{1} Map:{2}", dbchar.ID, dbchar.Name, dbchar.MapID);
             //在角色管理器中添加角色
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
+            //记录此角色的Session
+            SessionManager.Instance.AddSession(character.Id, sender);
 
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
             sender.Session.Response.gameEnter.Result = Result.Success;
@@ -195,23 +198,9 @@ namespace GameServer.Services
             // 进入游戏成功，发送初始角色信息
             sender.Session.Response.gameEnter.Character = character.Info;
 
-            //测试道具系统，发放道具给角色
-            /* 
-             * int itemId = 1;
-             bool hasItem = character.ItemManager.HasItem(itemId);
-             Log.InfoFormat("HasItem: [{0}] [{1}] ", itemId, hasItem);
-             if(!hasItem)
-             {
-                 character.ItemManager.AddItem(1, 100);
-                 character.ItemManager.AddItem(2, 200);
-                 character.ItemManager.AddItem(3, 30);
-                 character.ItemManager.AddItem(4, 120);
-             }
-             DBService.Instance.Save();
-            */
-
             sender.SendResponse();
             sender.Session.Character = character;
+            sender.Session.PostResponser = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
@@ -219,6 +208,8 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             Log.InfoFormat("UserService -- GameLeave:[{0},CharacterID{1}:{2},Map{3}]", sender.Session.User.Username, character.Id, character.Info.Name, character.Info.mapId);
+            //移除此角色的Session
+            SessionManager.Instance.RemoveSession(character.Id);
             CharacterLeave(character);
 
             sender.Session.Response.gameLeave = new UserGameLeaveResponse();
@@ -241,6 +232,8 @@ namespace GameServer.Services
             CharacterManager.Instance.RemoveCharacter(character.Id);
             //让地图移除角色
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            //角色对象自己清理自己
+            character.Clear();
         }
     }
 }

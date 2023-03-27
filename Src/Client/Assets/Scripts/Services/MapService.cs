@@ -47,7 +47,7 @@ namespace Services
             {
                 // 判断地图内角色列表中，归属玩家所控制的角色
                 // 玩家首次进入地图没有EntityID，所以为如果玩家空也应当注册当前角色给玩家
-                if (User.Instance.CurrentCharacter == null || User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -64,11 +64,11 @@ namespace Services
 
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("MapService: OnMapCharacterLeave: charID:{0}", response.characterId);
+            Debug.LogFormat("MapService: OnMapCharacterLeave: charID:{0}", response.entityId);
             // 销毁离开的玩家，如果离开游戏的是自身，销毁所有玩家
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
             {
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
             }
             else
             {

@@ -26,6 +26,7 @@ namespace Managers
             this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/UICharEquip", Cache = false });
             this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/UIQuest", Cache = false });
             this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/UIDialog", Cache = false });
+            this.UIResources.Add(typeof(UIFriend), new UIElement() { Resources = "UI/UIFriend", Cache = true });
         }
 
         ~UIManager()
