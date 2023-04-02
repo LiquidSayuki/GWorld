@@ -139,4 +139,14 @@ class Time
         _time = (_ticks - startupTicks) / 10000000f;
         lastTick = _ticks;
     }
+
+    public static int timestamp
+    {
+        get { return GetTimestamp(DateTime.Now); }
+    }
+    private static int GetTimestamp(System.DateTime time)
+    {
+        System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970,1,1));
+        return(int)(time - startTime).TotalSeconds;
+    }
 }

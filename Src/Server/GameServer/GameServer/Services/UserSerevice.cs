@@ -207,7 +207,7 @@ namespace GameServer.Services
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("UserService -- GameLeave:[{0},CharacterID{1}:{2},Map{3}]", sender.Session.User.Username, character.Id, character.Info.Name, character.Info.mapId);
+            // Log.InfoFormat("UserService -- GameLeave:[{0},CharacterID{1}:{2},Map{3}]", sender.Session.User.Username, character.Id, character.Info.Name, character.Info.mapId);
             //移除此角色的Session
             SessionManager.Instance.RemoveSession(character.Id);
             CharacterLeave(character);
@@ -228,12 +228,14 @@ namespace GameServer.Services
 
         public void CharacterLeave(Character character)
         {
+            Log.InfoFormat("Character Leave: [{0}-{1}]", character.Id, character.Info.Name);
             // 调用角色管理器，移除角色
             CharacterManager.Instance.RemoveCharacter(character.Id);
-            //让地图移除角色
-            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
             //角色对象自己清理自己
             character.Clear();
+
+            //让地图移除角色，会发送一包消息
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
 }

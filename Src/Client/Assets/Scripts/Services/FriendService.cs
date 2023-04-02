@@ -52,6 +52,7 @@ namespace Services
             message.Request.friendAddReq.ToId = friendId;
             message.Request.friendAddReq.ToName = friendName;
             NetClient.Instance.SendMessage(message);
+
         }
         // 收到他人回复
         private void OnFriendAddResponse(object sender, FriendAddResponse message)

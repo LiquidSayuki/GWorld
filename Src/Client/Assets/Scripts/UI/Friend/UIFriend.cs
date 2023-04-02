@@ -76,6 +76,23 @@ public class UIFriend : UIWindow {
 		{
 			FriendService.Instance.SendFriendRemoveRequest(this.selectedItem.Info.Id, this.selectedItem.Info.friendInfo.Id);
 		};
+	}
+
+	public void OnClickFriendTeamInvite()
+	{
+		if (selectedItem == null)
+		{
+			MessageBox.Show("您还没有选择要邀请的好友");
+			return;
+		}
+		if (selectedItem.Info.Status == 0)
+		{
+			MessageBox.Show("您的好友未在线");
+			return;
+		}
+		MessageBox.Show(string.Format("确定要邀请[{0}]加入你的队伍吗?", selectedItem.Info.friendInfo.Name), "邀请好友组队", MessageBoxType.Confirm, "确定" ,"取消").OnYes = () => {
+			TeamService.Instance.SendTeamInviteRequest(this.selectedItem.Info.friendInfo.Id, this.selectedItem.Info.friendInfo.Name);
+		};
 
 	}
 

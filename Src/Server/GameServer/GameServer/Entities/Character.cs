@@ -1,10 +1,13 @@
-﻿using Common.Data;
+﻿using Common;
+using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
+using GameServer.Models;
 using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,13 +27,15 @@ namespace GameServer.Entities
         public QuestManager QuestManager;
         public FriendManager FriendManager;
 
+        public Team team;
+        public int TeamUpdateTS; //时间戳
 
         public Character(CharacterType type, TCharacter cha) :
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
 
             this.Data = cha;
-            // cha 数据库character
+            // cha 数据库 character
             // ID 是唯一的DB ID
             this.Id = cha.ID;
 
@@ -51,8 +56,6 @@ namespace GameServer.Entities
 
 
             this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
-
-
 
             this.ItemManager = new ItemManager(this);
             this.ItemManager.GetItemInfos(this.Info.Items);
@@ -80,12 +83,27 @@ namespace GameServer.Entities
         }
 
         /// <summary>
-        /// 对角色状态的更新
+        /// 对角色状态的更新,唤醒一些管理器，要求他们把最新信息附带在message中等待发送
         /// </summary>
         /// <param name="message"></param>
         public void PostProcess(NetMessageResponse message)
         {
+            //Friend
             this.FriendManager.PostProcess(message);
+
+            //Team
+            if(this.team != null)
+            {
+                // 通过时间戳判断队伍信息是否相比之前有更新过
+                Log.InfoFormat("CharacterTS [{0}] teamTS[{1}] Result:[{2}]", TeamUpdateTS, team.timestamp, TeamUpdateTS < team.timestamp);
+                if (TeamUpdateTS < this.team.timestamp)
+                {         
+                    TeamUpdateTS = team.timestamp;
+                    this.team.PostProcess(message);
+                }
+            }
+
+            //Status
             if (this.StatusManager.HasStatus)
             {
                 this.StatusManager.PostProcess(message);
@@ -95,7 +113,22 @@ namespace GameServer.Entities
         // 角色离开时
         public void Clear()
         {
-            this.FriendManager.UpdateFriendInfo(this.Info, 0);
+            this.FriendManager.OfflineNotify();
+        }
+
+        /// <summary>
+        /// 复制一份自身的基本信息出去
+        /// </summary>
+        /// <returns>角色的简略信息</returns>
+        public NCharacterInfo GetBasicInfo()
+        {
+            return new NCharacterInfo
+            {
+                Id = this.Id,
+                Name = this.Info.Name,
+                Class = this.Info.Class,
+                Level = this.Info.Level,
+            };
         }
     }
 }

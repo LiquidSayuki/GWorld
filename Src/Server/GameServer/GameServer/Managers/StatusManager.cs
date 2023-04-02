@@ -1,4 +1,5 @@
-﻿using GameServer.Entities;
+﻿using Common;
+using GameServer.Entities;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,7 @@ namespace GameServer.Managers
 
         public void PostProcess(NetMessageResponse message)
         {
+            Log.Info("StatusManager PostProcess");
             if (message.statusNotify == null)
                 message.statusNotify = new StatusNotify();
             foreach(var status in this.Status)

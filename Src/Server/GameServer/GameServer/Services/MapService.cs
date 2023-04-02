@@ -47,15 +47,9 @@ namespace GameServer.Services
 
         public void SendEntityUpdate(NetConnection<NetSession> conn, NEntitySync entity)
         {
-            
-            NetMessage message = new NetMessage();
-            message.Response = new NetMessageResponse();
-
-            message.Response.mapEntitySync = new MapEntitySyncResponse();
-            message.Response.mapEntitySync.entitySyncs.Add(entity);
-
-            byte[] data = PackageHandler.PackMessage(message);
-            conn.SendData(data, 0, data.Length);
+            conn.Session.Response.mapEntitySync = new MapEntitySyncResponse() ;
+            conn.Session.Response.mapEntitySync.entitySyncs.Add(entity);
+            conn.SendResponse();
 
             // Log.InfoFormat("同步发出 Session信息 :  CharacterID : {0}, UserID: {1}", conn.Session.Character.Id, conn.Session.User.ID);
             // Log.InfoFormat("同步发出 Entity信息: Entity: ID : {0} - {1}", entity.Id, entity.Entity.Id);

@@ -137,6 +137,8 @@ namespace GameServer.Models
 
         void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
+            Log.InfoFormat("Map.Send Character Leave Map: Map[{0}], character[{1}], to [{2}]",this.Define.ID, character.Id, conn.Session.Character.Id);
+
             conn.Session.Response.mapCharacterLeave= new MapCharacterLeaveResponse();
             conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
             conn.SendResponse();

@@ -31,6 +31,7 @@ namespace GameServer
             UserService.Instance.Init();
             ItemService.Instance.Init();
             FriendService.Instance.Init();
+            TeamService.Instance.Init();
 
             //初始化manager
             DataManager.Instance.Load();

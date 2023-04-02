@@ -1,4 +1,5 @@
-﻿using GameServer.Entities;
+﻿using Common;
+using GameServer.Entities;
 using GameServer.Services;
 using SkillBridge.Message;
 using System;
@@ -55,13 +56,20 @@ namespace GameServer.Managers
             }
             else
             {//在线
-                friendInfo.friendInfo = GetBasicInfo(character.Info);
+                friendInfo.friendInfo = character.GetBasicInfo();
                 friendInfo.friendInfo.Name = character.Info.Name;
                 friendInfo.friendInfo.Class = character.Info.Class;
                 friendInfo.friendInfo.Level = character.Info.Level;
+
+                if(friend.Level != character.Info.Level)
+                {
+                    friend.Level = character.Info.Level;
+                }
+
                 character.FriendManager.UpdateFriendInfo(this.Owner.Info, 1);
                 friendInfo.Status = 1;
             }
+           // Log.InfoFormat("Get Friend Info: Player:[{0}{1}]", this.Owner.Id, this.Owner.Info.Name);
             return friendInfo;
         }
 
@@ -90,7 +98,7 @@ namespace GameServer.Managers
             }
         }
 
-
+        // 添加/移除好友
         internal void AddFriend(Character friend)
         {
             TCharacterFriend tf = new TCharacterFriend()
@@ -103,7 +111,6 @@ namespace GameServer.Managers
             this.Owner.Data.Friends.Add(tf);
             friendChanged = true;
         }
-
         internal bool RemoveFriendByID(int id)
         {
             var removeItem = this.Owner.Data.Friends.FirstOrDefault(v => v.Id == id);
@@ -114,7 +121,6 @@ namespace GameServer.Managers
             friendChanged = true;
             return true;
         }
-
         internal bool RemoveFriendByFriendID(int friendId)
         {
             var removeItem = this.Owner.Data.Friends.FirstOrDefault(v => v.FriendID == friendId);
@@ -143,6 +149,21 @@ namespace GameServer.Managers
             }
             this.friendChanged = true;
         }
+        /// <summary>
+        /// 显式的向他人通知自己的在线离线状态
+        /// </summary>
+        public void OfflineNotify()
+        {
+            foreach(var friendInfo in this.friends)
+            {
+                //寻找自己所有好友，如果好友在线，更新对方的好友管理器的，自己的在线信息
+                var friend = CharacterManager.Instance.GetCharacter(friendInfo.friendInfo.Id);
+                if(friend != null)
+                {
+                    friend.FriendManager.UpdateFriendInfo(this.Owner.Info, 0);
+                }
+            }
+        }
 
         /// <summary>
         /// 将最新的好友信息添加到当前Session的Response中，等待发送
@@ -161,18 +182,5 @@ namespace GameServer.Managers
                 friendChanged = false;
             }
         }
-
-        private NCharacterInfo GetBasicInfo(NCharacterInfo info)
-        {
-            return new NCharacterInfo()
-            {
-                Id = info.Id,
-                Name = info.Name,
-                Level = info.Level,
-                Class = info.Class,
-            };
-        }
     }
-
-
 }
