@@ -1,191 +1,132 @@
-2023-03-30 22:29:32,087 [ 1] INFO  Unity: LoadingManager start
-2023-03-30 22:29:35,647 [ 1] INFO  Unity: DataManager > DataManager()
-2023-03-30 22:29:40,678 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
-2023-03-30 22:29:40,684 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-03-30 22:29:40,694 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:29:40,695 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:29:40,701 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-04-17 16:43:02,229 [ 1] INFO  Unity: LoadingManager start
+2023-04-17 16:43:05,247 [ 1] INFO  Unity: DataManager > DataManager()
+2023-04-17 16:43:32,305 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-04-17 16:43:32,305 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-04-17 16:43:32,308 [ 1] INFO  Unity: DoConnect
+2023-04-17 16:43:32,309 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-04-17 16:43:32,312 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-03-30 22:29:40,716 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-30 22:29:41,271 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-03-30 22:29:41,276 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-03-30 22:29:41,455 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:29:46,395 [ 1] INFO  Unity: Select Char:[1]士001[Warrior]
-2023-03-30 22:29:46,910 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-03-30 22:29:47,011 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-03-30 22:29:47,018 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
-2023-03-30 22:29:47,019 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
-2023-03-30 22:29:47,025 [ 1] INFO  Unity: BagInit: System.Byte[]
-2023-03-30 22:29:47,071 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-30 22:29:47,078 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:士001MapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:29:47,091 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-03-30 22:29:47,517 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-04-17 16:43:32,315 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-04-17 16:43:32,417 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-04-17 16:43:32,419 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-04-17 16:43:32,624 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:43:33,195 [ 1] INFO  Unity: Select Char:[1]213123[Wizard]
+2023-04-17 16:43:33,727 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-04-17 16:43:33,748 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-04-17 16:43:33,749 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-04-17 16:43:33,750 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-04-17 16:43:33,752 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-04-17 16:43:33,759 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:2
+2023-04-17 16:43:33,761 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:sadasdasdsadasdMapID:1 Entity:(10:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-04-17 16:43:33,764 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:213123MapID:1 Entity:(11:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-04-17 16:43:33,765 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-04-17 16:43:34,204 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-03-30 22:29:47,593 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+2023-04-17 16:43:34,300 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-03-30 22:29:47,595 [ 1] WARN  Unity: [MainPlayerCamera][-1414508] Awake
+2023-04-17 16:43:34,302 [ 1] WARN  Unity: [MainPlayerCamera][-1945038] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:29:47,882 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
-You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:38)
+2023-04-17 16:43:34,302 [ 1] WARN  Unity: [GameObjectManager][-1944990] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-04-17 16:43:34,303 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-04-17 16:43:34,304 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-04-17 16:43:34,305 [ 1] INFO  Unity: CreatCharacterObject ,ID:10,Name:sadasdasdsadasd
+2023-04-17 16:43:34,306 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
+2023-04-17 16:43:34,312 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-04-17 16:43:34,319 [ 1] WARN  Unity: [UIMain][278000] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-04-17 16:43:34,321 [ 1] WARN  Unity: [UIWorldElementManager][278950] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+
+2023-04-17 16:43:34,366 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:43:34,380 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, MainPlayerCamera.LateUpdate () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:89)
 }</args></log4net.Error>
-2023-03-30 22:29:47,942 [ 1] WARN  Unity: [GameObjectManager][-1414460] Awake
-UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+2023-04-17 16:43:34,448 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 16:43:34,468 [ 1] INFO  Unity: CreatCharacterObject ,ID:11,Name:213123
+2023-04-17 16:43:34,469 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
+2023-04-17 16:43:34,482 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
+2023-04-17 16:43:37,181 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: MoveFwd entity :(10:pos:(5000,4000,820),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:47,943 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
-2023-03-30 22:29:47,945 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
-2023-03-30 22:29:47,953 [ 1] INFO  Unity: CreatCharacterObject ,ID:1,Name:士001
-2023-03-30 22:29:47,954 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
-2023-03-30 22:29:47,959 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
-2023-03-30 22:29:47,961 [ 1] WARN  Unity: [UIMain][236532] Awake
-UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+2023-04-17 16:43:37,241 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5030,4058,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:47,961 [ 1] WARN  Unity: [UIWorldElementManager][237416] Awake
-UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
+2023-04-17 16:43:37,305 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5050,4121,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:47,998 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:29:48,186 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-30 22:29:48,187 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:User002FashiMapID:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:29:48,188 [ 1] INFO  Unity: CreatCharacterObject ,ID:2,Name:User002Fashi
-2023-03-30 22:29:48,189 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
-2023-03-30 22:29:48,205 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
-2023-03-30 22:29:48,205 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:29:48,461 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,900),dir:(100,0,0),spd:0 ]
+2023-04-17 16:43:37,374 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5098,4168,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:48,486 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,972),dir:(100,0,0),spd:0 ]
+2023-04-17 16:43:37,444 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5150,4210,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:48,959 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveFwd entity :(2:pos:(5000,4000,972),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:37,505 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5204,4249,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:48,994 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5007,3965,1008),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:37,576 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5259,4287,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,034 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5004,3915,993),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:37,618 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: Idle entity :(10:pos:(5274,4287,806),dir:(100,0,0),spd:0 ]
 
-2023-03-30 22:29:49,082 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5006,3865,975),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:51,939 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: MoveBack entity :(10:pos:(5274,4287,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,130 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5008,3815,955),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:51,967 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5298,4337,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,184 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5011,3765,932),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:52,028 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5321,4400,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,232 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5013,3715,907),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:52,042 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: Idle entity :(10:pos:(5326,4400,806),dir:(100,0,0),spd:0 ]
 
-2023-03-30 22:29:49,253 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(5018,3715,907),dir:(100,0,0),spd:0 ]
+2023-04-17 16:43:52,357 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: MoveFwd entity :(10:pos:(5326,4400,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,556 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5013,3715,855),dir:(100,0,0),spd:0 ]
+2023-04-17 16:43:52,398 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5274,4417,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:49,686 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5013,3715,804),dir:(100,0,0),spd:0 ]
+2023-04-17 16:43:52,447 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5227,4435,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:29:52,727 [ 1] INFO  Unity: Send Team Invite REQUEST
-2023-03-30 22:29:53,582 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:29:53,585 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:30:26,963 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveFwd entity :(2:pos:(5013,3715,804),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:52,502 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5180,4451,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,004 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5019,3665,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:52,551 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5133,4468,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,060 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5024,3615,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:43:52,592 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: Idle entity :(10:pos:(5148,4468,806),dir:(100,0,0),spd:0 ]
 
-2023-03-30 22:30:27,122 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(5044,3615,805),dir:(100,0,0),spd:0 ]
+2023-04-17 16:44:54,620 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: MoveBack entity :(10:pos:(5148,4468,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,135 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5030,3566,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:44:54,711 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5175,4411,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,149 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveFwd entity :(2:pos:(5030,3566,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:44:54,772 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5224,4366,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,176 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5024,3615,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:44:54,839 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: None entity :(10:pos:(5273,4320,806),dir:(100,0,0),spd:300 ]
 
-2023-03-30 22:30:27,231 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5019,3665,805),dir:(100,0,0),spd:300 ]
+2023-04-17 16:44:54,889 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
+[10 event: Idle entity :(10:pos:(5288,4320,806),dir:(100,0,0),spd:0 ]
 
-2023-03-30 22:30:27,279 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5014,3715,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:27,306 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(5024,3715,805),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:30:36,722 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveFwd entity :(2:pos:(5024,3715,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:36,765 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4980,3693,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:36,812 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4948,3655,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:36,860 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4919,3614,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:36,908 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4903,3567,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:36,997 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4961,3521,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,086 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5043,3513,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,168 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5117,3549,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,230 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5163,3598,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,298 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5205,3649,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,366 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5248,3701,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,428 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5281,3758,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,497 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5299,3823,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,545 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5258,3851,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,599 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5214,3875,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,647 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5182,3913,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,695 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5165,3960,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,750 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5157,4009,805),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:30:37,792 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(5172,4009,805),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:32:25,053 [ 1] INFO  Unity: Character_1_士001 OnDestroy :ID:1 POS:(4920, 3782, 806) DIR:(100, 0, 0) SPD:0 
-2023-03-30 22:32:25,053 [ 1] INFO  Unity: Character_2_User002Fashi OnDestroy :ID:2 POS:(5172, 4009, 805) DIR:(100, 0, 0) SPD:0 
-2023-03-30 22:32:25,054 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-03-30 22:32:25,054 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-04-17 16:57:21,171 [ 1] INFO  Unity: Character_2_sadasdasdsadasd OnDestroy :ID:10 POS:(5288, 4320, 806) DIR:(100, 0, 0) SPD:0 
+2023-04-17 16:57:21,172 [ 1] INFO  Unity: Character_1_213123 OnDestroy :ID:11 POS:(5037, 3197, 805) DIR:(100, 0, 0) SPD:0 
+2023-04-17 16:57:21,174 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-04-17 16:57:21,174 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:173)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:168)
 

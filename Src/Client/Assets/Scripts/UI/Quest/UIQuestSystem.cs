@@ -1,13 +1,9 @@
 ﻿using Assets.Scripts.Managers;
-using Assets.Scripts.Models;
-using Common.Data;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIQuestSystem :UIWindow {
+public class UIQuestSystem : UIWindow
+{
     public Text title;
 
     public GameObject questItemPrefab;
@@ -62,10 +58,10 @@ public class UIQuestSystem :UIWindow {
 
                 this.QuestList.AddItem(ui);
 
-/*                if (kv.Value.Define.Type == QuestType.Main)
-                    this.listMain.AddItem(ui as ListView.ListViewItem);
-                else
-                    this.listBranch.AddItem(ui as ListView.ListViewItem);*/
+                /*                if (kv.Value.Define.Type == QuestType.Main)
+                                    this.listMain.AddItem(ui as ListView.ListViewItem);
+                                else
+                                    this.listBranch.AddItem(ui as ListView.ListViewItem);*/
 
             }
             else
@@ -78,10 +74,10 @@ public class UIQuestSystem :UIWindow {
 
                 this.QuestList.AddItem(ui);
 
-/*                if (kv.Value.Define.Type == QuestType.Main)
-                    this.listMain.AddItem(ui as ListView.ListViewItem);
-                else
-                    this.listBranch.AddItem(ui as ListView.ListViewItem);*/
+                /*                if (kv.Value.Define.Type == QuestType.Main)
+                                    this.listMain.AddItem(ui as ListView.ListViewItem);
+                                else
+                                    this.listBranch.AddItem(ui as ListView.ListViewItem);*/
 
             }
         }

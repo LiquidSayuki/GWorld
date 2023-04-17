@@ -1,100 +1,101 @@
-﻿using Common.Data;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Assets.Scripts.Managers;
-using System.Security.AccessControl;
+﻿using Assets.Scripts.Managers;
+using Common.Data;
 using Models;
+using System.Collections;
+using UnityEngine;
 
-public class NpcController : MonoBehaviour {
+public class NpcController : MonoBehaviour
+{
 
-	public int ID;
-	Animator animator;
-	SkinnedMeshRenderer renderer;
-	Color originColor;
+    public int ID;
+    Animator animator;
+    SkinnedMeshRenderer renderer;
+    Color originColor;
 
-	private bool inInteractive = false;
+    private bool inInteractive = false;
 
-	NpcDefine npc;
+    NpcDefine npc;
 
-	NpcQuestStatus questStatus;
+    NpcQuestStatus questStatus;
 
-    void Start () {
-		renderer = this.gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-		animator = this.gameObject.GetComponentInChildren<Animator>();
-		originColor = renderer.sharedMaterial.color;
-		npc = NpcManager.Instance.GetNpcDefine(ID);
-		this.StartCoroutine(Actions());
+    void Start()
+    {
+        renderer = this.gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
+        animator = this.gameObject.GetComponentInChildren<Animator>();
+        originColor = renderer.sharedMaterial.color;
+        npc = NpcManager.Instance.GetNpcDefine(ID);
+        this.StartCoroutine(Actions());
 
-		//questStatus
-		RefreshNpcStatus();
-		QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
-	}
+        //questStatus
+        RefreshNpcStatus();
+        QuestManager.Instance.onQuestStatusChanged += OnQuestStatusChanged;
+    }
     #region Add status UI display
-    void OnQuestStatusChanged(Quest quest) {
-		this.RefreshNpcStatus();
-	}
-	void RefreshNpcStatus()
-	{
-		questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.ID);
-		UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
-	}
+    void OnQuestStatusChanged(Quest quest)
+    {
+        this.RefreshNpcStatus();
+    }
+    void RefreshNpcStatus()
+    {
+        questStatus = QuestManager.Instance.GetQuestStatusByNpc(this.ID);
+        UIWorldElementManager.Instance.AddNpcQuestStatus(this.transform, questStatus);
+    }
 
-	void OnDestroy()
-	{
-		QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
-		if (UIWorldElementManager.Instance != null)
-		{
-			UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
-		}
-	}
+    void OnDestroy()
+    {
+        QuestManager.Instance.onQuestStatusChanged -= OnQuestStatusChanged;
+        if (UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveNpcQuestStatus(this.transform);
+        }
+    }
     #endregion
 
     IEnumerator Actions()
-	{
-		while (true)
-		{
-			if (inInteractive)
-			{
-				yield return new WaitForSeconds(2);
-			}
-			else
-			{
-				yield return new WaitForSeconds(Random.Range(5f,10f));
-			}
-			this.Relax();
-		}
-	}
+    {
+        while (true)
+        {
+            if (inInteractive)
+            {
+                yield return new WaitForSeconds(2);
+            }
+            else
+            {
+                yield return new WaitForSeconds(Random.Range(5f, 10f));
+            }
+            this.Relax();
+        }
+    }
 
     private void Relax()
     {
-		animator.SetTrigger("Relax");
+        animator.SetTrigger("Relax");
     }
 
     void OnMouseDown()
-	{
-		Interactive();
-	}
+    {
+        Interactive();
+    }
 
-	private void Interactive()
-	{
-		if(! inInteractive)
-		{
-			inInteractive= true;
-			StartCoroutine(DoInteractive());
-		}
-	}
+    private void Interactive()
+    {
+        if (!inInteractive)
+        {
+            inInteractive = true;
+            StartCoroutine(DoInteractive());
+        }
+    }
 
-	IEnumerator DoInteractive()
-	{
-		yield return FaceToPlayer();
-		if (NpcManager.Instance.Interactive(npc))
-		{
-			animator.SetTrigger("Talk");
-		}
-		yield return new WaitForSeconds(3);
-		inInteractive = false;
-	}
+    IEnumerator DoInteractive()
+    {
+        yield return FaceToPlayer();
+        if (NpcManager.Instance.Interactive(npc))
+        {
+            animator.SetTrigger("Talk");
+        }
+        yield return new WaitForSeconds(3);
+        inInteractive = false;
+    }
 
     IEnumerator FaceToPlayer()
     {
@@ -120,18 +121,18 @@ public class NpcController : MonoBehaviour {
     }
 
     private void Highlight(bool highlight)
-	{
-		if (highlight)
-		{
-			if (renderer.sharedMaterial.color != Color.white)
-				renderer.sharedMaterial.color = Color.white;
-		}
-		else
-		{
+    {
+        if (highlight)
+        {
+            if (renderer.sharedMaterial.color != Color.white)
+                renderer.sharedMaterial.color = Color.white;
+        }
+        else
+        {
             if (renderer.sharedMaterial.color != originColor)
                 renderer.sharedMaterial.color = originColor;
         }
-	}
+    }
 
 
 }

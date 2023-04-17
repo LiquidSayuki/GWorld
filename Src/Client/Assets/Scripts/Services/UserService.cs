@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Assets.Scripts.Managers;
 using Common;
-using Network;
-using UnityEngine;
 using Models;
+using Network;
 using SkillBridge.Message;
-using Assets.Scripts.Managers;
+using System;
+using UnityEngine;
 
 namespace Services
 {
@@ -22,6 +19,8 @@ namespace Services
 
         bool connected = false;
 
+        bool isQuitGame = false;
+
         public UserService()
         {
             NetClient.Instance.OnConnect += OnGameServerConnect;
@@ -33,9 +32,9 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
 
-           // 已经交给Mapservice
-           // MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
-           //MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnCharacterLeave);
+            // 已经交给Mapservice
+            // MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnCharacterLeave);
 
         }
 
@@ -71,14 +70,14 @@ namespace Services
             NetClient.Instance.Connect();
         }
 
-        
+
         void OnGameServerConnect(int result, string reason)
         {
             Log.InfoFormat("LoadingMesager::OnGameServerConnect :{0} reason:{1}", result, reason);
             if (NetClient.Instance.Connected)
             {
                 this.connected = true;
-                if(this.pendingMessage!=null)
+                if (this.pendingMessage != null)
                 {
                     NetClient.Instance.SendMessage(this.pendingMessage);
                     this.pendingMessage = null;
@@ -99,18 +98,18 @@ namespace Services
             return;
         }
 
-        bool DisconnectNotify(int result,string reason)
+        bool DisconnectNotify(int result, string reason)
         {
             if (this.pendingMessage != null)
             {
-                if (this.pendingMessage.Request.userLogin!=null)
+                if (this.pendingMessage.Request.userLogin != null)
                 {
                     if (this.OnLogin != null)
                     {
                         this.OnLogin(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
                     }
                 }
-                else if(this.pendingMessage.Request.userRegister!=null)
+                else if (this.pendingMessage.Request.userRegister != null)
                 {
                     if (this.OnRegister != null)
                     {
@@ -229,7 +228,7 @@ namespace Services
         {
             Debug.LogFormat("OnUserCreateCharacter:{0} [{1}]", response.Result, response.Errormsg);
 
-            if(response.Result == Result.Success)
+            if (response.Result == Result.Success)
             {
                 Models.User.Instance.Info.Player.Characters.Clear();
                 Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);
@@ -247,6 +246,9 @@ namespace Services
         public void SendGameEnter(int characterIdx)
         {
             Debug.LogFormat("UserGameEnterRequest::characterId :{0}", characterIdx);
+
+            ChatManager.Instance.Init();
+
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.gameEnter = new UserGameEnterRequest();
@@ -262,20 +264,22 @@ namespace Services
             {
                 if (response.Character != null)
                 {
-                    User.Instance.CurrentCharacter= response.Character;
+                    User.Instance.CurrentCharacter = response.Character;
                     ItemManager.Instance.Init(response.Character.Items);
                     BagManager.Instance.Init(response.Character.Bag);
                     ShopManager.Instance.Init();
                     EquipManager.Instance.Init(response.Character.Equips);
                     QuestManager.Instance.Init(response.Character.Quests);
                     FriendManager.Instance.Init(response.Character.Friends);
+                    GuildManager.Instance.Init(response.Character.Guild);
                 }
             }
         }
 
 
-        public void SendGameLeave()
+        public void SendGameLeave(bool isQuitGame = false)
         {
+            this.isQuitGame= isQuitGame;
             Debug.Log("UserGameLeaveRequest");
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
@@ -283,11 +287,28 @@ namespace Services
             NetClient.Instance.SendMessage(message);
         }
 
+        /// <summary>
+        /// 收到退出游戏响应后
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="response"></param>
         void OnGameLeave(object sender, UserGameLeaveResponse response)
         {
             MapService.Instance.CurrentMapId = 0;
             User.Instance.CurrentCharacter = null;
             Debug.LogFormat("OnGameLeave:{0} [{1}]", response.Result, response.Errormsg);
+
+
+            if (this.isQuitGame)
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying= false;
+#else
+                Application.Quit();
+#endif
+            }
+
+
         }
         #endregion
 
@@ -308,5 +329,5 @@ namespace Services
         }
         */
 
-    } 
+    }
 }

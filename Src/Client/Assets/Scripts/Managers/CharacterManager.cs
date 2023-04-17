@@ -1,14 +1,9 @@
-﻿using System;
+﻿using Entities;
+using SkillBridge.Message;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Common;
-using Network;
 using UnityEngine;
 using UnityEngine.Events;
-
-using Entities;
-using SkillBridge.Message;
 
 namespace Assets.Scripts.Managers
 {
@@ -18,20 +13,9 @@ namespace Assets.Scripts.Managers
         public UnityAction<Character> OnCharacterEnter;
         public UnityAction<Character> OnCharacterLeave;
 
-        public CharacterManager()
-        {
-
-        }
-
-        public void Dispose()
-        {
-        }
-
-        public void Init()
-        {
-
-        }
-
+        public CharacterManager(){}
+        public void Dispose(){}
+        public void Init(){}
         public void Clear()
         {
             this.Characters.Clear();
@@ -47,12 +31,11 @@ namespace Assets.Scripts.Managers
             EntityManager.Instance.AddEntity(character);
 
             // 事件调用，游戏物体管理器创建游戏物体
-            if(OnCharacterEnter!=null)
+            if (OnCharacterEnter != null)
             {
                 OnCharacterEnter(character);
             }
         }
-
 
         public void RemoveCharacter(int entityId)
         {
@@ -60,14 +43,19 @@ namespace Assets.Scripts.Managers
             if (this.Characters.ContainsKey(entityId))
             {
                 EntityManager.Instance.RemoveEntity(this.Characters[entityId].Info.Entity);
-                if(OnCharacterLeave != null)
+                if (OnCharacterLeave != null)
                 {
                     OnCharacterLeave(this.Characters[entityId]);
                 }
                 this.Characters.Remove(entityId);
             }
-            
+        }
 
+        public Character GetCharacter(int id)
+        {
+            Character character;
+            this.Characters.TryGetValue(id, out character);
+            return character;
         }
     }
 }

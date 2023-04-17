@@ -95,7 +95,7 @@ message NCharacterInfo {
 	repeated NQuestInfo quests = 14;
 	repeated NFriendInfo friends = 15;
 
-	
+	NGuildInfo guild = 16;
 }
 
 message NItemInfo{
@@ -209,6 +209,16 @@ message NetMessageRequest{
 	TeamInviteResponse teamInivteRes = 20;
 	TeamInfoRequest teamInfo = 21;
 	TeamLeaveRequest teamLeave = 22;
+
+	GuildCreateRequest guildCreate = 23;
+	GuildJoinRequest guildJoinReq = 24;
+	GuildJoinResponse guildJoinRes = 25;
+	GuildRequest guild = 26;
+	GuildLeaveRequest guildLeave = 27;
+	GuildListRequest guildList = 28;
+	GuildAdminRequest guildAdmin = 29;
+
+	ChatRequest chat = 30;
 }
 
 message NetMessageResponse{
@@ -240,6 +250,16 @@ message NetMessageResponse{
 	TeamInviteResponse teamInivteRes = 20;
 	TeamInfoResponse teamInfo = 21;
 	TeamLeaveResponse teamLeave = 22;
+
+	GuildCreateResponse guildCreate = 23;
+	GuildJoinRequest guildJoinReq = 24;
+	GuildJoinResponse guildJoinRes = 25;
+	GuildResponse guild = 26;
+	GuildLeaveResponse guildLeave = 27;
+	GuildListResponse guildList = 28;
+	GuildAdminResponse guildAdmin = 29;
+
+	ChatResponse chat = 30;
 
 	StatusNotify statusNotify = 100;
 	
@@ -470,7 +490,6 @@ message FriendRemoveResponse{
 ///////////////////////
 // TeamSystem
 ///////////////////////
-
 message NTeamInfo{
 	int32 id = 1;
 	int32 leader = 2;
@@ -503,4 +522,159 @@ message TeamLeaveResponse{
 	RESULT result= 1;
 	string errormsg = 2;
 	int32 character_id = 3;
+}
+
+///////////////////
+// Guild System
+///////////////////
+enum GUILD_TITLE{
+	NONE = 0;
+	SENIOR = 1;
+	VICE_PRESIDENT = 2;
+	PRESIDENT = 3;
+}
+
+enum APPLY_RESULT{
+	NONE = 0;
+	ACCEPT = 1;
+	REJECT = 2;
+}
+// 工会相关Netmessage
+message NGuildInfo{
+	int32 id = 1;
+	string guildName = 2;
+	int32 leaderID = 3;
+	string leaderName = 4;
+	string notice = 5;
+	int32 memberCount = 6;
+	repeated NGuildMemberInfo members = 7;
+	repeated NGuildApplyInfo applies = 8;
+	int64 createTime = 9;
+}
+message NGuildApplyInfo{
+	int32 guild_id = 1;
+	int32 characterId = 2;
+	string name = 3;
+	int32 class = 4;
+	int32 level = 5;
+	APPLY_RESULT result = 6;
+}
+message NGuildMemberInfo{
+	int32 id = 1;
+	int32 characterId = 2;
+	GUILD_TITLE title = 3;
+	NCharacterInfo info = 4;
+	int64 joinTime = 5;
+	int64 lastTime = 6;
+	int32 status = 7;
+}
+
+//创建
+message GuildCreateRequest{
+	string guildName = 1;
+	string guildNotice = 2;
+}
+message GuildCreateResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	NGuildInfo guildInfo = 3;
+}
+
+//加入
+message GuildJoinRequest{
+	NGuildApplyInfo apply = 1;
+}
+message GuildJoinResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	NGuildApplyInfo apply = 3;
+}
+
+//工会列表
+message GuildListRequest{
+
+}
+
+message GuildListResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated NGuildInfo guilds = 3;
+}
+
+//请求单个工会信息
+message GuildRequest{
+
+}
+message GuildResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	NGuildInfo guildInfo = 3;
+}
+
+//退出工会
+message GuildLeaveRequest{
+}
+
+message GuildLeaveResponse{
+	RESULT result =  1;
+	string errormsg = 2;
+}
+
+//工会管理
+enum GUILD_ADMIN_COMMAND{
+	KICKOUT = 1;
+	PROMOTE = 2;
+	DEPOST = 3;
+	TRANSFER = 4;
+}
+
+message GuildAdminRequest{
+	GUILD_ADMIN_COMMAND command= 1;
+	int32 targetId = 2;
+}
+message GuildAdminResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	GuildAdminRequest command = 3;
+}
+
+
+///////////////////
+// Chat System
+///////////////////
+
+enum CHAT_CHANNEL{
+	ALL = -1;
+	LOCAL = 1;
+	WORLD = 2;
+	SYSTEM = 3;
+	PRIVATE = 8;
+	TEAM = 16;
+	GUILD = 32;
+}
+
+message ChatMessage{
+	CHAT_CHANNEL channel = 1;
+	int32 id = 2;
+	int32 from_id =3;
+	string from_name = 4;
+	int32 to_id = 5;
+	string to_name = 6;
+	string message = 7;
+	double time = 8;
+}
+
+message ChatRequest{
+	ChatMessage message = 1;
+}
+
+message ChatResponse{
+	RESULT result = 1;
+	string errormsg = 2;
+	repeated ChatMessage localMessages = 3;
+	repeated ChatMessage worldMessages = 4;
+	repeated ChatMessage systemMessages = 5;
+	repeated ChatMessage privateMessages = 6;
+	repeated ChatMessage teamMessages = 7;
+	repeated ChatMessage guildMessages = 8;
 }

@@ -1,6 +1,5 @@
 ﻿using Assets.Scripts.Managers;
 using Entities;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,10 +15,11 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
     {
         nameBarPrefab.SetActive(false);
     }
-	
-	void Update () {
-		
-	}
+
+    void Update()
+    {
+
+    }
 
 
     public void AddCharacterNameBar(Transform owner, Character character)

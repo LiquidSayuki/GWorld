@@ -1,136 +1,69 @@
-2023-03-30 22:10:25,011 [ 1] INFO  Unity: LoadingManager start
-2023-03-30 22:10:28,015 [ 1] INFO  Unity: DataManager > DataManager()
-2023-03-30 22:10:35,523 [ 1] INFO  Unity: UserLoginRequest::user :user002 psw:12345
-2023-03-30 22:10:35,524 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-03-30 22:10:35,527 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:10:35,528 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:10:35,531 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-04-17 16:30:03,861 [ 1] INFO  Unity: LoadingManager start
+2023-04-17 16:30:07,107 [ 1] INFO  Unity: DataManager > DataManager()
+2023-04-17 16:30:20,633 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-04-17 16:30:20,633 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-04-17 16:30:20,637 [ 1] INFO  Unity: DoConnect
+2023-04-17 16:30:20,638 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-04-17 16:30:20,641 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-03-30 22:10:35,534 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-30 22:10:35,910 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-03-30 22:10:35,911 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-03-30 22:10:36,072 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:10:36,679 [ 1] INFO  Unity: Select Char:[2]User002Fashi[Wizard]
-2023-03-30 22:10:37,098 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-03-30 22:10:37,191 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-03-30 22:10:37,193 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
-2023-03-30 22:10:37,194 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
-2023-03-30 22:10:37,195 [ 1] INFO  Unity: BagInit: System.Byte[]
-2023-03-30 22:10:37,200 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-30 22:10:37,202 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:User002FashiMapID:1 Entity:(5:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:10:37,204 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-03-30 22:10:37,603 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-03-30 22:10:37,692 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
-
-2023-03-30 22:10:37,693 [ 1] WARN  Unity: [MainPlayerCamera][-1360446] Awake
-UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
-
-2023-03-30 22:10:37,695 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
-You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:38)
+2023-04-17 16:30:20,643 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-04-17 16:30:20,766 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-04-17 16:30:20,767 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-04-17 16:30:20,978 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:30:21,516 [ 1] INFO  Unity: Select Char:[1]213123[Wizard]
+2023-04-17 16:30:22,488 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-04-17 16:30:22,510 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-04-17 16:30:22,512 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-04-17 16:30:22,512 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-04-17 16:30:22,515 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-04-17 16:30:22,524 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Assets.Scripts.Managers.GuildManager.Init (SkillBridge.Message.NGuildInfo guild) [0x0000a] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\GuildManager.cs:24 
+  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x000d3] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\UserService.cs:274 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2023-04-17 16:30:22,525 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Assets.Scripts.Managers.GuildManager.Init (SkillBridge.Message.NGuildInfo guild) (at Assets/Scripts/Managers/GuildManager.cs:24)
+Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:274)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
 }</args></log4net.Error>
-2023-03-30 22:10:37,697 [ 1] WARN  Unity: [GameObjectManager][-1360398] Awake
+2023-04-17 16:30:22,533 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-04-17 16:30:22,534 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:213123MapID:1 Entity:(7:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-04-17 16:30:22,537 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-04-17 16:30:23,056 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-04-17 16:30:23,145 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+2023-04-17 16:30:23,147 [ 1] WARN  Unity: [MainPlayerCamera][-1891872] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:10:37,698 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
-2023-03-30 22:10:37,698 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
-2023-03-30 22:10:37,699 [ 1] INFO  Unity: CreatCharacterObject ,ID:5,Name:User002Fashi
-2023-03-30 22:10:37,700 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
-2023-03-30 22:10:37,703 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
-2023-03-30 22:10:37,704 [ 1] WARN  Unity: [UIMain][211810] Awake
+2023-04-17 16:30:23,148 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
+You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:35)
+}</args></log4net.Error>
+2023-04-17 16:30:23,149 [ 1] WARN  Unity: [GameObjectManager][-1891824] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:10:37,705 [ 1] WARN  Unity: [UIWorldElementManager][212694] Awake
+2023-04-17 16:30:23,149 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-04-17 16:30:23,150 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-04-17 16:30:23,152 [ 1] INFO  Unity: CreatCharacterObject ,ID:7,Name:213123
+2023-04-17 16:30:23,152 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
+2023-04-17 16:30:23,156 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-04-17 16:30:23,161 [ 1] WARN  Unity: [UIMain][244552] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:10:37,726 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:11:55,037 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
+2023-04-17 16:30:23,163 [ 1] WARN  Unity: [UIWorldElementManager][245502] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
-
-2023-03-30 22:11:55,038 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+2023-04-17 16:30:23,199 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:30:23,254 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 16:30:25,611 [ 1] INFO  Unity: SetChannel:World
+2023-04-17 16:30:26,638 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 16:38:25,145 [ 1] INFO  Unity: Character_1_213123 OnDestroy :ID:7 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 
+2023-04-17 16:38:25,151 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-04-17 16:38:25,152 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:173)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:168)
 
-2023-03-30 22:11:55,051 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:11:55,052 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:11:55,053 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-03-30 22:11:57,081 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:11:57,083 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:11:57,121 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:11:57,122 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:11:57,123 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2023-03-30 22:11:59,149 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:11:59,150 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:11:59,211 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:11:59,211 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:11:59,212 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
-
-2023-03-30 22:12:01,220 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:12:01,221 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:12:01,221 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2023-03-30 22:12:05,922 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-03-30 22:12:05,923 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
-
-2023-03-30 22:12:05,924 [ 1] INFO  Unity: Character_2_User002Fashi OnDestroy :ID:5 POS:(4764, 3252, 805) DIR:(100, 0, 0) SPD:0 

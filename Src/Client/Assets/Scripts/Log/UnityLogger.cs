@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using log4net;
 using UnityEngine;
-using log4net;
 
 public static class UnityLogger
 {
@@ -18,7 +14,7 @@ public static class UnityLogger
 
     private static void onLogMessageReceived(string condition, string stackTrace, UnityEngine.LogType type)
     {
-        switch(type)
+        switch (type)
         {
             case LogType.Error:
                 log.ErrorFormat("{0}\r\n{1}", condition, stackTrace.Replace("\n", "\r\n"));

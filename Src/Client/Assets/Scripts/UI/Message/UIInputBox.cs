@@ -2,7 +2,8 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UIInputBox : MonoBehaviour {
+public class UIInputBox : MonoBehaviour
+{
 
     public Text title;
     public Text message;
@@ -21,14 +22,16 @@ public class UIInputBox : MonoBehaviour {
     public string emptyTips;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void Init(string title, string message, string btnOK = "", string btnCancel = "", string emptyTips = "")
     {
@@ -54,10 +57,10 @@ public class UIInputBox : MonoBehaviour {
             return;
         }
         // 提交事件回调接口
-        if(OnSubmit != null)
+        if (OnSubmit != null)
         {
             string tips;
-            if(!OnSubmit(this.input.text, out tips))
+            if (!OnSubmit(this.input.text, out tips))
             {
                 this.tips.text = tips;
                 return;
@@ -69,7 +72,7 @@ public class UIInputBox : MonoBehaviour {
     void OnClickNo()
     {
         Destroy(this.gameObject);
-        if(this.OnCancel != null)
+        if (this.OnCancel != null)
         {
             this.OnCancel();
         }

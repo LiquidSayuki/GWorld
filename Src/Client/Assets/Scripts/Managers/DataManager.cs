@@ -1,14 +1,9 @@
-using UnityEngine;
+using Common.Data;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Events;
-using System.Text;
-using System;
 using System.IO;
-
-using Common.Data;
-
-using Newtonsoft.Json;
+using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {

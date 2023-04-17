@@ -1,11 +1,7 @@
 ﻿using Models;
 using Services;
 using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class UITeam : UIWindow
@@ -43,17 +39,17 @@ public class UITeam : UIWindow
 
     private void UpdateTeamUI()
     {
-        if(User.Instance.TeamInfo == null)
+        if (User.Instance.TeamInfo == null)
         {
             return;
         }
         NCharacterInfo teamLeader = User.Instance.TeamInfo.Members.FirstOrDefault((i) => i.Id == User.Instance.TeamInfo.Leader);
 
-        this.teamTitle.text = string.Format("{0}的队伍 ({1}/5)", teamLeader.Name,User.Instance.TeamInfo.Members.Count);
+        this.teamTitle.text = string.Format("{0}的队伍 ({1}/5)", teamLeader.Name, User.Instance.TeamInfo.Members.Count);
 
-        for(int i = 0; i < 5; i++)
+        for (int i = 0; i < 5; i++)
         {
-            if(i < User.Instance.TeamInfo.Members.Count)
+            if (i < User.Instance.TeamInfo.Members.Count)
             {
                 this.members[i].SetMemberInfo(i, User.Instance.TeamInfo.Members[i], User.Instance.TeamInfo.Members[i].Id == User.Instance.TeamInfo.Leader);
                 this.members[i].gameObject.SetActive(true);

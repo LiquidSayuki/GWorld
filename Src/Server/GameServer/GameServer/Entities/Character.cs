@@ -30,6 +30,11 @@ namespace GameServer.Entities
         public Team team;
         public int TeamUpdateTS; //时间戳
 
+        public Guild Guild;
+        public double GuildUpdateTS;
+
+        public Chat chat;
+
         public Character(CharacterType type, TCharacter cha) :
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
@@ -67,6 +72,10 @@ namespace GameServer.Entities
 
             this.FriendManager = new FriendManager(this);
             this.FriendManager.GetFriendInfos(this.Info.Friends);
+
+            this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildId);
+
+            this.chat = new Chat(this);
         }
 
         public long Gold
@@ -101,6 +110,31 @@ namespace GameServer.Entities
                     TeamUpdateTS = team.timestamp;
                     this.team.PostProcess(message);
                 }
+            }
+
+            // Guild
+            if(this.Guild != null)
+            {
+                if(this.Info.Guild == null) // 角色登陆时没有工会，后来加入了工会
+                {
+                    this.Info.Guild = this.Guild.GuildInfo(this);
+                    if(message.mapCharacterEnter != null)
+                    {
+                        GuildUpdateTS = Guild.timestamp;
+                    }
+                }
+
+                if(GuildUpdateTS < this.Guild.timestamp && message.mapCharacterEnter == null)
+                {
+                    GuildUpdateTS = Guild.timestamp;
+                    this.Guild.PostProcess(this, message);
+                }
+            }
+
+            //Chat
+            if(this.chat != null)
+            {
+                this.chat.PostProcess(message);
             }
 
             //Status

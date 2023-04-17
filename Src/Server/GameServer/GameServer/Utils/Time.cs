@@ -144,7 +144,7 @@ class Time
     {
         get { return GetTimestamp(DateTime.Now); }
     }
-    private static int GetTimestamp(System.DateTime time)
+    public static int GetTimestamp(System.DateTime time)
     {
         System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970,1,1));
         return(int)(time - startTime).TotalSeconds;

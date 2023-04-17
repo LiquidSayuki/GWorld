@@ -3,9 +3,6 @@ using Models;
 using Network;
 using SkillBridge.Message;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -44,7 +41,7 @@ namespace Services
         internal void SendFriendAddRequest(int friendId, string friendName)
         {
             Debug.Log("Send Friend Add Request");
-            NetMessage message = new NetMessage(); 
+            NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.friendAddReq = new FriendAddRequest();
             message.Request.friendAddReq.FromId = User.Instance.CurrentCharacter.Id;
@@ -57,7 +54,7 @@ namespace Services
         // 收到他人回复
         private void OnFriendAddResponse(object sender, FriendAddResponse message)
         {
-            if(message.Result == Result.Success)
+            if (message.Result == Result.Success)
             {
                 MessageBox.Show(message.Request.ToName + " 接受了您的请求", "添加好友成功");
             }
@@ -94,7 +91,7 @@ namespace Services
             message.Response.friendAddRes = new FriendAddResponse();
             message.Response.friendAddRes.Result = accept ? Result.Success : Result.Failed;
             message.Response.friendAddRes.Errormsg = accept ? "对方同意了你的好友请求" : "对方拒绝了你的好友请求";
-            message.Response.friendAddRes.Request= request;
+            message.Response.friendAddRes.Request = request;
             NetClient.Instance.SendMessage(message);
         }
 
@@ -105,20 +102,20 @@ namespace Services
             message.Request = new NetMessageRequest();
             message.Request.friendRemove = new FriendRemoveRequest();
             message.Request.friendRemove.Id = id;
-            message.Request.friendRemove.friendId= friendId;
+            message.Request.friendRemove.friendId = friendId;
             NetClient.Instance.SendMessage(message);
         }
 
 
         private void OnFriendRemove(object sender, FriendRemoveResponse message)
         {
-            if(message.Result == Result.Success)
+            if (message.Result == Result.Success)
             {
                 MessageBox.Show("删除成功", "删除好友");
             }
             else
             {
-                MessageBox.Show("删除失败", "删除好友",MessageBoxType.Error);
+                MessageBox.Show("删除失败", "删除好友", MessageBoxType.Error);
             }
         }
 

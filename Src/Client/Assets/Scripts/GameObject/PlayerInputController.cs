@@ -1,13 +1,12 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Managers;
+using Entities;
+using Services;
+using SkillBridge.Message;
 using System.Collections.Generic;
 using UnityEngine;
 
-using Entities;
-using SkillBridge.Message;
-using Services;
-using Assets.Scripts.Managers;
-
-public class PlayerInputController : MonoBehaviour {
+public class PlayerInputController : MonoBehaviour
+{
 
     public Rigidbody rb;
     SkillBridge.Message.CharacterState state;
@@ -26,9 +25,10 @@ public class PlayerInputController : MonoBehaviour {
     private MainPlayerCamera mainPlayerCamera;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         state = SkillBridge.Message.CharacterState.Idle;
-        if(this.character == null)
+        if (this.character == null)
         {
             DataManager.Instance.Load();
             NCharacterInfo cinfo = new NCharacterInfo();
@@ -52,12 +52,14 @@ public class PlayerInputController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (character == null)
+        //无角色，或正在打字，不控制角色
+        if (character == null || InputManager.Instance.IsInputMode)
             return;
+
 
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
-        if (v > 0.01 || h> 0.01 || h < -0.01)
+        if (v > 0.01 || h > 0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
             {
@@ -120,7 +122,7 @@ public class PlayerInputController : MonoBehaviour {
         if (Input.GetButtonDown("Jump"))
         {
             this.SendEntityEvent(EntityEvent.Jump);
-        }    
+        }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -144,27 +146,27 @@ public class PlayerInputController : MonoBehaviour {
 
 
 
-/*        if (h<-0.1 || h>0.1)
-        {
-            this.transform.Rotate(0, h * rotateSpeed, 0);
-            Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
-            Quaternion rot = new Quaternion();
-            rot.SetFromToRotation(dir, this.transform.forward);
-            
-            if(rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
-            {
-                character.SetDirection(GameObjectTool.WorldToLogic(this.transform.forward));
-                rb.transform.forward = this.transform.forward;
-                this.SendEntityEvent(EntityEvent.None);
-            }
+        /*        if (h<-0.1 || h>0.1)
+                {
+                    this.transform.Rotate(0, h * rotateSpeed, 0);
+                    Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
+                    Quaternion rot = new Quaternion();
+                    rot.SetFromToRotation(dir, this.transform.forward);
 
-        }*/
+                    if(rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
+                    {
+                        character.SetDirection(GameObjectTool.WorldToLogic(this.transform.forward));
+                        rb.transform.forward = this.transform.forward;
+                        this.SendEntityEvent(EntityEvent.None);
+                    }
+
+                }*/
         //Debug.LogFormat("velocity {0}", this.rb.velocity.magnitude);
     }
 
     private List<Transform> GetTargets()
     {
-        List<Transform> listTargets = new List<Transform> ();
+        List<Transform> listTargets = new List<Transform>();
         RaycastHit[] raycastHits = Physics.SphereCastAll(this.rb.position, 200f, this.rb.transform.forward);
 
         foreach (var target in raycastHits)
@@ -188,7 +190,7 @@ public class PlayerInputController : MonoBehaviour {
         this.speed = (int)(offset.magnitude * 100f / Time.deltaTime);
         //Debug.LogFormat("LateUpdate velocity {0} : {1}", this.rb.velocity.magnitude, this.speed);
         this.lastPos = this.rb.transform.position;
-        
+
         // 当角色位置和服务器位置偏移过大，进行重新定位
         if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
         {

@@ -1,16 +1,16 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Managers;
+using Common.Data;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEditor;
 using UnityEditor.SceneManagement;
-using Common.Data;
-using Assets.Scripts.Managers;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 将场景中的传送点的位置保存到传送点定义文件中
 /// </summary>
-public class MapTools {
+public class MapTools
+{
 
     [MenuItem("Map Tools/Export Teleporters")]
     public static void ExportTeleporters()
@@ -27,7 +27,7 @@ public class MapTools {
 
         List<TeleporterObject> allTeleporters = new List<TeleporterObject>();
 
-        foreach( var map in DataManager.Instance.Maps)
+        foreach (var map in DataManager.Instance.Maps)
         {
             // 打开场景文件
             string sceneFile = "Assets/Levels/" + map.Value.Resource + ".unity";
@@ -39,8 +39,8 @@ public class MapTools {
             EditorSceneManager.OpenScene(sceneFile, OpenSceneMode.Single);
 
             // 检查每一个场景中的传送点的ID，在表格中是否存在
-            TeleporterObject[] teleporters = GameObject.FindObjectsOfType<TeleporterObject>();  
-            foreach(var teleporter in teleporters)
+            TeleporterObject[] teleporters = GameObject.FindObjectsOfType<TeleporterObject>();
+            foreach (var teleporter in teleporters)
             {
                 if (!DataManager.Instance.Teleporters.ContainsKey(teleporter.ID))
                 {
@@ -49,9 +49,9 @@ public class MapTools {
                 }
                 // 检查传送点对应的地图ID是否正确
                 TeleporterDefine def = DataManager.Instance.Teleporters[teleporter.ID];
-                if(def.MapID != map.Value.ID)
+                if (def.MapID != map.Value.ID)
                 {
-                    EditorUtility.DisplayDialog("错误", string.Format("地图{0} 中配置的Teleproter[{1}]不正确",map.Value.ID, teleporter.ID), "确定");
+                    EditorUtility.DisplayDialog("错误", string.Format("地图{0} 中配置的Teleproter[{1}]不正确", map.Value.ID, teleporter.ID), "确定");
                     return;
                 }
                 def.Position = GameObjectTool.WorldToLogicN(teleporter.transform.position);
@@ -95,8 +95,9 @@ public class MapTools {
 
 
             // 检查每一个场景中的刷怪点的ID，在表格中是否存在， 如无就新建
-           SpawnPoint[] spawnponits = GameObject.FindObjectsOfType<SpawnPoint>();
-           if (!DataManager.Instance.SpawnPoints.ContainsKey(map.Value.ID)){
+            SpawnPoint[] spawnponits = GameObject.FindObjectsOfType<SpawnPoint>();
+            if (!DataManager.Instance.SpawnPoints.ContainsKey(map.Value.ID))
+            {
                 DataManager.Instance.SpawnPoints[map.Value.ID] = new Dictionary<int, SpawnPointDefine>();
             }
             foreach (var sp in spawnponits)

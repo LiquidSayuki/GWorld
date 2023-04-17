@@ -3,9 +3,6 @@ using Models;
 using Network;
 using SkillBridge.Message;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Services
@@ -53,7 +50,7 @@ namespace Services
 
         private void OnTeamInviteRequest(object sender, TeamInviteRequest message)
         {
-             var confirm = MessageBox.Show(string.Format("[{0}]  邀请你加入队伍", message.FromName), "组队请求", MessageBoxType.Confirm, "接受", "拒绝");
+            var confirm = MessageBox.Show(string.Format("[{0}]  邀请你加入队伍", message.FromName), "组队请求", MessageBoxType.Confirm, "接受", "拒绝");
             confirm.OnYes = () =>
             {
                 this.SendTeamInviteResponse(true, message);
@@ -77,12 +74,12 @@ namespace Services
             message.Request.teamInivteRes = new TeamInviteResponse();
             message.Request.teamInivteRes.Result = accept ? Result.Success : Result.Failed;
             message.Request.teamInivteRes.Errormsg = accept ? "对方接受了您的组队请求" : "对方拒绝了您的组队请求";
-           message.Request.teamInivteRes.Request= request;
+            message.Request.teamInivteRes.Request = request;
             NetClient.Instance.SendMessage(message);
         }
         private void OnTeamInviteResponse(object sender, TeamInviteResponse message)
         {
-            if(message.Result == Result.Success)
+            if (message.Result == Result.Success)
             {
                 MessageBox.Show(message.Request.ToName + "加入了队伍", "组队成功");
             }
@@ -110,7 +107,7 @@ namespace Services
         }
         private void OnTeamLeave(object sender, TeamLeaveResponse message)
         {
-            if(message.Result == Result.Success)
+            if (message.Result == Result.Success)
             {
                 if (message.CharacterId == User.Instance.TeamInfo.Leader)
                 {

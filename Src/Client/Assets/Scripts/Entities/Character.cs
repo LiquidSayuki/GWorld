@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Assets.Scripts.Managers;
 using SkillBridge.Message;
 using UnityEngine;
-using Assets.Scripts.Managers;
 
 
 namespace Entities
@@ -42,7 +38,7 @@ namespace Entities
             {
                 if (!IsPlayer) return false;
                 return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
-            } 
+            }
         }
 
         public Character(NCharacterInfo info) : base(info.Entity)

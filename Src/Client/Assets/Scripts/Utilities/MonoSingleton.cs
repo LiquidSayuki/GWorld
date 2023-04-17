@@ -11,7 +11,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
         {
             if (instance == null)
             {
-                instance =(T)FindObjectOfType<T>();
+                instance = (T)FindObjectOfType<T>();
             }
             return instance;
         }
@@ -23,7 +23,7 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
         Debug.LogWarningFormat("[{0}][{1}] Awake", typeof(T), this.GetInstanceID());
         if (global)
         {
-            if(instance != null && instance != this.gameObject.GetComponent<T>())
+            if (instance != null && instance != this.gameObject.GetComponent<T>())
             {
                 Destroy(this.gameObject);
                 return;

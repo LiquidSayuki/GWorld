@@ -1,8 +1,4 @@
 ﻿using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 public class GameObjectTool
@@ -48,13 +44,13 @@ public class GameObjectTool
     }
 
 
-    public static bool EntityUpdate(NEntity entity,UnityEngine.Vector3 position, Quaternion rotation,float speed)
+    public static bool EntityUpdate(NEntity entity, UnityEngine.Vector3 position, Quaternion rotation, float speed)
     {
         NVector3 pos = WorldToLogicN(position);
         NVector3 dir = WorldToLogicN(rotation.eulerAngles);
         int spd = WorldToLogic(speed);
         bool updated = false;
-        if(!entity.Position.Equal(pos))
+        if (!entity.Position.Equal(pos))
         {
             entity.Position = pos;
             updated = true;
@@ -64,7 +60,7 @@ public class GameObjectTool
             entity.Direction = dir;
             updated = true;
         }
-        if(entity.Speed!= spd)
+        if (entity.Speed != spd)
         {
             entity.Speed = spd;
             updated = true;

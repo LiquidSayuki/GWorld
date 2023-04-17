@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts.Managers;
+using Services;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
 
-using SkillBridge.Message;
-using ProtoBuf;
-using Services;
-using Assets.Scripts.Managers;
-
-public class LoadingManager : MonoBehaviour {
+public class LoadingManager : MonoBehaviour
+{
 
     public GameObject UITips;
     public GameObject UILoading;
@@ -44,6 +40,8 @@ public class LoadingManager : MonoBehaviour {
         StatusService.Instance.Init();
         FriendService.Instance.Init();
         TeamService.Instance.Init();
+        GuildService.Instance.Init();
+        ChatService.Instance.Init();
 
 
         // Fake Loading Simulate
@@ -61,7 +59,8 @@ public class LoadingManager : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
     }
 }

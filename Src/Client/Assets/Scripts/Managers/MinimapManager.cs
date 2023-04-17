@@ -1,6 +1,4 @@
 ﻿using Models;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Managers
@@ -34,9 +32,10 @@ namespace Assets.Scripts.Managers
             return Resloader.Load<Sprite>("UI/Minimap/" + User.Instance.CurrentMapData.Minimap);
         }
 
-        public void UpdateMinimap(Collider minimapBoundingBox) {
+        public void UpdateMinimap(Collider minimapBoundingBox)
+        {
             this.minimapBoundingBox = minimapBoundingBox;
-            if(this.minimap != null)
+            if (this.minimap != null)
             {
                 this.minimap.UpdateMap();
             }

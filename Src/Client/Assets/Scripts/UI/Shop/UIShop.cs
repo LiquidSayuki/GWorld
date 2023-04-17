@@ -1,16 +1,13 @@
 ﻿using Assets.Scripts.Managers;
 using Common.Data;
 using Models;
-using System;
 using System.Collections;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.UI
 {
-    public class UIShop: UIWindow
+    public class UIShop : UIWindow
     {
         public Text Title;
         public Text Money;
@@ -63,7 +60,7 @@ namespace Assets.Scripts.UI
             {
                 ShopManager.Instance.BuyItem(this.shop.ID, this.selectedItem.ShopItemId);
             }
-            
+
             return;
         }
     }

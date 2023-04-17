@@ -1,7 +1,4 @@
 ﻿using Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,7 +30,7 @@ public class UIQuestInfo : MonoBehaviour
         this.rewardMoney.text = quest.Define.RewardGold.ToString();
         this.rewardExp.text = quest.Define.RewardExp.ToString();
 
-        foreach(var fitter in this.GetComponentsInChildren<ContentSizeFitter>())
+        foreach (var fitter in this.GetComponentsInChildren<ContentSizeFitter>())
         {
             fitter.SetLayoutVertical();
         }

@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using Assets.Scripts.Managers;
 using Models;
 using Services;
 using SkillBridge.Message;
-using Assets.Scripts.Managers;
-public class UICharacterSelect : MonoBehaviour {
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class UICharacterSelect : MonoBehaviour
+{
 
     public GameObject panelCreate;
     public GameObject panelSelect;
@@ -44,10 +45,11 @@ public class UICharacterSelect : MonoBehaviour {
         panelSelect.SetActive(false);
         OnSelectClass(1);
     }
-	
-	void Update () {
-		
-	}
+
+    void Update()
+    {
+
+    }
 
     public void OnClickCreate()
     {
@@ -119,7 +121,8 @@ public class UICharacterSelect : MonoBehaviour {
 
                 Button button = go.GetComponent<Button>();
                 int idx = i;
-                button.onClick.AddListener(() => {
+                button.onClick.AddListener(() =>
+                {
                     OnSelectCharacter(idx);
                 });
 

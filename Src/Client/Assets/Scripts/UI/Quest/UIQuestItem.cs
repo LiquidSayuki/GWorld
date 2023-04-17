@@ -1,11 +1,9 @@
 ﻿using Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIQuestItem : ListView.ListViewItem {
+public class UIQuestItem : ListView.ListViewItem
+{
 
     public Text title;
     public Image background;
@@ -14,7 +12,7 @@ public class UIQuestItem : ListView.ListViewItem {
 
     public override void onSelected(bool selected)
     {
-        this.background.overrideSprite = selected? selectedBg : normalBg;
+        this.background.overrideSprite = selected ? selectedBg : normalBg;
     }
 
     public Quest quest;

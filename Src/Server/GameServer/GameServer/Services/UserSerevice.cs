@@ -195,12 +195,13 @@ namespace GameServer.Services
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
             sender.Session.Response.gameEnter.Result = Result.Success;
             sender.Session.Response.gameEnter.Errormsg = "None";
+
             // 进入游戏成功，发送初始角色信息
+            sender.Session.Character = character;
+            sender.Session.PostResponser = character; 
             sender.Session.Response.gameEnter.Character = character.Info;
 
             sender.SendResponse();
-            sender.Session.Character = character;
-            sender.Session.PostResponser = character;
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
@@ -208,8 +209,6 @@ namespace GameServer.Services
         {
             Character character = sender.Session.Character;
             // Log.InfoFormat("UserService -- GameLeave:[{0},CharacterID{1}:{2},Map{3}]", sender.Session.User.Username, character.Id, character.Info.Name, character.Info.mapId);
-            //移除此角色的Session
-            SessionManager.Instance.RemoveSession(character.Id);
             CharacterLeave(character);
 
             sender.Session.Response.gameLeave = new UserGameLeaveResponse();
@@ -229,6 +228,8 @@ namespace GameServer.Services
         public void CharacterLeave(Character character)
         {
             Log.InfoFormat("Character Leave: [{0}-{1}]", character.Id, character.Info.Name);
+            //移除此角色的Session
+            SessionManager.Instance.RemoveSession(character.Id);
             // 调用角色管理器，移除角色
             CharacterManager.Instance.RemoveCharacter(character.Id);
             //角色对象自己清理自己

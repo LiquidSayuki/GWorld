@@ -1,14 +1,10 @@
 ﻿using Assets.Scripts.Models;
 using Services;
 using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Assets.Scripts.Managers
 {
-    class EquipManager: Singleton<EquipManager>
+    class EquipManager : Singleton<EquipManager>
     {
         public delegate void OnEquipmentChangeHandler();
         public event OnEquipmentChangeHandler OnEquipmentChange;
@@ -37,7 +33,7 @@ namespace Assets.Scripts.Managers
 
         unsafe void ParseEquipData(byte[] data)
         {
-            fixed(byte* pt = this.Data)
+            fixed (byte* pt = this.Data)
             {
                 for (int i = 0; i < this.Equipments.Length; i++)
                 {
@@ -61,7 +57,7 @@ namespace Assets.Scripts.Managers
 
         unsafe public byte[] GetEquipData()
         {
-            fixed(byte * pt = Data)
+            fixed (byte* pt = Data)
             {
                 for (int i = 0; i < this.Equipments.Length; i++)
                 {
@@ -91,7 +87,7 @@ namespace Assets.Scripts.Managers
 
         public void OnEquipItem(Item equip)
         {
-            if (this.Equipments[(int)equip.EquipInfo.Slot] != null && this.Equipments[(int) equip.EquipInfo.Slot].Id == equip.Id)
+            if (this.Equipments[(int)equip.EquipInfo.Slot] != null && this.Equipments[(int)equip.EquipInfo.Slot].Id == equip.Id)
             {
                 return;
             }
@@ -105,7 +101,7 @@ namespace Assets.Scripts.Managers
 
         public void OnUnEquipItem(EquipSlot slot)
         {
-            if (this.Equipments[(int) slot] != null)
+            if (this.Equipments[(int)slot] != null)
             {
                 this.Equipments[(int)slot] = null;
                 if (OnEquipmentChange != null)

@@ -1,195 +1,63 @@
-2023-03-30 22:46:48,443 [ 1] INFO  Unity: LoadingManager start
-2023-03-30 22:46:51,461 [ 1] INFO  Unity: DataManager > DataManager()
-2023-03-30 22:47:01,044 [ 1] INFO  Unity: UserLoginRequest::user :user002 psw:12345
-2023-03-30 22:47:01,045 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-03-30 22:47:01,048 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:47:01,049 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:47:01,052 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-04-17 17:43:05,543 [ 1] INFO  Unity: LoadingManager start
+2023-04-17 17:43:08,607 [ 1] INFO  Unity: DataManager > DataManager()
+2023-04-17 17:43:14,330 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-04-17 17:43:14,332 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-04-17 17:43:14,334 [ 1] INFO  Unity: DoConnect
+2023-04-17 17:43:14,335 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-04-17 17:43:14,338 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-03-30 22:47:01,056 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-30 22:47:01,143 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-03-30 22:47:01,144 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-03-30 22:47:01,294 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:47:02,693 [ 1] INFO  Unity: Select Char:[2]User002Fashi[Wizard]
-2023-03-30 22:47:03,263 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-03-30 22:47:03,282 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-03-30 22:47:03,284 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
-2023-03-30 22:47:03,284 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
-2023-03-30 22:47:03,286 [ 1] INFO  Unity: BagInit: System.Byte[]
-2023-03-30 22:47:03,292 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:2
-2023-03-30 22:47:03,294 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:士001MapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:47:03,296 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:User002FashiMapID:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:47:03,297 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-03-30 22:47:03,297 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:03,672 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-04-17 17:43:14,340 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-04-17 17:43:14,430 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-04-17 17:43:14,431 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-04-17 17:43:14,605 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 17:43:15,144 [ 1] INFO  Unity: Select Char:[1]213123[Wizard]
+2023-04-17 17:43:15,629 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-04-17 17:43:15,651 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-04-17 17:43:15,652 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-04-17 17:43:15,653 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-04-17 17:43:15,654 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-04-17 17:43:15,662 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:2
+2023-04-17 17:43:15,664 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:sadasdasdsadasdMapID:1 Entity:(10:pos:(4941,4699,806),dir:(100,0,0),spd:0
+2023-04-17 17:43:15,665 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:213123MapID:1 Entity:(13:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-04-17 17:43:15,666 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-04-17 17:43:16,083 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-03-30 22:47:03,749 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+2023-04-17 17:43:16,155 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
 
-2023-03-30 22:47:03,750 [ 1] WARN  Unity: [MainPlayerCamera][-1466132] Awake
+2023-04-17 17:43:16,156 [ 1] WARN  Unity: [MainPlayerCamera][-2010686] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:47:03,751 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
-You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:38)
-}</args></log4net.Error>
-2023-03-30 22:47:03,754 [ 1] WARN  Unity: [GameObjectManager][-1466084] Awake
+2023-04-17 17:43:16,157 [ 1] WARN  Unity: [GameObjectManager][-2010638] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:47:03,754 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
-2023-03-30 22:47:03,755 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
-2023-03-30 22:47:03,756 [ 1] INFO  Unity: CreatCharacterObject ,ID:1,Name:士001
-2023-03-30 22:47:03,757 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
-2023-03-30 22:47:03,760 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
-2023-03-30 22:47:03,761 [ 1] WARN  Unity: [UIMain][250500] Awake
+2023-04-17 17:43:16,157 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-04-17 17:43:16,158 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-04-17 17:43:16,159 [ 1] INFO  Unity: CreatCharacterObject ,ID:10,Name:sadasdasdsadasd
+2023-04-17 17:43:16,159 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
+2023-04-17 17:43:16,163 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-04-17 17:43:16,166 [ 1] WARN  Unity: [UIMain][311458] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:47:03,762 [ 1] WARN  Unity: [UIWorldElementManager][251384] Awake
+2023-04-17 17:43:16,167 [ 1] WARN  Unity: [UIWorldElementManager][312408] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:47:03,783 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:47:03,789 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
-You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.LateUpdate () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:51)
+2023-04-17 17:43:16,196 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 17:43:16,204 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, MainPlayerCamera.LateUpdate () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:89)
 }</args></log4net.Error>
-2023-03-30 22:47:03,807 [ 1] INFO  Unity: CreatCharacterObject ,ID:2,Name:User002Fashi
-2023-03-30 22:47:03,808 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
-2023-03-30 22:47:03,817 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
-2023-03-30 22:47:06,897 [ 1] INFO  Unity: Send Team Invite REQUEST
-2023-03-30 22:47:07,926 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:07,928 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:47:11,232 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: MoveBack entity :(1:pos:(5000,4000,820),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:11,233 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:11,274 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4955,4019,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:11,323 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4922,4057,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:11,370 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4904,4103,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:11,418 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4904,4153,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:11,479 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: Idle entity :(1:pos:(4924,4153,806),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:47:18,977 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: MoveBack entity :(1:pos:(4924,4153,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:18,978 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:18,978 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:47:18,990 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4946,4204,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:19,052 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(4993,4247,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:19,100 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: Idle entity :(1:pos:(5008,4247,806),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:47:35,731 [ 1] INFO  Unity: Send Team Invite REQUEST
-2023-03-30 22:47:37,288 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:37,289 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:47:42,078 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: MoveBack entity :(1:pos:(5008,4247,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,079 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:42,079 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:47:42,146 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5078,4210,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,215 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5123,4161,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,276 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5151,4101,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,332 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5153,4051,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,379 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5139,4003,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,427 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5116,3959,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,482 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: None entity :(1:pos:(5081,3923,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:47:42,530 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[1 event: Idle entity :(1:pos:(5096,3923,806),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:47:45,532 [ 1] INFO  Unity: Send Team Invite REQUEST
-2023-03-30 22:47:46,667 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:46,670 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:47:50,620 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:47:50,634 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:50,636 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:47:50,637 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Services.TeamService.OnTeamLeave (System.Object sender, SkillBridge.Message.TeamLeaveResponse message) [0x0001d] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\TeamService.cs:115 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[TeamLeaveResponse] (System.Object sender, SkillBridge.Message.TeamLeaveResponse msg) [0x00000] in <filename unknown>:0 
-2023-03-30 22:47:50,637 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Services.TeamService.OnTeamLeave (System.Object sender, SkillBridge.Message.TeamLeaveResponse message) (at Assets/Scripts/Services/TeamService.cs:115)
-Network.MessageDistributer`1[System.Object].RaiseEvent[TeamLeaveResponse] (System.Object sender, SkillBridge.Message.TeamLeaveResponse msg)
-}</args></log4net.Error>
-2023-03-30 22:48:03,287 [ 1] INFO  Unity: SendBuyItem: shopId: [1], ItemId[1]
-2023-03-30 22:48:03,331 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:48:03,332 [ 1] INFO  Unity: Satus Notify [Action:Add], [Type:Item]
-2023-03-30 22:48:03,333 [ 1] ERROR Unity: Message handler exception:, The object of type 'Image' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
-  at Assets.Scripts.UI.UIBag.Clear () [0x00015] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\UI\Bag\UIBag.cs:70 
-  at Assets.Scripts.UI.UIBag.OnReset () [0x0000c] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\UI\Bag\UIBag.cs:62 
-  at Assets.Scripts.Managers.BagManager.AddItem (Int32 itemId, Int32 count) [0x00116] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\BagManager.cs:140 
-  at Assets.Scripts.Managers.ItemManager.AddItem (Int32 itemId, Int32 count) [0x00049] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\ItemManager.cs:56 
-  at Assets.Scripts.Managers.ItemManager.OnItemNotify (SkillBridge.Message.NStatus status) [0x0001b] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\ItemManager.cs:35 
-  at Services.StatusService.Notify (SkillBridge.Message.NStatus status) [0x0009c] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\StatusService.cs:77 
-  at Services.StatusService.OnStatusNotify (System.Object sender, SkillBridge.Message.StatusNotify notify) [0x0001e] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\StatusService.cs:59 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[StatusNotify] (System.Object sender, SkillBridge.Message.StatusNotify msg) [0x00000] in <filename unknown>:0 
-2023-03-30 22:48:03,333 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingReferenceException: The object of type 'Image' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., Assets.Scripts.UI.UIBag.Clear () (at Assets/Scripts/UI/Bag/UIBag.cs:70)
-Assets.Scripts.UI.UIBag.OnReset () (at Assets/Scripts/UI/Bag/UIBag.cs:62)
-Assets.Scripts.Managers.BagManager.AddItem (Int32 itemId, Int32 count) (at Assets/Scripts/Managers/BagManager.cs:140)
-Assets.Scripts.Managers.ItemManager.AddItem (Int32 itemId, Int32 count) (at Assets/Scripts/Managers/ItemManager.cs:56)
-Assets.Scripts.Managers.ItemManager.OnItemNotify (SkillBridge.Message.NStatus status) (at Assets/Scripts/Managers/ItemManager.cs:35)
-Services.StatusService.Notify (SkillBridge.Message.NStatus status) (at Assets/Scripts/Services/StatusService.cs:77)
-Services.StatusService.OnStatusNotify (System.Object sender, SkillBridge.Message.StatusNotify notify) (at Assets/Scripts/Services/StatusService.cs:59)
-Network.MessageDistributer`1[System.Object].RaiseEvent[StatusNotify] (System.Object sender, SkillBridge.Message.StatusNotify msg)
-}</args></log4net.Error>
-2023-03-30 22:48:05,112 [ 1] INFO  Unity: SendBuyItem: shopId: [1], ItemId[1]
-2023-03-30 22:48:05,132 [ 1] INFO  Unity: Satus Notify [Action:Add], [Type:Item]
-2023-03-30 22:48:05,133 [ 1] ERROR Unity: Message handler exception:, The object of type 'Image' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_transform ()
-  at Assets.Scripts.UI.UIBag.Clear () [0x00015] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\UI\Bag\UIBag.cs:70 
-  at Assets.Scripts.UI.UIBag.OnReset () [0x0000c] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\UI\Bag\UIBag.cs:62 
-  at Assets.Scripts.Managers.BagManager.AddItem (Int32 itemId, Int32 count) [0x00116] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\BagManager.cs:140 
-  at Assets.Scripts.Managers.ItemManager.AddItem (Int32 itemId, Int32 count) [0x00049] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\ItemManager.cs:56 
-  at Assets.Scripts.Managers.ItemManager.OnItemNotify (SkillBridge.Message.NStatus status) [0x0001b] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\ItemManager.cs:35 
-  at Services.StatusService.Notify (SkillBridge.Message.NStatus status) [0x0009c] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\StatusService.cs:77 
-  at Services.StatusService.OnStatusNotify (System.Object sender, SkillBridge.Message.StatusNotify notify) [0x0001e] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\StatusService.cs:59 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[StatusNotify] (System.Object sender, SkillBridge.Message.StatusNotify msg) [0x00000] in <filename unknown>:0 
-2023-03-30 22:48:05,133 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingReferenceException: The object of type 'Image' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., Assets.Scripts.UI.UIBag.Clear () (at Assets/Scripts/UI/Bag/UIBag.cs:70)
-Assets.Scripts.UI.UIBag.OnReset () (at Assets/Scripts/UI/Bag/UIBag.cs:62)
-Assets.Scripts.Managers.BagManager.AddItem (Int32 itemId, Int32 count) (at Assets/Scripts/Managers/BagManager.cs:140)
-Assets.Scripts.Managers.ItemManager.AddItem (Int32 itemId, Int32 count) (at Assets/Scripts/Managers/ItemManager.cs:56)
-Assets.Scripts.Managers.ItemManager.OnItemNotify (SkillBridge.Message.NStatus status) (at Assets/Scripts/Managers/ItemManager.cs:35)
-Services.StatusService.Notify (SkillBridge.Message.NStatus status) (at Assets/Scripts/Services/StatusService.cs:77)
-Services.StatusService.OnStatusNotify (System.Object sender, SkillBridge.Message.StatusNotify notify) (at Assets/Scripts/Services/StatusService.cs:59)
-Network.MessageDistributer`1[System.Object].RaiseEvent[StatusNotify] (System.Object sender, SkillBridge.Message.StatusNotify msg)
-}</args></log4net.Error>
-2023-03-30 22:48:16,028 [ 1] INFO  Unity: Character_1_士001 OnDestroy :ID:1 POS:(5096, 3923, 806) DIR:(100, 0, 0) SPD:0 
-2023-03-30 22:48:16,028 [ 1] INFO  Unity: Character_2_User002Fashi OnDestroy :ID:2 POS:(4291, 4726, 805) DIR:(100, 0, 0) SPD:0 
-2023-03-30 22:48:16,028 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-03-30 22:48:16,029 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-04-17 17:43:16,244 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 17:43:16,262 [ 1] INFO  Unity: CreatCharacterObject ,ID:13,Name:213123
+2023-04-17 17:43:16,262 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
+2023-04-17 17:43:16,272 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
+2023-04-17 17:43:45,897 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-04-17 17:43:45,898 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:173)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:168)
 
+2023-04-17 17:43:45,900 [ 1] INFO  Unity: Character_2_sadasdasdsadasd OnDestroy :ID:10 POS:(4941, 4699, 806) DIR:(100, 0, 0) SPD:0 
+2023-04-17 17:43:45,901 [ 1] INFO  Unity: Character_1_213123 OnDestroy :ID:13 POS:(5329, 3738, 805) DIR:(100, 0, 0) SPD:0 

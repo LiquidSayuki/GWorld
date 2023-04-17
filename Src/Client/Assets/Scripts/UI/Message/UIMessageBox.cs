@@ -2,7 +2,8 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UIMessageBox : MonoBehaviour {
+public class UIMessageBox : MonoBehaviour
+{
 
     public Text title;
     public Text message;
@@ -16,17 +17,19 @@ public class UIMessageBox : MonoBehaviour {
 
     public UnityAction OnYes;
     public UnityAction OnNo;
-    
+
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 
     public void Init(string title, string message, MessageBoxType type = MessageBoxType.Information, string btnOK = "", string btnCancel = "")
     {

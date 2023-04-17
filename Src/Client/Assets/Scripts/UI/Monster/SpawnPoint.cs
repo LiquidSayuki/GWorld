@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SpawnPoint : MonoBehaviour {
+public class SpawnPoint : MonoBehaviour
+{
     Mesh mesh = null;
     public int Id;
 
-    void Start ()
+    void Start()
     {
         this.mesh = this.GetComponent<MeshFilter>().sharedMesh;
     }

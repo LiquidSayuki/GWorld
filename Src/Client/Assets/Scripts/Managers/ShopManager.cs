@@ -1,11 +1,7 @@
-﻿using Services;
-using Assets.Scripts.UI;
+﻿using Assets.Scripts.UI;
 using Common.Data;
 using Managers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Services;
 
 namespace Assets.Scripts.Managers
 {
@@ -22,7 +18,7 @@ namespace Assets.Scripts.Managers
             return true;
         }
 
-        public void ShowShop(int shopId) 
+        public void ShowShop(int shopId)
         {
             ShopDefine shop;
             if (DataManager.Instance.Shops.TryGetValue(shopId, out shop))

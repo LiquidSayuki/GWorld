@@ -1,19 +1,15 @@
 ﻿using Assets.Scripts.Models;
+using Common.Data;
+using Services;
 using SkillBridge.Message;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
-using System.Text;
-using Common.Data;
-using Models;
-using Services;
 
 namespace Assets.Scripts.Managers
 {
     internal class ItemManager : Singleton<ItemManager>
     {
-        public Dictionary<int, Item> Items = new Dictionary<int, Item> ();
+        public Dictionary<int, Item> Items = new Dictionary<int, Item>();
         internal void Init(List<NItemInfo> items)
         {
             this.Items.Clear();

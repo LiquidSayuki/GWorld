@@ -1,9 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TabView : MonoBehaviour {
+public class TabView : MonoBehaviour
+{
 
     public TabButton[] tabButtons;
     public GameObject[] tabPages;
@@ -12,7 +12,8 @@ public class TabView : MonoBehaviour {
 
     public int index = -1;
     // Use this for initialization
-    IEnumerator Start () {
+    IEnumerator Start()
+    {
         for (int i = 0; i < tabButtons.Length; i++)
         {
             tabButtons[i].tabView = this;

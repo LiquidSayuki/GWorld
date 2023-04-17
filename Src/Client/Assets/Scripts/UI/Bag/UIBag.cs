@@ -65,7 +65,7 @@ namespace Assets.Scripts.UI
 
         void Clear()
         {
-            for(int i = 0; i < slots.Count; i++)
+            for (int i = 0; i < slots.Count; i++)
             {
                 if (slots[i].transform.childCount > 0)
                 {

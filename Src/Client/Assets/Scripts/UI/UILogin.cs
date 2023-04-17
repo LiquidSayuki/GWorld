@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Services;
+using SkillBridge.Message;
 using UnityEngine;
 using UnityEngine.UI;
-using Services;
-using SkillBridge.Message;
 
-public class UILogin : MonoBehaviour {
+public class UILogin : MonoBehaviour
+{
 
 
     public InputField username;
@@ -14,15 +13,17 @@ public class UILogin : MonoBehaviour {
     public Button buttonRegister;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         UserService.Instance.OnLogin = OnLogin;
     }
 
 
     // Update is called once per frame
-    void Update () {
-		
-	}
+    void Update()
+    {
+
+    }
 
     public void OnClickLogin()
     {
@@ -37,7 +38,7 @@ public class UILogin : MonoBehaviour {
             return;
         }
         // Enter Game
-        UserService.Instance.SendLogin(this.username.text,this.password.text);
+        UserService.Instance.SendLogin(this.username.text, this.password.text);
 
     }
 

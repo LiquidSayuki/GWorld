@@ -1,10 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Models;
 using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Assets.Scripts.UI
@@ -38,7 +34,7 @@ namespace Assets.Scripts.UI
 
         private void InitEquipedItems()
         {
-           for (int i = 0; i < (int)EquipSlot.SlotMax; i++)
+            for (int i = 0; i < (int)EquipSlot.SlotMax; i++)
             {
                 var item = EquipManager.Instance.Equipments[i];
                 if (item != null)
@@ -70,7 +66,7 @@ namespace Assets.Scripts.UI
 
         private void ClearEquipedList()
         {
-            foreach(var item in slots)
+            foreach (var item in slots)
             {
                 if (item.childCount > 0)
                 {
@@ -81,7 +77,7 @@ namespace Assets.Scripts.UI
 
         private void ClearAllEquipList()
         {
-            foreach(var item in itemListRoot.GetComponentsInChildren<UIEquipItem>())
+            foreach (var item in itemListRoot.GetComponentsInChildren<UIEquipItem>())
             {
                 Destroy(item.gameObject);
             }

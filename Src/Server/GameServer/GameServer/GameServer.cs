@@ -32,8 +32,10 @@ namespace GameServer
             ItemService.Instance.Init();
             FriendService.Instance.Init();
             TeamService.Instance.Init();
+            GuildService.Instance.Init();
+            ChatService.Instance.Init();
 
-            //初始化manager
+            //Data manager读取的json配置文件是一些service的前置依赖
             DataManager.Instance.Load();
 
             MapService.Instance.Init();

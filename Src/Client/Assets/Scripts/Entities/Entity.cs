@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using SkillBridge.Message;
 using UnityEngine;
-using SkillBridge.Message;
 
 namespace Entities
 {
@@ -20,11 +16,13 @@ namespace Entities
         private NEntity entityData;
         public NEntity EntityData
         {
-            get {
+            get
+            {
                 UpdateEntityData();
                 return entityData;
             }
-            set {
+            set
+            {
                 entityData = value;
                 this.SetEntityData(value);
             }

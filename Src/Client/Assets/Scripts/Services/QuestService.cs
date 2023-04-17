@@ -3,16 +3,13 @@ using Models;
 using Network;
 using SkillBridge.Message;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Services
 {
     class QuestService : Singleton<QuestService>, IDisposable
     {
-        public QuestService() 
+        public QuestService()
         {
             MessageDistributer.Instance.Subscribe<QuestListResponse>(this.OnQuestList);
             MessageDistributer.Instance.Subscribe<QuestAcceptResponse>(this.OnQuestAccept);

@@ -1,7 +1,5 @@
 ﻿using Assets.Scripts.Managers;
 using Common.Data;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -24,8 +22,8 @@ namespace Assets.Scripts.UI
         public bool Selected
         {
             get { return selected; }
-            set 
-            { 
+            set
+            {
                 selected = value;
                 this.background.overrideSprite = selected ? selectedBg : normalBg;
             }
@@ -51,7 +49,7 @@ namespace Assets.Scripts.UI
 
         public void OnSelect(BaseEventData eventData)
         {
-            this.Selected= true;
+            this.Selected = true;
             this.shop.SelectShopItem(this);
         }
     }

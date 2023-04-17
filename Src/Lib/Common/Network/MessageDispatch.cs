@@ -37,6 +37,18 @@ namespace Network
             if (message.teamInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInfo); } //21
             if (message.teamLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamLeave); } //22
 
+            if (message.guildCreate != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildCreate); } //23
+            if (message.guildJoinReq != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildJoinReq); } //24
+            if (message.guildJoinRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildJoinRes); } //25
+            if (message.Guild != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Guild); } //26
+            if (message.guildLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildLeave); } //27
+            if (message.guildList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildList); } //28
+            if (message.guildAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildAdmin); } //29
+
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); } //30
+
+
+
             if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); } //100
 
         }
@@ -71,6 +83,17 @@ namespace Network
             if (message.teamInivteRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInivteRes); } //20
             if (message.teamInfo != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamInfo); } //21
             if (message.teamLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.teamLeave); } //22
+
+            if (message.guildCreate != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildCreate); } //23
+            if (message.guildJoinReq != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildJoinReq); } //24
+            if (message.guildJoinRes != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildJoinRes); } //25
+            if (message.Guild != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Guild); } //26
+            if (message.guildLeave != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildLeave); } //27
+            if (message.guildList != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildList); } //28
+            if (message.guildAdmin != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.guildAdmin); } //29
+
+            if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); } //30
+
 
             // 每新增消息类型，需要来此处添加分发
         }

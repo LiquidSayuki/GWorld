@@ -1,14 +1,10 @@
 ﻿using Assets.Scripts.Models;
 using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {
-    class BagManager :Singleton<BagManager>
+    class BagManager : Singleton<BagManager>
     {
         public int Unlocked;
         public BagItem[] Items;
@@ -22,7 +18,7 @@ namespace Assets.Scripts.Managers
         {
             this.Info = info;
             this.Unlocked = info.Unlocked;
-            Items  = new BagItem[this.Unlocked];
+            Items = new BagItem[this.Unlocked];
             if (info.Items != null && info.Items.Length >= this.Unlocked)
             {
                 Analyse(info.Items);
@@ -40,9 +36,9 @@ namespace Assets.Scripts.Managers
         public void Reset()
         {
             int i = 0;
-            foreach(var kv in ItemManager.Instance.Items)
+            foreach (var kv in ItemManager.Instance.Items)
             {
-                if(kv.Value.Count <= kv.Value.Define.StackLimit)
+                if (kv.Value.Count <= kv.Value.Define.StackLimit)
                 {
                     this.Items[i].ItemId = (ushort)kv.Key;
                     this.Items[i].Count = (ushort)kv.Value.Count;
@@ -72,7 +68,7 @@ namespace Assets.Scripts.Managers
             // pt是指向Data的指针
             fixed (byte* pt = data)
             {
-                for (int i =0; i< this.Unlocked; i++)
+                for (int i = 0; i < this.Unlocked; i++)
                 {
                     //一个bagitem的指针
                     //pt为初始位置，第i个物体*一个物体所占空间为当前物体的起始字节在字节数组中的位置（偏移）
@@ -87,7 +83,7 @@ namespace Assets.Scripts.Managers
         {
             fixed (byte* pt = Info.Items)
             {
-                for (int i = 0; i< this.Unlocked; i++)
+                for (int i = 0; i < this.Unlocked; i++)
                 {
                     BagItem* item = (BagItem*)(pt + i * sizeof(BagItem));
                     *item = Items[i];
@@ -119,14 +115,14 @@ namespace Assets.Scripts.Managers
                     }
                     else
                     {
-                        this.Items[i].Count +=canAdd;
+                        this.Items[i].Count += canAdd;
                         addCount -= canAdd;
                     }
                 }
             }
-            if (addCount >0)
+            if (addCount > 0)
             {
-                for (int i = 0; i< Items.Length; i++)
+                for (int i = 0; i < Items.Length; i++)
                 {
                     if (this.Items[i].ItemId == 0)
                     {

@@ -1,7 +1,5 @@
 ﻿using Common.Data;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Assets.Scripts.Managers
 {
@@ -44,19 +42,20 @@ namespace Assets.Scripts.Managers
         public bool Interactive(NpcDefine npc)
         {
             // 优先检查npc任务
-            if(DoTaskInteractive(npc))
+            if (DoTaskInteractive(npc))
             {
                 return true;
             }
 
-            else if(npc.Type == NpcType.Functional)
+            else if (npc.Type == NpcType.Functional)
             {
                 return DoFunctionalInteractive(npc);
             }
             return false;
         }
 
-        private bool DoTaskInteractive(NpcDefine npc) {
+        private bool DoTaskInteractive(NpcDefine npc)
+        {
             var status = QuestManager.Instance.GetQuestStatusByNpc(npc.TID);
             if (status == NpcQuestStatus.None)
                 return false;
@@ -64,16 +63,17 @@ namespace Assets.Scripts.Managers
             return QuestManager.Instance.OpenNpcQuest(npc.TID);
         }
 
-        private bool DoFunctionalInteractive(NpcDefine npc) { 
+        private bool DoFunctionalInteractive(NpcDefine npc)
+        {
             if (npc.Type != NpcType.Functional)
             {
                 return false;
             }
-            if(!eventMap.ContainsKey(npc.Function))
+            if (!eventMap.ContainsKey(npc.Function))
             {
                 return false;
             }
-            
+
             return eventMap[npc.Function](npc);
         }
     }

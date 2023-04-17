@@ -1,10 +1,8 @@
-﻿using Managers;
-using Models;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using Assets.Scripts.Managers;
 using Assets.Scripts.UI;
+using Managers;
+using Models;
+using UnityEngine.UI;
 
 public class UIMain : MonoSingleton<UIMain>
 {
@@ -55,5 +53,24 @@ public class UIMain : MonoSingleton<UIMain>
     public void ShowTeamUI(bool show)
     {
         TeamWindow.ShowTeam(show);
+    }
+
+    public void OnCilickGuild()
+    {
+        GuildManager.Instance.ShowGuild();
+    }
+
+    public void OnClickRide()
+    {
+
+    }
+    public void OnClickSetting()
+    {
+        UIManager.Instance.Show<UISetting>();
+    }
+
+    public void OnClickSkill()
+    {
+
     }
 }

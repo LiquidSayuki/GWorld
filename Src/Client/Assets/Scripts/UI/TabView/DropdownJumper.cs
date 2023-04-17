@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class DropdownJumper : MonoBehaviour {
+public class DropdownJumper : MonoBehaviour
+{
     public TabButton[] buttons;
     private Dropdown dropdown;
 
-    void Start ()
+    void Start()
     {
         dropdown = GetComponent<Dropdown>();
         dropdown.onValueChanged.AddListener(TriggerButton);

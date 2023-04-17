@@ -1,12 +1,9 @@
-﻿using Common.Data;
-using Managers;
+﻿using Managers;
 using Models;
 using Services;
 using SkillBridge.Message;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine.Events;
 
 namespace Assets.Scripts.Managers
@@ -19,7 +16,7 @@ namespace Assets.Scripts.Managers
         Incomplete,
     }
 
-    public class QuestManager: Singleton<QuestManager>
+    public class QuestManager : Singleton<QuestManager>
     {
         // 服务器quest信息
         public List<NQuestInfo> questInfos;
@@ -44,7 +41,7 @@ namespace Assets.Scripts.Managers
         private void InitQuests()
         {
             //从服务器获得已经接的任务
-           foreach(var info in this.questInfos)
+            foreach (var info in this.questInfos)
             {
                 Quest quest = new Quest(info);
                 this.allQuests[quest.Info.QuestId] = quest;
@@ -95,10 +92,10 @@ namespace Assets.Scripts.Managers
                 this.npcQuests[npcId] = new Dictionary<NpcQuestStatus, List<Quest>>();
 
             List<Quest> availables;
-            List<Quest> completes ;
+            List<Quest> completes;
             List<Quest> incompletes;
 
-            if (!this.npcQuests[npcId].TryGetValue (NpcQuestStatus.Avaliable, out availables))
+            if (!this.npcQuests[npcId].TryGetValue(NpcQuestStatus.Avaliable, out availables))
             {
                 availables = new List<Quest>();
                 this.npcQuests[npcId][NpcQuestStatus.Avaliable] = availables;
@@ -148,7 +145,7 @@ namespace Assets.Scripts.Managers
 
             if (this.npcQuests.TryGetValue(npcId, out status))
             {
-                if (status[NpcQuestStatus.Complete].Count >0)
+                if (status[NpcQuestStatus.Complete].Count > 0)
                     return NpcQuestStatus.Complete;
                 if (status[NpcQuestStatus.Avaliable].Count > 0)
                     return NpcQuestStatus.Avaliable;
@@ -194,12 +191,12 @@ namespace Assets.Scripts.Managers
 
         private void OnQuestDialogClose(UIWindow sender, UIWindow.WindowResult result)
         {
-            UIQuestDialog dialog = (UIQuestDialog) sender;
+            UIQuestDialog dialog = (UIQuestDialog)sender;
             // 接受与完成任务按键都触发yes
             if (result == UIWindow.WindowResult.Yes)
             {
                 // 没接
-                if(dialog.quest.Info == null)
+                if (dialog.quest.Info == null)
                 {
                     QuestService.Instance.SendQuestAccept(dialog.quest);
                 }

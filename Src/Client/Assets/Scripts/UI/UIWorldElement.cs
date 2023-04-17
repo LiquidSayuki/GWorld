@@ -1,16 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class UIWorldElement : MonoBehaviour {
+public class UIWorldElement : MonoBehaviour
+{
 
     public Transform owner;
 
     public float height = 1.5f;
 
-	void Start () {
-		
-	}
+    void Start()
+    {
+
+    }
 
     void Update()
     {
@@ -19,7 +19,7 @@ public class UIWorldElement : MonoBehaviour {
             this.transform.position = owner.position + Vector3.up * height;
         }
 
-        if (Camera.main!= null)
+        if (Camera.main != null)
         {
             this.transform.forward = Camera.main.transform.forward;
         }

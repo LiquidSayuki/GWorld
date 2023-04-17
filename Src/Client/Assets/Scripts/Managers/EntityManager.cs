@@ -1,9 +1,6 @@
 ﻿using Entities;
 using SkillBridge.Message;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Assets.Scripts.Managers
 {
@@ -14,14 +11,14 @@ namespace Assets.Scripts.Managers
         void OnEntityEvent(EntityEvent @event);
     }
 
-    internal class EntityManager:Singleton<EntityManager>
+    internal class EntityManager : Singleton<EntityManager>
     {
-        Dictionary<int,Entity> entities = new Dictionary<int,Entity>();
+        Dictionary<int, Entity> entities = new Dictionary<int, Entity>();
 
         // 使用一个接口
-        Dictionary<int,IEntityNotify> notifiers = new Dictionary<int, IEntityNotify> ();
+        Dictionary<int, IEntityNotify> notifiers = new Dictionary<int, IEntityNotify>();
 
-        public void RegisterEntityNotify (int entityId, IEntityNotify notify)
+        public void RegisterEntityNotify(int entityId, IEntityNotify notify)
         {
             this.notifiers[entityId] = notify;
         }
@@ -31,7 +28,7 @@ namespace Assets.Scripts.Managers
             entities[entity.entityId] = entity;
         }
 
-        public void RemoveEntity(NEntity nEntity) 
+        public void RemoveEntity(NEntity nEntity)
         {
             this.entities.Remove(nEntity.Id);
             if (notifiers.ContainsKey(nEntity.Id))
@@ -51,7 +48,7 @@ namespace Assets.Scripts.Managers
             entities.TryGetValue(sync.Id, out entity);
             if (entity != null)
             {
-                if(sync.Entity != null)
+                if (sync.Entity != null)
                 {
                     entity.EntityData = sync.Entity;
                 }

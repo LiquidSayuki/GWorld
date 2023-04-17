@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class UICharacterView : MonoBehaviour {
+public class UICharacterView : MonoBehaviour
+{
 
     public GameObject[] characters;
 
@@ -22,17 +21,19 @@ public class UICharacterView : MonoBehaviour {
         }
     }
 
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
 
     void UpdateCharacter()
     {
-        for(int i=0;i<3;i++)
+        for (int i = 0; i < 3; i++)
         {
             characters[i].SetActive(i == this.currentCharacter);
         }

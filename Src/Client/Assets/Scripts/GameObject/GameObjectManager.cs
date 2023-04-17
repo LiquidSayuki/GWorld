@@ -1,12 +1,9 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Managers;
+using Entities;
+using Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using Entities;
-using Services;
-using SkillBridge.Message;
-using Models;
-using Assets.Scripts.Managers;
 
 public class GameObjectManager : MonoSingleton<GameObjectManager>
 {
@@ -77,9 +74,9 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         if (!Characters.ContainsKey(character.entityId) || Characters[character.entityId] == null)
         {
             Object obj = Resloader.Load<Object>(character.Define.Resource);
-            if(obj == null)
+            if (obj == null)
             {
-                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.",character.Define.TID, character.Define.Resource);
+                Debug.LogErrorFormat("Character[{0}] Resource[{1}] not existed.", character.Define.TID, character.Define.Resource);
                 return;
             }
             GameObject go = (GameObject)Instantiate(obj, this.transform);

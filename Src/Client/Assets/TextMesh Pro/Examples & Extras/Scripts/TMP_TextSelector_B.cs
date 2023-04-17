@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using System.Collections;
-using System.Collections.Generic;
 
 
 #pragma warning disable 0618 // Disabled warning due to SetVertices being deprecated until new release with SetMesh() is available.
@@ -255,7 +252,7 @@ namespace TMPro.Examples
 
                     TMP_LinkInfo linkInfo = m_TextMeshPro.textInfo.linkInfo[linkIndex];
 
-                   // Debug.Log("Link ID: \"" + linkInfo.GetLinkID() + "\"   Link Text: \"" + linkInfo.GetLinkText() + "\""); // Example of how to retrieve the Link ID and Link Text.
+                    // Debug.Log("Link ID: \"" + linkInfo.GetLinkID() + "\"   Link Text: \"" + linkInfo.GetLinkText() + "\""); // Example of how to retrieve the Link ID and Link Text.
 
                     Vector3 worldPointInRectangle = Vector3.zero;
                     RectTransformUtility.ScreenPointToWorldPointInRectangle(m_TextMeshPro.rectTransform, Input.mousePosition, m_Camera, out worldPointInRectangle);
@@ -286,7 +283,7 @@ namespace TMPro.Examples
                     m_lastIndex = -1;
                 }
             }
-            
+
         }
 
 

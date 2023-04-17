@@ -1,14 +1,12 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Models;
 using Assets.Scripts.UI;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIEquipItem : MonoBehaviour, IPointerClickHandler {
+public class UIEquipItem : MonoBehaviour, IPointerClickHandler
+{
 
     public Image icon;
     public Text title;
@@ -49,7 +47,7 @@ public class UIEquipItem : MonoBehaviour, IPointerClickHandler {
             if (this.selected)
             {
                 DoEquip();
-                this.selected= false;
+                this.selected = false;
             }
             else
             {
@@ -62,7 +60,7 @@ public class UIEquipItem : MonoBehaviour, IPointerClickHandler {
     {
         this.owner = owner;
         this.item = item;
-        this.index= idx;
+        this.index = idx;
         this.isEquiped = equiped;
 
         if (this.title != null) this.title.text = this.item.Define.Name;

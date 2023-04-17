@@ -1,203 +1,71 @@
-2023-03-30 22:04:47,346 [ 1] INFO  Unity: LoadingManager start
-2023-03-30 22:04:50,356 [ 1] INFO  Unity: DataManager > DataManager()
-2023-03-30 22:05:21,322 [ 1] INFO  Unity: UserLoginRequest::user :user002 psw:12345
-2023-03-30 22:05:21,324 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-03-30 22:05:21,327 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:05:21,328 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:05:21,331 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-04-17 16:27:58,199 [ 1] INFO  Unity: LoadingManager start
+2023-04-17 16:28:01,328 [ 1] INFO  Unity: DataManager > DataManager()
+2023-04-17 16:28:09,989 [ 1] INFO  Unity: UserLoginRequest::user :user001 psw:12345
+2023-04-17 16:28:09,990 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-04-17 16:28:09,993 [ 1] INFO  Unity: DoConnect
+2023-04-17 16:28:09,994 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-04-17 16:28:09,998 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-03-30 22:05:21,333 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-30 22:05:21,760 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-03-30 22:05:21,761 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-03-30 22:05:21,923 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:05:23,372 [ 1] INFO  Unity: Select Char:[2]User002Fashi[Wizard]
-2023-03-30 22:05:23,831 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-03-30 22:05:23,925 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-03-30 22:05:23,927 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
-2023-03-30 22:05:23,927 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
-2023-03-30 22:05:23,929 [ 1] INFO  Unity: BagInit: System.Byte[]
-2023-03-30 22:05:23,936 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-30 22:05:23,937 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:2Name:User002FashiMapID:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:05:23,939 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-03-30 22:05:24,328 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
-
-2023-03-30 22:05:24,407 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
-
-2023-03-30 22:05:24,409 [ 1] WARN  Unity: [MainPlayerCamera][-1347372] Awake
-UnityEngine.Debug:LogWarningFormat(String, Object[])
-MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
-
-2023-03-30 22:05:24,411 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
-You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:38)
+2023-04-17 16:28:10,001 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-04-17 16:28:10,160 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-04-17 16:28:10,161 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-04-17 16:28:10,377 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:28:11,052 [ 1] INFO  Unity: Select Char:[1]213123[Wizard]
+2023-04-17 16:28:11,590 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-04-17 16:28:11,612 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-04-17 16:28:11,613 [ 1] INFO  Unity: ItemManager: Init[1], Count: 10
+2023-04-17 16:28:11,614 [ 1] INFO  Unity: ItemManager: Init[2], Count: 10
+2023-04-17 16:28:11,615 [ 1] INFO  Unity: BagInit: System.Byte[]
+2023-04-17 16:28:11,623 [ 1] ERROR Unity: Message handler exception:, Object reference not set to an instance of an object, Assembly-CSharp,   at Assets.Scripts.Managers.GuildManager.Init (SkillBridge.Message.NGuildInfo guild) [0x0000a] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Managers\GuildManager.cs:24 
+  at Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) [0x000d3] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Services\UserService.cs:274 
+  at Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg) [0x00000] in <filename unknown>:0 
+2023-04-17 16:28:11,624 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, Assets.Scripts.Managers.GuildManager.Init (SkillBridge.Message.NGuildInfo guild) (at Assets/Scripts/Managers/GuildManager.cs:24)
+Services.UserService.OnGameEnter (System.Object sender, SkillBridge.Message.UserGameEnterResponse response) (at Assets/Scripts/Services/UserService.cs:274)
+Network.MessageDistributer`1[System.Object].RaiseEvent[UserGameEnterResponse] (System.Object sender, SkillBridge.Message.UserGameEnterResponse msg)
 }</args></log4net.Error>
-2023-03-30 22:05:24,413 [ 1] WARN  Unity: [GameObjectManager][-1347324] Awake
+2023-04-17 16:28:11,631 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
+2023-04-17 16:28:11,632 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:213123MapID:1 Entity:(6:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-04-17 16:28:11,635 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-04-17 16:28:12,090 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+
+2023-04-17 16:28:12,182 [ 1] WARN  Unity: Asset 'DeliveryNpc': Transition 'AnyState -> DeliveryNPC_Talk' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+
+2023-04-17 16:28:12,183 [ 1] WARN  Unity: [MainPlayerCamera][-1871812] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:05:24,414 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
-2023-03-30 22:05:24,415 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
-2023-03-30 22:05:24,416 [ 1] INFO  Unity: CreatCharacterObject ,ID:1,Name:User002Fashi
-2023-03-30 22:05:24,416 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
-2023-03-30 22:05:24,419 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
-2023-03-30 22:05:24,420 [ 1] WARN  Unity: [UIMain][207154] Awake
+2023-04-17 16:28:12,184 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{UnassignedReferenceException: The variable player of MainPlayerCamera has not been assigned.
+You probably need to assign the player variable of the MainPlayerCamera script in the inspector., MainPlayerCamera.OnEnable () (at Assets/Scripts/GameObject/MainPlayerCamera.cs:35)
+}</args></log4net.Error>
+2023-04-17 16:28:12,184 [ 1] WARN  Unity: [GameObjectManager][-1871764] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:05:24,421 [ 1] WARN  Unity: [UIWorldElementManager][208038] Awake
+2023-04-17 16:28:12,185 [ 1] INFO  Unity: GameObjectManager的OnStart被调用了
+2023-04-17 16:28:12,185 [ 1] INFO  Unity: IEnumerator InitGameObjects被调用了
+2023-04-17 16:28:12,186 [ 1] INFO  Unity: CreatCharacterObject ,ID:6,Name:213123
+2023-04-17 16:28:12,188 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有0个角色/怪物
+2023-04-17 16:28:12,191 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有1
+2023-04-17 16:28:12,195 [ 1] WARN  Unity: [UIMain][239508] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:05:24,443 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-03-30 22:05:24,947 [ 1] INFO  Unity: MapService: OnMapCharacterEnter:Map:1 Count:1
-2023-03-30 22:05:24,948 [ 1] INFO  Unity: CharacterManager:AddCharacter:ID:1Name:士001MapID:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-03-30 22:05:24,949 [ 1] INFO  Unity: CreatCharacterObject ,ID:2,Name:士001
-2023-03-30 22:05:24,950 [ 1] INFO  Unity: GameObjectManager开始创建角色物体，目前已经有1个角色/怪物
-2023-03-30 22:05:24,975 [ 1] INFO  Unity: GameObjectManager创建角色物体完毕，目前共有2
-2023-03-30 22:05:24,976 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:05:25,221 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,900),dir:(100,0,0),spd:0 ]
+2023-04-17 16:28:12,196 [ 1] WARN  Unity: [UIWorldElementManager][240458] Awake
+UnityEngine.Debug:LogWarningFormat(String, Object[])
+MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:23)
 
-2023-03-30 22:05:25,239 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,972),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:05:25,801 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,915),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:05:25,897 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,862),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:05:25,979 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(5000,4000,811),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:05:27,450 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveBack entity :(2:pos:(5000,4000,811),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,484 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4959,3970,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,539 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4913,3952,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,586 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4863,3946,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,635 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4814,3940,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,682 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4765,3949,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,737 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4733,3986,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,799 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4715,4033,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,867 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4772,4075,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:27,956 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4854,4072,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:28,038 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4932,4042,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:28,079 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(4947,4042,806),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:05:36,331 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:05:38,674 [ 1] INFO  Unity: Send Team Invite RESPONSE
-2023-03-30 22:05:38,689 [ 1] INFO  Unity: On Friend List Change
-2023-03-30 22:05:38,691 [ 1] INFO  Unity: On Teaminfo Received
-2023-03-30 22:05:51,176 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: MoveFwd entity :(2:pos:(4947,4042,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,196 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4945,3987,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,251 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4930,3939,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,299 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4916,3891,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,347 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4901,3843,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,395 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4879,3798,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,450 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4851,3757,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,505 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4815,3722,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,552 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4777,3689,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,600 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4741,3655,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,648 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4709,3616,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,717 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: None entity :(2:pos:(4704,3565,806),dir:(100,0,0),spd:300 ]
-
-2023-03-30 22:05:51,744 [ 1] INFO  Unity: MapEntityUpdateResponse : Entitiys 1
-[2 event: Idle entity :(2:pos:(4714,3565,806),dir:(100,0,0),spd:0 ]
-
-2023-03-30 22:07:03,465 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException: 远程主机强迫关闭了一个现有的连接。
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, Int32 offset, Int32 size, SocketFlags flags) [0x00000] in <filename unknown>:0 
-  at Network.NetClient.ProcessRecv () [0x00084] in F:\Unity\GWorld\GWorld\Src\Client\Assets\Scripts\Network\NetClient.cs:336 
-
-2023-03-30 22:07:03,466 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
+2023-04-17 16:28:12,229 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-04-17 16:28:12,281 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 16:28:49,855 [ 1] INFO  Unity: SetChannel:World
+2023-04-17 16:28:56,125 [ 1] INFO  Unity: SetChannel:Private
+2023-04-17 16:28:59,109 [ 1] INFO  Unity: SetChannel:Local
+2023-04-17 16:29:04,641 [ 1] INFO  Unity: SetChannel:World
+2023-04-17 16:29:53,190 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-04-17 16:29:53,190 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:ProcessRecv() (at Assets/Scripts/Network/NetClient.cs:350)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:430)
+Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:173)
+Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:168)
 
-2023-03-30 22:07:03,473 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:07:03,474 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:07:03,475 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
-
-2023-03-30 22:07:05,503 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:270)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:07:05,504 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException: 由于目标计算机积极拒绝，无法连接。
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket+Worker.Connect () [0x00000] in <filename unknown>:0  
-UnityEngine.Debug:LogErrorFormat(String, Object[])
-Network.NetClient:DoConnect() (at Assets/Scripts/Network/NetClient.cs:272)
-Network.NetClient:Connect(Int32) (at Assets/Scripts/Network/NetClient.cs:165)
-Network.NetClient:KeepConnect() (at Assets/Scripts/Network/NetClient.cs:311)
-Network.NetClient:Update() (at Assets/Scripts/Network/NetClient.cs:428)
-
-2023-03-30 22:07:05,519 [ 1] INFO  Unity: DoConnect
-2023-03-30 22:07:05,520 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-03-30 22:07:05,521 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
-
-2023-03-30 22:07:06,537 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-03-30 22:07:11,899 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:07:22,072 [ 1] INFO  Unity: Send Team Invite REQUEST
-2023-03-30 22:07:40,938 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:08:02,597 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:10:09,191 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:10:13,781 [ 1] INFO  Unity: Send Team Leave Request
-2023-03-30 22:10:20,534 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-03-30 22:10:20,535 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-UnityEngine.Debug:LogWarning(Object)
-Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:176)
-Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:171)
-
-2023-03-30 22:10:20,537 [ 1] INFO  Unity: Character_2_User002Fashi OnDestroy :ID:1 POS:(4865, 2894, 805) DIR:(100, 0, 0) SPD:0 
-2023-03-30 22:10:20,537 [ 1] INFO  Unity: Character_1_士001 OnDestroy :ID:2 POS:(4714, 3565, 806) DIR:(100, 0, 0) SPD:0 
+2023-04-17 16:29:53,194 [ 1] INFO  Unity: Character_1_213123 OnDestroy :ID:6 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

@@ -1,10 +1,6 @@
 ﻿using Assets.Scripts.Managers;
 using Common.Data;
 using SkillBridge.Message;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Assets.Scripts.Models
 {
@@ -16,8 +12,9 @@ namespace Assets.Scripts.Models
         public EquipDefine EquipInfo;
 
         //可以重载自己的构造函数
-        public Item(NItemInfo item):
-            this(item.Id, item.Count){ }
+        public Item(NItemInfo item) :
+            this(item.Id, item.Count)
+        { }
 
         public Item(int id, int count)
         {

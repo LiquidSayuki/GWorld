@@ -3,13 +3,11 @@ using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace Services
 {
-    class StatusService: Singleton<StatusService>, IDisposable
+    class StatusService : Singleton<StatusService>, IDisposable
     {
         // 使用一种eventMap的方式
         // 观察者
@@ -42,7 +40,8 @@ namespace Services
         }
 
         // Message Subscribe
-        public StatusService() {
+        public StatusService()
+        {
             MessageDistributer.Instance.Subscribe<StatusNotify>(this.OnStatusNotify);
         }
 
@@ -54,7 +53,7 @@ namespace Services
 
         private void OnStatusNotify(object sender, StatusNotify notify)
         {
-            foreach(NStatus status in notify.Status)
+            foreach (NStatus status in notify.Status)
             {
                 Notify(status);
             }
@@ -67,7 +66,9 @@ namespace Services
             if (status.Action == StatusAction.Add)
             {
                 User.Instance.AddGold(status.Value);
-            }else if(status.Action == StatusAction.Delete){
+            }
+            else if (status.Action == StatusAction.Delete)
+            {
                 User.Instance.AddGold(-status.Value);
             }
 

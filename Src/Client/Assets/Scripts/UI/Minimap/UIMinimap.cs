@@ -1,12 +1,10 @@
-﻿using Models;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Assets.Scripts.Managers;
+using Models;
 using UnityEngine;
 using UnityEngine.UI;
-using Managers;
-using Assets.Scripts.Managers;
 
-public class UIMinimap : MonoBehaviour {
+public class UIMinimap : MonoBehaviour
+{
 
     public Collider minimapBoundingBox;
     public Image minimap;
@@ -14,8 +12,9 @@ public class UIMinimap : MonoBehaviour {
     public Text mapName;
 
     private Transform playerTransform;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         MinimapManager.Instance.minimap = this;
         this.UpdateMap();
     }
@@ -32,10 +31,11 @@ public class UIMinimap : MonoBehaviour {
 
         this.playerTransform = null;
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if(playerTransform == null)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (playerTransform == null)
         {
             // 缓存玩家控制的GameObject的Transform，减少对单例的引用，节约性能
             this.playerTransform = MinimapManager.Instance.PlayerTransform;
@@ -60,5 +60,5 @@ public class UIMinimap : MonoBehaviour {
         this.minimap.rectTransform.localPosition = Vector2.zero;
         // 将角色的y轴旋转赋值给小地图箭头
         this.arrow.transform.eulerAngles = new Vector3(0, 0, -playerTransform.eulerAngles.y);
-	}
+    }
 }

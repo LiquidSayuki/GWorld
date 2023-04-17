@@ -15,7 +15,7 @@ namespace GameServer.Entities
 
         public int Id { get; set; }
         // 纯ID 代指数据库ID
-
+        public string Name { get { return this.Info.Name; }}
         public NCharacterInfo Info;
         public CharacterDefine Define;
 

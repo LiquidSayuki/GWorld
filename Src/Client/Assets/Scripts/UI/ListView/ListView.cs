@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -26,7 +23,7 @@ public class ListView : MonoBehaviour
                 onSelected(selected);
             }
         }
-        public virtual void onSelected(bool selected){}
+        public virtual void onSelected(bool selected) { }
         public void OnPointerClick(PointerEventData eventData)
         {
             // 点击时如果已经选中就不反应
@@ -52,7 +49,7 @@ public class ListView : MonoBehaviour
         get { return selectedItem; }
         private set
         {
-            if (selectedItem!=null && selectedItem != value)
+            if (selectedItem != null && selectedItem != value)
             {
                 selectedItem.Selected = false;
             }
@@ -71,7 +68,7 @@ public class ListView : MonoBehaviour
 
     public void RemoveAll()
     {
-        foreach(var it in items)
+        foreach (var it in items)
         {
             Destroy(it.gameObject);
         }
