@@ -15,7 +15,7 @@ namespace Common.Data
         AddExp=4,
         AddMoney=5,
         AddItem=6,
-        AddSkillPint=7,
+        AddSkillPoint = 7,
     }
 
     public class ItemDefine

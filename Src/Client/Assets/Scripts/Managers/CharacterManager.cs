@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Models;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -29,11 +30,15 @@ namespace Assets.Scripts.Managers
 
             // 交给实体管理器
             EntityManager.Instance.AddEntity(character);
-
             // 事件调用，游戏物体管理器创建游戏物体
             if (OnCharacterEnter != null)
             {
                 OnCharacterEnter(character);
+            }
+            //将创建好的玩家角色传递给User，方便调用
+            if (cha.EntityId == User.Instance.CurrentCharacterInfo.EntityId)
+            {
+                User.Instance.CurrentCharacter = character;
             }
         }
 

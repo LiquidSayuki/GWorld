@@ -2,8 +2,10 @@
 using Entities;
 using Services;
 using SkillBridge.Message;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class PlayerInputController : MonoBehaviour
     public bool onAir = false;
 
     private MainPlayerCamera mainPlayerCamera;
+
+    private NavMeshAgent navMeshAgent;
+    private bool autoNav = false;
 
     // Use this for initialization
     void Start()
@@ -46,6 +51,14 @@ public class PlayerInputController : MonoBehaviour
             if (entityController != null) entityController.entity = this.character;
 
             this.mainPlayerCamera = GameObject.FindObjectOfType<MainPlayerCamera>();
+
+            //自动寻路
+            if(navMeshAgent == null)
+            {
+                navMeshAgent = this.gameObject.AddComponent<NavMeshAgent>();
+                //提前停止防止目标为npc导致重合穿模
+                navMeshAgent.stoppingDistance = 0.3f;
+            }
         }
     }
 
@@ -56,9 +69,11 @@ public class PlayerInputController : MonoBehaviour
         if (character == null || InputManager.Instance.IsInputMode)
             return;
 
-
+        //input轴向
         float v = Input.GetAxis("Vertical");
         float h = Input.GetAxis("Horizontal");
+
+        //设置角色动作
         if (v > 0.01 || h > 0.01 || h < -0.01)
         {
             if (state != SkillBridge.Message.CharacterState.Move)
@@ -89,16 +104,17 @@ public class PlayerInputController : MonoBehaviour
                 this.SendEntityEvent(EntityEvent.Idle);
             }
         }
+       
 
         // 实现相对相机方向而非角色方向的移动
         Vector3 targetDirection = new Vector3(h, 0, v);
-        // 摄像机看向玩家，就会有相对世界的旋转角度
+        // 摄像机看向玩家，就会有相对世界的旋转角度 y 
         float y = Camera.main.transform.rotation.eulerAngles.y;
         // 让目标方向绕y轴（世界垂直）旋转y（相机旋转角度）度
         targetDirection = Quaternion.Euler(0, y, 0) * targetDirection;
         targetDirection = targetDirection.normalized;
 
-        // 使角色持续面朝摄像机反方向
+        // 这段可以使角色持续面朝摄像机反方向
         // this.rb.transform.rotation = Quaternion.Slerp(this.rb.transform.rotation, Quaternion.Euler(0,y,0), 5.0f * Time.deltaTime);
 
         if (lockMode)
@@ -114,8 +130,11 @@ public class PlayerInputController : MonoBehaviour
             {
                 // 角色面朝自身前进方向
                 this.rb.transform.rotation = Quaternion.Slerp(this.rb.transform.rotation, Quaternion.LookRotation(targetDirection), 8.0f * Time.deltaTime);
+                //TODO: 向服务器同步角色朝向
+
             }
         }
+
         // 执行移动
         this.rb.transform.Translate(targetDirection * Time.deltaTime * this.character.speed / 30f, Space.World);
 
@@ -198,6 +217,43 @@ public class PlayerInputController : MonoBehaviour
             this.SendEntityEvent(EntityEvent.None);
         }
         this.transform.position = this.rb.transform.position;
+    }
+
+    //自动寻路
+    public void StartNav(Vector3 target)
+    {
+        StartCoroutine(BeginNav(target));
+    }
+
+    public void StopNav()
+    {
+        autoNav = false;
+        navMeshAgent.ResetPath();
+        if(state  != SkillBridge.Message.CharacterState.Idle)
+        {
+            state = SkillBridge.Message.CharacterState.Idle;
+            this.rb.velocity= Vector3.zero;
+            this.character.Stop();
+            this.SendEntityEvent(EntityEvent.Idle);
+        }
+    }
+    public void NavMove()
+    {
+        if (navMeshAgent.pathPending) return;
+    }
+
+    IEnumerator BeginNav(Vector3 target)
+    {
+        navMeshAgent.SetDestination(target);
+        yield return null;
+        autoNav = true;
+        if(state != SkillBridge.Message.CharacterState.Move)
+        {
+            state = SkillBridge.Message.CharacterState.Move;
+            this.character.MoveForward();
+            this.SendEntityEvent(EntityEvent.MoveFwd);
+            navMeshAgent.speed = this.character.speed / 50f;
+        }
     }
 
     void SendEntityEvent(EntityEvent entityEvent)

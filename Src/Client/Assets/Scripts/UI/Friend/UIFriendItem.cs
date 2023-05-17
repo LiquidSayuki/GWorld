@@ -18,7 +18,6 @@ public class UIFriendItem : ListView.ListViewItem
     {
         this.Background.overrideSprite = selected ? SelectedBg : NormalBg;
     }
-    // Use this for initialization
     void Start()
     {
 

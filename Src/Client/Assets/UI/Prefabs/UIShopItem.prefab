@@ -404,6 +404,7 @@ MonoBehaviour:
   icon: {fileID: 114471383886236142}
   title: {fileID: 114126009269220866}
   price: {fileID: 114161490038392440}
+  limitClass: {fileID: 0}
   count: {fileID: 114540291974061056}
   background: {fileID: 114661337431817630}
   normalBg: {fileID: 21300000, guid: f2c26ba28b4d05643ba74996bb40967b, type: 3}

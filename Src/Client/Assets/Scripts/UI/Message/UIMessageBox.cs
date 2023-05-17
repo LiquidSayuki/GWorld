@@ -50,6 +50,8 @@ public class UIMessageBox : MonoBehaviour
 
     void OnClickYes()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+
         Destroy(this.gameObject);
         if (this.OnYes != null)
             this.OnYes();
@@ -57,6 +59,8 @@ public class UIMessageBox : MonoBehaviour
 
     void OnClickNo()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+
         Destroy(this.gameObject);
         if (this.OnNo != null)
             this.OnNo();

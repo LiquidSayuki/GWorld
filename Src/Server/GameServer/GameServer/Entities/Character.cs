@@ -18,9 +18,8 @@ namespace GameServer.Entities
     /// Character
     /// 玩家角色类
     /// </summary>
-    class Character : CharacterBase,IPostResponser
+    class Character : Creature,IPostResponser
     {
-
         public TCharacter Data;
         public ItemManager ItemManager;
         public StatusManager StatusManager;
@@ -35,10 +34,41 @@ namespace GameServer.Entities
 
         public Chat chat;
 
+        public long Exp
+        {
+            get { return this.Data.Exp;}
+            private set 
+            {
+                if (this.Data.Exp == value) return;
+                this.StatusManager.AddExpChange((int)(value - this.Data.Exp));
+                this.Data.Exp = value;
+            }
+        }
+        public int Level
+        {
+            get { return this.Data.Level;}
+            private set
+            {
+                if (this.Data.Level == value) return;
+                this.StatusManager.AddLevelUp((int)(value - this.Data.Level));
+                this.Data.Level = value;
+            }
+        }
+        public long Gold
+        {
+            get { return this.Data.Gold; }
+            set
+            {
+                if (this.Data.Gold == value)
+                    return;
+                this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
+                this.Data.Gold = value;
+            }
+        }
+
         public Character(CharacterType type, TCharacter cha) :
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
-
             this.Data = cha;
             // cha 数据库 character
             // ID 是唯一的DB ID
@@ -51,6 +81,7 @@ namespace GameServer.Entities
             this.Info.Type = type;
             this.Info.Name = cha.Name;
             this.Info.Level = 10;//cha.Level;
+            this.Info.Exp = cha.Exp;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Entity = this.EntityData;
@@ -58,7 +89,6 @@ namespace GameServer.Entities
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
             this.Info.Equips = this.Data.Equips;
-
 
             this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
 
@@ -76,22 +106,48 @@ namespace GameServer.Entities
             this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildId);
 
             this.chat = new Chat(this);
+
+            this.Info.attrDynamic = new NAttributeDynamic();
+            this.Info.attrDynamic.Hp = cha.HP;
+            this.Info.attrDynamic.Mp = cha.MP;
         }
 
-        public long Gold
+        internal void AddExp(int exp)
         {
-            get { return this.Data.Gold; }
+            this.Exp += exp;
+            this.CheckLevelUp();
+        }
 
-            set
+        void CheckLevelUp()
+        {
+            long needExp = (long)Math.Pow(this.Level, 3) * 10 + this.Level * 40 + 50;
+            if(this.Exp > needExp)
             {
-                if (this.Data.Gold == value)
-                    return;
-                this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
-                this.Data.Gold = value;
+                this.LevelUp();
             }
+        }
+        void LevelUp()
+        {
+            this.Level += 1;
+            Log.InfoFormat("Character [{0},{1}] LevelUpTo{2}", this.Id, this.Info.Name, this.Level);
         }
 
         /// <summary>
+        /// 复制一份自身的基本信息出去
+        /// </summary>
+        /// <returns>角色的简略信息</returns>
+        public NCharacterInfo GetBasicInfo()
+        {
+            return new NCharacterInfo
+            {
+                Id = this.Id,
+                Name = this.Info.Name,
+                Class = this.Info.Class,
+                Level = this.Info.Level,
+            };
+        }
+        /// <summary>
+        /// 后处理
         /// 对角色状态的更新,唤醒一些管理器，要求他们把最新信息附带在message中等待发送
         /// </summary>
         /// <param name="message"></param>
@@ -148,21 +204,6 @@ namespace GameServer.Entities
         public void Clear()
         {
             this.FriendManager.OfflineNotify();
-        }
-
-        /// <summary>
-        /// 复制一份自身的基本信息出去
-        /// </summary>
-        /// <returns>角色的简略信息</returns>
-        public NCharacterInfo GetBasicInfo()
-        {
-            return new NCharacterInfo
-            {
-                Id = this.Id,
-                Name = this.Info.Name,
-                Class = this.Info.Class,
-                Level = this.Info.Level,
-            };
         }
     }
 }

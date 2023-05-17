@@ -65,5 +65,15 @@ namespace GameServer.Managers
             }
             this.Status.Clear();
         }
+
+        internal void AddLevelUp(int v)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void AddExpChange(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

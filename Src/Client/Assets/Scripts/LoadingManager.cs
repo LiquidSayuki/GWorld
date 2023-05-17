@@ -42,6 +42,7 @@ public class LoadingManager : MonoBehaviour
         TeamService.Instance.Init();
         GuildService.Instance.Init();
         ChatService.Instance.Init();
+        SoundManager.Instance.Playmusic(SoundDefine.Music_Login);
 
 
         // Fake Loading Simulate
@@ -55,12 +56,5 @@ public class LoadingManager : MonoBehaviour
         UILoading.SetActive(false);
         UILogin.SetActive(true);
         yield return null;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

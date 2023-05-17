@@ -61,9 +61,9 @@ namespace Assets.Scripts.Managers
             //从本地配置表寻找可接任务
             foreach (var kv in DataManager.Instance.Quests)
             {
-                if (kv.Value.LimitClass != CharacterClass.None && kv.Value.LimitClass != User.Instance.CurrentCharacter.Class)
+                if (kv.Value.LimitClass != CharacterClass.None && kv.Value.LimitClass != User.Instance.CurrentCharacterInfo.Class)
                     continue;
-                if (kv.Value.LimitLevel > User.Instance.CurrentCharacter.Level)
+                if (kv.Value.LimitLevel > User.Instance.CurrentCharacterInfo.Level)
                     continue;
                 if (this.allQuests.ContainsKey(kv.Key))
                     continue;

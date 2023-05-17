@@ -41,8 +41,8 @@ namespace Services
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.teamInviteReq = new TeamInviteRequest();
-            message.Request.teamInviteReq.FromId = User.Instance.CurrentCharacter.Id;
-            message.Request.teamInviteReq.FromName = User.Instance.CurrentCharacter.Name;
+            message.Request.teamInviteReq.FromId = User.Instance.CurrentCharacterInfo.Id;
+            message.Request.teamInviteReq.FromName = User.Instance.CurrentCharacterInfo.Name;
             message.Request.teamInviteReq.ToId = friendId;
             message.Request.teamInviteReq.ToName = friendName;
             NetClient.Instance.SendMessage(message);
@@ -102,7 +102,7 @@ namespace Services
             message.Request = new NetMessageRequest();
             message.Request.teamLeave = new TeamLeaveRequest();
             message.Request.teamLeave.TeamId = id;
-            message.Request.teamLeave.CharacterId = User.Instance.CurrentCharacter.Id;
+            message.Request.teamLeave.CharacterId = User.Instance.CurrentCharacterInfo.Id;
             NetClient.Instance.SendMessage(message);
         }
         private void OnTeamLeave(object sender, TeamLeaveResponse message)

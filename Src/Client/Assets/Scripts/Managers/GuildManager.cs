@@ -34,7 +34,7 @@ namespace Assets.Scripts.Managers
             }
             foreach(var m in guildMembers)
             {
-                if(m.characterId == User.Instance.CurrentCharacter.Id)
+                if(m.characterId == User.Instance.CurrentCharacterInfo.Id)
                 {
                     myMemberInfo = m;
                     break;

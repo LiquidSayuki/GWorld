@@ -9,7 +9,7 @@ namespace Assets.Scripts.Managers
     {
         public void Init()
         {
-            NpcManager.Instance.RegisterNpcEvent(NpcFunction.IvokeShop, OnOpenShop);
+            NpcManager.Instance.RegisterNpcEvent(NpcFunction.InvokeShop, OnOpenShop);
         }
 
         private bool OnOpenShop(NpcDefine npc)

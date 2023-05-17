@@ -10,21 +10,19 @@ using System.Threading.Tasks;
 
 namespace GameServer.Entities
 {
-    class CharacterBase : Entity
+    class Creature : Entity
     {
-
         public int Id { get; set; }
-        // 纯ID 代指数据库ID
+        // 此 ID 为数据库ID
         public string Name { get { return this.Info.Name; }}
         public NCharacterInfo Info;
         public CharacterDefine Define;
 
-        public CharacterBase(Vector3Int pos, Vector3Int dir):base(pos,dir)
+        public Creature(Vector3Int pos, Vector3Int dir):base(pos,dir)
         {
 
         }
-
-        public CharacterBase(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :
+        public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :
            base(pos, dir)
         {
             this.Info = new NCharacterInfo();

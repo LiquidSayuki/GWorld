@@ -51,7 +51,7 @@ namespace Services
                     }
                     else
                     {
-                        EquipManager.Instance.OnUnEquipItem(pendingEquip.EquipInfo.Slot);
+                        EquipManager.Instance.OnUnequipItem(pendingEquip.EquipInfo.Slot);
                     }
                     pendingEquip = null;
                 }

@@ -1,18 +1,29 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.Models;
+using Common.Battle;
+using Models;
 using SkillBridge.Message;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts.UI
 {
     class UICharEquip : UIWindow
     {
+        public Text money;
+
         public GameObject itemPrefab;
         public GameObject itemEquipedPrefab;
         public Transform itemListRoot;
-
         public Transform[] slots;
 
+        public Text HP;
+        public Slider HPBar;
+        public Text MP;
+        public Slider MPBar;
+
+        public Text[] attrs;
 
         void Start()
         {
@@ -30,6 +41,11 @@ namespace Assets.Scripts.UI
             InitAllEquipItems();
             ClearEquipedList();
             InitEquipedItems();
+            if(this.money != null)
+            {
+                this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
+            }
+            InitAttributes();
         }
 
         private void InitEquipedItems()
@@ -45,12 +61,14 @@ namespace Assets.Scripts.UI
                 }
             }
         }
-
+        /// <summary>
+        /// 初始化所有装备列表
+        /// </summary>
         private void InitAllEquipItems()
         {
             foreach (var kv in ItemManager.Instance.Items)
             {
-                if (kv.Value.Define.Type == SkillBridge.Message.ItemType.Equipment)
+                if (kv.Value.Define.Type == SkillBridge.Message.ItemType.Equip && kv.Value.Define.LimitClass == User.Instance.CurrentCharacterInfo.Class)
                 {
                     // 已经装备的装备不显示在装备栏中
                     if (EquipManager.Instance.Contains(kv.Key))
@@ -92,6 +110,27 @@ namespace Assets.Scripts.UI
             EquipManager.Instance.UnEquipItem(item);
         }
 
+        private void InitAttributes()
+        {
+            Attributes charattr = User.Instance.CurrentCharacter.Attributes;
+            this.HP.text = string.Format("{0}/{1}",charattr.HP, (int)charattr.MaxHP);
+            this.MP.text = string.Format("{0}/{1}", charattr.MP, (int)charattr.MaxMP);
+            this.HPBar.maxValue = charattr.MaxHP;
+            this.MPBar.maxValue = charattr.MaxMP;
+            this.HPBar.value = charattr.HP;
+            this.MPBar.value = charattr.MP;
 
+            for(int i = (int)AttributeType.STR; i < (int)AttributeType.MAX; i++)
+            {
+                if(i == (int)AttributeType.CRI)
+                {
+                    this.attrs[i - 2].text = string.Format("{0:f2}%", charattr.Final.Data[i] * 100);
+                }
+                else
+                {
+                    this.attrs[i - 2].text = (((int)charattr.Final.Data[i]).ToString());
+                }
+            }
+        }
     }
 }

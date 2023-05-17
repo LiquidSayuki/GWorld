@@ -37,6 +37,7 @@ public class UICharacterSelect : MonoBehaviour
     {
         InitCharacterSelect(true);
         UserService.Instance.OnCharacterCreate = OnCharacterCreate;
+        SoundManager.Instance.Playmusic(SoundDefine.Music_Select);
     }
 
     public void InitCharacterCreate()
@@ -53,6 +54,8 @@ public class UICharacterSelect : MonoBehaviour
 
     public void OnClickCreate()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         if (string.IsNullOrEmpty(this.charName.text))
         {
             MessageBox.Show("请输入角色名称");
@@ -67,6 +70,8 @@ public class UICharacterSelect : MonoBehaviour
     /// <param name="charClass"></param>
     public void OnSelectClass(int charClass)
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         this.charClass = (CharacterClass)charClass;
 
         // 修改当前显示的角色
@@ -135,6 +140,8 @@ public class UICharacterSelect : MonoBehaviour
 
     public void OnSelectCharacter(int idx)
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         this.selectCharacterIdx = idx;
         var cha = User.Instance.Info.Player.Characters[idx];
         Debug.LogFormat("Select Char:[{0}]{1}[{2}]", cha.Id, cha.Name, cha.Class);
@@ -149,6 +156,8 @@ public class UICharacterSelect : MonoBehaviour
 
     public void OnClickPlay()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         if (selectCharacterIdx >= 0)
         {
             UserService.Instance.SendGameEnter(selectCharacterIdx);

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Managers;
+using Common.Battle;
 using SkillBridge.Message;
 using UnityEngine;
 
@@ -8,8 +9,8 @@ namespace Entities
     public class Character : Entity
     {
         public NCharacterInfo Info;
-
         public Common.Data.CharacterDefine Define;
+        public Attributes Attributes;
 
         public int Id
         {
@@ -37,14 +38,21 @@ namespace Entities
             get
             {
                 if (!IsPlayer) return false;
-                return this.Info.Id == Models.User.Instance.CurrentCharacter.Id;
+                return this.Info.Id == Models.User.Instance.CurrentCharacterInfo.Id;
             }
         }
 
+        /// <summary>
+        /// 构造函数在这里
+        /// </summary>
+        /// <param name="info"></param>
         public Character(NCharacterInfo info) : base(info.Entity)
         {
             this.Info = info;
             this.Define = DataManager.Instance.Characters[info.ConfigId];
+            this.Attributes = new Attributes();
+            var equips = EquipManager.Instance.GetEquipedDefines();
+            this.Attributes.Init(this.Define, this.Info.Level, equips, this.Info.attrDynamic);
         }
 
         public void MoveForward()

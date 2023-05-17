@@ -25,7 +25,7 @@ namespace Assets.Scripts.Managers
 
         public Dictionary<int, QuestDefine> Quests = null;
 
-
+        public Dictionary<int, Dictionary<int,SkillDefine>> Skills = null;
         public DataManager()
         {
             this.DataPath = "Data/";
@@ -58,6 +58,9 @@ namespace Assets.Scripts.Managers
 
             json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
             this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
+
+            json = File.ReadAllText(this.DataPath + "SkillDefine.txt");
+            this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
         }
 
 
@@ -104,6 +107,10 @@ namespace Assets.Scripts.Managers
 
             json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
             this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
+            yield return null;
+
+            json = File.ReadAllText(this.DataPath + "SkillDefine.txt");
+            this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
             yield return null;
         }
 

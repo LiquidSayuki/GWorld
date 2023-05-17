@@ -76,7 +76,7 @@ namespace Assets.Scripts.UI
 
         public void SetMoney()
         {
-            this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+            this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
         }
     }
 }

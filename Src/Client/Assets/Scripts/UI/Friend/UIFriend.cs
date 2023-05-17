@@ -49,7 +49,7 @@ public class UIFriend : UIWindow
         string friendName = "";
         if (!int.TryParse(input, out friendId))
             friendName = input;
-        if (friendId == User.Instance.CurrentCharacter.Id || friendName == User.Instance.CurrentCharacter.Name)
+        if (friendId == User.Instance.CurrentCharacterInfo.Id || friendName == User.Instance.CurrentCharacterInfo.Name)
         {
             // 反向向输入框发送本地的校验信息
             tips = "不能添加自己为好友";

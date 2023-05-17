@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Assets\Config.cs" />
      <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
      <Compile Include="Assets\Scripts\Entities\Character.cs" />
      <Compile Include="Assets\Scripts\Entities\Entity.cs" />
@@ -81,6 +82,7 @@
      <Compile Include="Assets\Scripts\Managers\NpcManager.cs" />
      <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SpriteManager.cs" />
      <Compile Include="Assets\Scripts\Managers\TeamManager.cs" />
      <Compile Include="Assets\Scripts\Models\BagItem.cs" />
@@ -99,6 +101,7 @@
      <Compile Include="Assets\Scripts\Services\StatusService.cs" />
      <Compile Include="Assets\Scripts\Services\TeamService.cs" />
      <Compile Include="Assets\Scripts\Services\UserService.cs" />
+     <Compile Include="Assets\Scripts\Sound\SoundDefine.cs" />
      <Compile Include="Assets\Scripts\UI\Bag\UIBag.cs" />
      <Compile Include="Assets\Scripts\UI\Bag\UIIconItem.cs" />
      <Compile Include="Assets\Scripts\UI\Chat\UIChat.cs" />
@@ -130,6 +133,10 @@
      <Compile Include="Assets\Scripts\UI\Quest\UIQuestSystem.cs" />
      <Compile Include="Assets\Scripts\UI\Shop\UIShop.cs" />
      <Compile Include="Assets\Scripts\UI\Shop\UIShopItem.cs" />
+     <Compile Include="Assets\Scripts\UI\Skill\UISkill.cs" />
+     <Compile Include="Assets\Scripts\UI\Skill\UISkillItem.cs" />
+     <Compile Include="Assets\Scripts\UI\Skill\UISkillSlotItem.cs" />
+     <Compile Include="Assets\Scripts\UI\Skill\UISkillSlots.cs" />
      <Compile Include="Assets\Scripts\UI\TabView\DropdownJumper.cs" />
      <Compile Include="Assets\Scripts\UI\TabView\TabButton.cs" />
      <Compile Include="Assets\Scripts\UI\TabView\TabView.cs" />
@@ -144,6 +151,7 @@
      <Compile Include="Assets\Scripts\UI\UINameBar.cs" />
      <Compile Include="Assets\Scripts\UI\UIRegister.cs" />
      <Compile Include="Assets\Scripts\UI\UISetting.cs" />
+     <Compile Include="Assets\Scripts\UI\UISystemConfig.cs" />
      <Compile Include="Assets\Scripts\UI\UIWindow.cs" />
      <Compile Include="Assets\Scripts\UI\UIWorldElement.cs" />
      <Compile Include="Assets\Scripts\UI\UIWorldElementManager.cs" />

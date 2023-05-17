@@ -1,6 +1,9 @@
 ﻿using Assets.Scripts.Models;
+using Common.Data;
 using Services;
 using SkillBridge.Message;
+using System;
+using System.Collections.Generic;
 
 namespace Assets.Scripts.Managers
 {
@@ -30,7 +33,10 @@ namespace Assets.Scripts.Managers
             }
             return false;
         }
-
+        /// <summary>
+        /// 将equip字节数据转化为装备
+        /// </summary>
+        /// <param name="data"></param>
         unsafe void ParseEquipData(byte[] data)
         {
             fixed (byte* pt = this.Data)
@@ -85,6 +91,7 @@ namespace Assets.Scripts.Managers
             ItemService.Instance.SendEquipItem(equip, false);
         }
 
+        //穿装备成功回调函数
         public void OnEquipItem(Item equip)
         {
             if (this.Equipments[(int)equip.EquipInfo.Slot] != null && this.Equipments[(int)equip.EquipInfo.Slot].Id == equip.Id)
@@ -98,18 +105,35 @@ namespace Assets.Scripts.Managers
                 OnEquipmentChange();
             }
         }
-
-        public void OnUnEquipItem(EquipSlot slot)
+        //脱装备成功回调函数
+        public void OnUnequipItem(EquipSlot slot)
         {
             if (this.Equipments[(int)slot] != null)
             {
                 this.Equipments[(int)slot] = null;
-                if (OnEquipmentChange != null)
+                if(OnEquipmentChange != null)
                 {
                     OnEquipmentChange();
                 }
             }
         }
 
+        /// <summary>
+        /// 得到当前所有正在装备的装备的Define信息
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public List<EquipDefine> GetEquipedDefines()
+        {
+            List<EquipDefine> equips = new List<EquipDefine>();
+            for(int i = 0; i< (int)EquipSlot.SlotMax; i++)
+            {
+                if (Equipments[i] != null)
+                {
+                    equips.Add(Equipments[i].EquipInfo);
+                }
+            }
+            return equips;
+        }
     }
 }

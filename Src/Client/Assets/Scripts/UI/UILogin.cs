@@ -27,6 +27,8 @@ public class UILogin : MonoBehaviour
 
     public void OnClickLogin()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         if (string.IsNullOrEmpty(this.username.text))
         {
             MessageBox.Show("请输入账号");
@@ -37,9 +39,9 @@ public class UILogin : MonoBehaviour
             MessageBox.Show("请输入密码");
             return;
         }
+
         // Enter Game
         UserService.Instance.SendLogin(this.username.text, this.password.text);
-
     }
 
     void OnLogin(Result result, string message)
@@ -49,7 +51,6 @@ public class UILogin : MonoBehaviour
             //登录成功，进入角色选择
             //MessageBox.Show("登录成功,准备角色选择" + message,"提示", MessageBoxType.Information);
             SceneManager.Instance.LoadScene("CharSelect");
-
         }
         else
             MessageBox.Show(message, "错误", MessageBoxType.Error);

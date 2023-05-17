@@ -44,9 +44,9 @@ namespace Services
             {
                 // 判断地图内角色列表中，归属玩家所控制的角色
                 // 玩家首次进入地图没有EntityID，所以为如果玩家空也应当注册当前角色给玩家
-                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
+                if (User.Instance.CurrentCharacterInfo == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacterInfo.Id == cha.Id))
                 {
-                    User.Instance.CurrentCharacter = cha;
+                    User.Instance.CurrentCharacterInfo = cha;
                 }
                 // 对于所有角色（怪物），都需要交给角色管理器处理
                 CharacterManager.Instance.AddCharacter(cha);
@@ -63,7 +63,7 @@ namespace Services
         {
             Debug.LogFormat("MapService: OnMapCharacterLeave: charID:{0}", response.entityId);
             // 销毁离开的玩家，如果离开游戏的是自身，销毁所有玩家
-            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+            if (response.entityId != User.Instance.CurrentCharacterInfo.EntityId)
             {
                 CharacterManager.Instance.RemoveCharacter(response.entityId);
             }
@@ -80,9 +80,12 @@ namespace Services
                 MapDefine map = DataManager.Instance.Maps[mapId];
                 User.Instance.CurrentMapData = map;
                 SceneManager.Instance.LoadScene(map.Resource);
+                SoundManager.Instance.Playmusic(map.Music);
             }
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);
+
+
         }
 
         // 地图同步请求

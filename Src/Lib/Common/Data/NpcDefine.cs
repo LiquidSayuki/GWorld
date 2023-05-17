@@ -15,8 +15,8 @@ namespace Common.Data
     public enum NpcFunction
     {
         None = 0,
-        IvokeShop = 1,
-        IvokeInsrance = 2,
+        InvokeShop = 1,
+        InvokeInsrance = 2,
     }
 
     public class NpcDefine

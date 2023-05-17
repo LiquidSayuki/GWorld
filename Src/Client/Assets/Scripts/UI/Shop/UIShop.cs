@@ -40,7 +40,7 @@ namespace Assets.Scripts.UI
         {
             this.shop = shop;
             this.Title.text = shop.Name;
-            this.Money.text = User.Instance.CurrentCharacter.Gold.ToString();
+            this.Money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
         }
 
         private UIShopItem selectedItem;
