@@ -34,6 +34,7 @@ namespace GameServer
             TeamService.Instance.Init();
             GuildService.Instance.Init();
             ChatService.Instance.Init();
+            BattleService.Instance.Init();
 
             //Data manager读取的json配置文件是一些service的前置依赖
             DataManager.Instance.Load();

@@ -1,27 +1,14 @@
-﻿using System;
+﻿using Common.Battle;
 using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel.Channels;
-using System.Text;
 
 namespace Common.Data
 {
-    public enum SkillType
-    {
-        Normal = 0,
-        Skill = 1,
-    }
-    public enum TargetType
-    {
-        None = 0,
-        Target = 1,
-        Position = 2,
-    }
     public class SkillDefine
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string SkillAnim { get; set; }
         public string Icon { get; set; }
         public SkillType Type { get; set; }
         public TargetType CastTarget { get; set; }

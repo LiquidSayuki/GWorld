@@ -6,6 +6,7 @@ using System.IO;
 using Common;
 using Common.Data;
 using Newtonsoft.Json;
+using System.Security.Permissions;
 
 namespace GameServer.Managers
 {
@@ -25,6 +26,9 @@ namespace GameServer.Managers
         public Dictionary<int, Dictionary<int,SpawnRuleDefine>> SpawnRules = null;
 
         internal Dictionary<int, QuestDefine> Quests = null;
+
+        public Dictionary<int, Dictionary<int, SkillDefine>> Skills = null;
+        public Dictionary<int, BuffDefine> Buffs = null;
 
         public DataManager()
         {
@@ -61,6 +65,11 @@ namespace GameServer.Managers
             json = File.ReadAllText(this.DataPath + "QuestDefine.txt");
             this.Quests = JsonConvert.DeserializeObject<Dictionary<int, QuestDefine>>(json);
 
+            json = File.ReadAllText(this.DataPath + "SkillDefine.txt");
+            this.Skills = JsonConvert.DeserializeObject<Dictionary<int, Dictionary<int, SkillDefine>>>(json);
+
+            json = File.ReadAllText(this.DataPath + "BuffDefine.txt");
+            this.Buffs = JsonConvert.DeserializeObject<Dictionary<int, BuffDefine>>(json);
         }
     }
 }

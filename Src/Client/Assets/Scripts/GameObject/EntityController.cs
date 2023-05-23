@@ -1,9 +1,10 @@
-﻿using Assets.Scripts.Managers;
+﻿using Assets.Scripts.Entities;
+using Assets.Scripts.Managers;
 using Entities;
 using SkillBridge.Message;
 using UnityEngine;
 
-public class EntityController : MonoBehaviour, IEntityNotify
+public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
 {
 
     public Animator anim;
@@ -33,14 +34,12 @@ public class EntityController : MonoBehaviour, IEntityNotify
             EntityManager.Instance.RegisterEntityNotify(entity.entityId, this);
             this.UpdateTransform();
         }
-
         if (!this.isPlayer)
             rb.useGravity = false;
     }
 
     void UpdateTransform()
     {
-
         this.position = GameObjectTool.LogicToWorld(entity.position);
         this.direction = GameObjectTool.LogicToWorld(entity.direction);
 
@@ -62,7 +61,6 @@ public class EntityController : MonoBehaviour, IEntityNotify
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (this.entity == null)
@@ -108,5 +106,22 @@ public class EntityController : MonoBehaviour, IEntityNotify
     public void OnEntityChanged(Entity entity)
     {
 
+    }
+
+    public void PlayAnim(string name)
+    {
+        this.anim.SetTrigger(name);
+    }
+
+    public void SetStandby(bool standby)
+    {
+        this.anim.SetBool("Standby", standby);
+    }
+
+    void OnMouseDown()
+    {
+        Creature target = this.entity as Creature;
+        if (target.IsCurrentPlayer) return;
+        BattleManager.Instance.CurrentTarget = this.entity as Creature;
     }
 }

@@ -9,6 +9,4 @@ namespace Assets.Scripts.Managers
     {
         public bool IsInputMode = false;
     }
-
-
 }

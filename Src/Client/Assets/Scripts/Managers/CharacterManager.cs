@@ -10,9 +10,9 @@ namespace Assets.Scripts.Managers
 {
     class CharacterManager : Singleton<CharacterManager>, IDisposable
     {
-        public Dictionary<int, Character> Characters = new Dictionary<int, Character>();
-        public UnityAction<Character> OnCharacterEnter;
-        public UnityAction<Character> OnCharacterLeave;
+        public Dictionary<int, Creature> Characters = new Dictionary<int, Creature>();
+        public UnityAction<Creature> OnCharacterEnter;
+        public UnityAction<Creature> OnCharacterLeave;
 
         public CharacterManager(){}
         public void Dispose(){}
@@ -25,7 +25,7 @@ namespace Assets.Scripts.Managers
         public void AddCharacter(SkillBridge.Message.NCharacterInfo cha)
         {
             Debug.LogFormat("CharacterManager:AddCharacter:ID:{0}Name:{1}MapID:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
-            Character character = new Character(cha);
+            Creature character = new Creature(cha);
             this.Characters[cha.EntityId] = character;
 
             // 交给实体管理器
@@ -56,9 +56,9 @@ namespace Assets.Scripts.Managers
             }
         }
 
-        public Character GetCharacter(int id)
+        public Creature GetCharacter(int id)
         {
-            Character character;
+            Creature character;
             this.Characters.TryGetValue(id, out character);
             return character;
         }

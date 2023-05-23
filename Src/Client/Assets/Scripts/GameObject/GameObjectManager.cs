@@ -32,12 +32,12 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     }
 
-    void OnCharacterEnter(Character cha)
+    void OnCharacterEnter(Creature cha)
     {
         CreateCharacterObject(cha);
     }
 
-    private void OnCharacterLeave(Character cha)
+    private void OnCharacterLeave(Creature cha)
     {
         if (!Characters.ContainsKey(cha.entityId))
         {
@@ -66,7 +66,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
     /**
     * 创建角色游戏物体，并进行初始化
     */
-    private void CreateCharacterObject(Character character)
+    private void CreateCharacterObject(Creature character)
     {
         // 是否已经存在，避免重复创建
         Debug.LogFormat("CreatCharacterObject ,ID:{0},Name:{1}", character.entityId, character.Name);
@@ -90,7 +90,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         Debug.LogFormat("GameObjectManager创建角色物体完毕，目前共有{0}", Characters.Count);
     }
 
-    private void InitGameObject(GameObject go, Character character)
+    private void InitGameObject(GameObject go, Creature character)
     {
         // 初始化位置
         go.transform.position = GameObjectTool.LogicToWorld(character.position);
@@ -102,6 +102,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         {
             ec.entity = character;
             ec.isPlayer = character.IsCurrentPlayer;
+            character.Controller = ec;
         }
 
         PlayerInputController pc = go.GetComponent<PlayerInputController>();

@@ -47,7 +47,7 @@ namespace Network
 
             if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); } //30
 
-
+            if (message.skillCast != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillCast); } //31
 
             if (message.statusNotify != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.statusNotify); } //100
 
@@ -94,7 +94,7 @@ namespace Network
 
             if (message.Chat != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.Chat); } //30
 
-
+            if (message.skillCast != null) { MessageDistributer<T>.Instance.RaiseEvent(sender, message.skillCast); } //31
             // 每新增消息类型，需要来此处添加分发
         }
     }

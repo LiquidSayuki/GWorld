@@ -1,13 +1,10 @@
-﻿using Assets.Scripts.Managers;
-using Common.Data;
+﻿using Common.Battle;
 using Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UISkill : UIWindow {
+
 	public Text Description;
 	public GameObject ItemPrefab;
 	public ListView ListMain;
@@ -21,6 +18,7 @@ public class UISkill : UIWindow {
     public void OnItemSelected(ListView.ListViewItem item)
 	{
 		this.SelectedItem = item as UISkillItem;
+        this.Description.text = SelectedItem.item.Define.Description;
 	}
 
     private void RefreshUI()
@@ -36,14 +34,14 @@ public class UISkill : UIWindow {
 
     private void InitItems()
     {
-        var Skills = DataManager.Instance.Skills[(int)User.Instance.CurrentCharacterInfo.Class];
-        foreach(var kv in Skills)
+        var Skills = User.Instance.CurrentCharacter.SkillManager.Skills;
+        foreach(var skill in Skills)
         {
-            if(kv.Value.Type == SkillType.Skill)
+            if(skill.Define.Type == SkillType.Skill)
             {
                 GameObject go = Instantiate(ItemPrefab, this.ListMain.transform);
                 UISkillItem ui = go.GetComponent<UISkillItem>();
-                ui.SetItem(kv.Value, this, false);
+                ui.SetItem(skill, this, false);
                 this.ListMain.AddItem(ui);
             }
         }

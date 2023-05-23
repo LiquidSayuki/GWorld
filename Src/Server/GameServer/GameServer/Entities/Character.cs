@@ -1,16 +1,9 @@
 ﻿using Common;
-using Common.Data;
-using GameServer.Core;
 using GameServer.Managers;
 using GameServer.Models;
 using Network;
 using SkillBridge.Message;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameServer.Entities
 {
@@ -27,7 +20,7 @@ namespace GameServer.Entities
         public FriendManager FriendManager;
 
         public Team team;
-        public int TeamUpdateTS; //时间戳
+        public int TeamUpdateTS; //队伍信息更新时间戳
 
         public Guild Guild;
         public double GuildUpdateTS;
@@ -42,6 +35,7 @@ namespace GameServer.Entities
                 if (this.Data.Exp == value) return;
                 this.StatusManager.AddExpChange((int)(value - this.Data.Exp));
                 this.Data.Exp = value;
+                this.Info.Exp = value;
             }
         }
         public int Level
@@ -52,6 +46,7 @@ namespace GameServer.Entities
                 if (this.Data.Level == value) return;
                 this.StatusManager.AddLevelUp((int)(value - this.Data.Level));
                 this.Data.Level = value;
+                this.Info.Level = value;
             }
         }
         public long Gold
@@ -63,35 +58,29 @@ namespace GameServer.Entities
                     return;
                 this.StatusManager.AddGoldChange((int)(value - this.Data.Gold));
                 this.Data.Gold = value;
+                this.Info.Gold = value;
             }
         }
 
         public Character(CharacterType type, TCharacter cha) :
-            base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
+            base(type, cha.TID ,cha.Level , new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
             this.Data = cha;
             // cha 数据库 character
             // ID 是唯一的DB ID
             this.Id = cha.ID;
 
-            this.Info = new NCharacterInfo();
             this.Info.Id = cha.ID;
-            this.Info.EntityId = this.entityId; // Entity ID
-            this.Info.ConfigId = cha.TID; //Config ID
-            this.Info.Type = type;
             this.Info.Name = cha.Name;
-            this.Info.Level = 10;//cha.Level;
             this.Info.Exp = cha.Exp;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
-            this.Info.Entity = this.EntityData;
+            this.Info.Gold = cha.Gold;
             this.Info.Bag = new NBagInfo();
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
             this.Info.Equips = this.Data.Equips;
-
-            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
-
+            
             this.ItemManager = new ItemManager(this);
             this.ItemManager.GetItemInfos(this.Info.Items);
 

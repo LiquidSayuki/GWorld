@@ -8,7 +8,7 @@ public class UINameBar : MonoBehaviour
     public Text avaverName;
     public Image avaterImage;
 
-    public Character character;
+    public Creature character;
 
     void Start()
     {

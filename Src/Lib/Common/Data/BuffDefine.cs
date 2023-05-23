@@ -1,16 +1,11 @@
-﻿using System;
+﻿using Common.Battle;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Common.Data
 {
-
-    public enum BuffEffect
-    {
-        None = 0,
-        Stun = 1,
-    }
     public class BuffDefine
     {
         public int ID { get; set; }

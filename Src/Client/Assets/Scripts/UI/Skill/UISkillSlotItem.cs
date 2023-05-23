@@ -1,8 +1,8 @@
-﻿using Common.Data;
+﻿using Assets.Scripts.Managers;
+using Battle;
+using Common.Battle;
+using SkillBridge.Message;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal.VersionControl;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,62 +12,58 @@ public class UISkillSlotItem : MonoBehaviour,IPointerClickHandler {
 	public Image icon;
 	public Image CDOverlay;
 	public Text CDText;
-
-	SkillDefine skill;
+	Skill skill;
 
 	private float overlaySpeed = 0;
 	private float cdRemain = 0;
 
+	void Start()
+	{
+		CDOverlay.enabled = false;
+		CDText.enabled = false;
+	}
 	void Update () 
 	{
-		if(CDOverlay.fillAmount > 0)
+		if(this.skill.CD > 0)
 		{
-			CDOverlay.fillAmount = this.cdRemain / this.skill.CD;
-			this.CDText.text = ((int)Math.Ceiling(this.cdRemain)).ToString();
-			this.cdRemain -= Time.deltaTime;
+			if(!CDOverlay.enabled) CDOverlay.enabled = true;
+			if(!CDText.enabled) CDText.enabled = true;
+
+			CDOverlay.fillAmount = this.skill.CD / this.skill.Define.CD;
+			this.CDText.text = ((int)Math.Ceiling(this.skill.CD)).ToString();
 		}
 		else
 		{
-			if (CDOverlay.enabled)
-			{
-				CDOverlay.enabled = false;
-			}
-			if (this.CDText.enabled)
-			{
-				this.CDText.enabled = false;
-			}
+			if (CDOverlay.enabled) CDOverlay.enabled = false;
+			if (this.CDText.enabled) this.CDText.enabled = false;
 		}
 	}
 
-    internal void SetSkill(SkillDefine value)
+    internal void SetSkill(Skill value)
     {
 		this.skill = value;
-		if (this.icon != null) this.icon.overrideSprite = Resloader.Load<Sprite>(this.skill.Icon);
-		this.SetCD(this.skill.CD);
-    }
-
-
-	public void SetCD(float cd)
-	{
-		if(!CDOverlay.enabled) CDOverlay.enabled = true;
-		if(!this.CDText.enabled) this.CDText.enabled = true;
-
-		this.CDText.text = ((int)Math.Floor(this.cdRemain)).ToString();
-		CDOverlay.fillAmount = 1f;
-		overlaySpeed = 1 / cd;
-		cdRemain = cd;
+		if (this.icon != null) this.icon.overrideSprite = Resloader.Load<Sprite>(this.skill.Define.Icon);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (this.CDOverlay.fillAmount > 0)
-        {
-            MessageBox.Show("正在冷却");
-        }
-        else
-        {
-            MessageBox.Show("释放技能" + this.skill.Name);
-            this.SetCD(this.skill.CD);
+		SkillResult result= this.skill.CanCast(BattleManager.Instance.CurrentTarget);
+
+		switch (result)
+		{
+			case SkillResult.Ok:
+                MessageBox.Show("释放技能" + this.skill.Define.Name);
+                BattleManager.Instance.CastSkill(this.skill);
+                break;
+			case SkillResult.InvalidTarget:
+                MessageBox.Show("无效目标");
+                break;
+			case SkillResult.OutOfMp:
+                MessageBox.Show("魔法不足");
+                break;
+			case SkillResult.Cooldown:
+                MessageBox.Show("冷却中");
+                break;
         }
     }
 }

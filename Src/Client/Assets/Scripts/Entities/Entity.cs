@@ -1,4 +1,5 @@
-﻿using SkillBridge.Message;
+﻿using Assets.Scripts.Entities;
+using SkillBridge.Message;
 using UnityEngine;
 
 namespace Entities
@@ -6,12 +7,11 @@ namespace Entities
     public class Entity
     {
         public int entityId;
-
-
         public Vector3Int position;
         public Vector3Int direction;
         public int speed;
 
+        public IEntityController Controller;
 
         private NEntity entityData;
         public NEntity EntityData
@@ -27,8 +27,6 @@ namespace Entities
                 this.SetEntityData(value);
             }
         }
-
-
 
         public Entity(NEntity entity)
         {

@@ -1,7 +1,9 @@
 ﻿using Assets.Scripts.Managers;
 using Assets.Scripts.UI;
+using Entities;
 using Managers;
 using Models;
+using System;
 using UnityEngine.UI;
 
 public class UIMain : MonoSingleton<UIMain>
@@ -11,17 +13,31 @@ public class UIMain : MonoSingleton<UIMain>
     public Text avatarLevel;
 
     public UITeam TeamWindow;
-
+    public UICreatureInfo targetUI;
 
     protected override void OnStart()
     {
         this.UpdateAvatar();
+        this.targetUI.gameObject.SetActive(false);
+        BattleManager.Instance.OnTargetChanged += OnTargetChanged;
     }
 
     void UpdateAvatar()
     {
         this.avatarName.text = string.Format("{0}[{1}]", User.Instance.CurrentCharacterInfo.Name, User.Instance.CurrentCharacterInfo.Id);
         this.avatarLevel.text = User.Instance.CurrentCharacterInfo.Level.ToString();
+    }
+    private void OnTargetChanged(Creature creature)
+    {
+        if(targetUI != null)
+        {
+            if(!targetUI.isActiveAndEnabled) targetUI.gameObject.SetActive(true);
+            targetUI.Target = creature;
+        }
+        else
+        {
+            targetUI.gameObject.SetActive(false);
+        }
     }
 
     public void OnClickCharSelect()
@@ -71,6 +87,6 @@ public class UIMain : MonoSingleton<UIMain>
 
     public void OnClickSkill()
     {
-
+        UIManager.Instance.Show<UISkill>();
     }
 }

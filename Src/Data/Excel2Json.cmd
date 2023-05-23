@@ -9,6 +9,8 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\ShopDefine.txt ..\Client\Data\
 @copy Data\ShopItemDefine.txt ..\Client\Data\
 @copy Data\SpawnRuleDefine.txt ..\Client\Data\
+@copy Data\SkillDefine.txt ..\Client\Data\
+@copy Data\BuffDefine.txt ..\Client\Data\
 
 
 
@@ -21,6 +23,8 @@ json-excel\json-excel json Tables\ Data\
 @copy Data\ShopDefine.txt ..\Server\Gameserver\Gameserver\bin\Debug\Data\
 @copy Data\ShopItemDefine.txt ..\Server\Gameserver\Gameserver\bin\Debug\Data\
 @copy Data\SpawnRuleDefine.txt ..\Server\Gameserver\Gameserver\bin\Debug\Data\
+@copy Data\SkillDefine.txt ..\Server\Gameserver\Gameserver\bin\Debug\Data\
+@copy Data\BuffDefine.txt ..\Server\Gameserver\Gameserver\bin\Debug\Data\
 
 
 pause

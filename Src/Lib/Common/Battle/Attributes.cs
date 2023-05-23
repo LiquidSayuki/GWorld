@@ -74,8 +74,8 @@ namespace Common.Battle
             {
                 this.dynamic = new NAttributeDynamic();
             }
-            this.HP = dynamicAttr.Hp;
-            this.MP = dynamicAttr.Mp;
+            this.HP = dynamic.Hp;
+            this.MP = dynamic.Mp;
         }
 
         //载入角色0级属性
@@ -104,6 +104,7 @@ namespace Common.Battle
         private void LoadEquipAttributes(AttributeData data, List<EquipDefine> equips)
         {
             data.Reset();
+            if (equips == null) return;
             foreach(EquipDefine equip in equips)
             {
                 data.MaxHP += equip.MaxHP;

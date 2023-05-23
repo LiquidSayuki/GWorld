@@ -122,7 +122,6 @@ namespace Assets.Scripts.Managers
         /// 得到当前所有正在装备的装备的Define信息
         /// </summary>
         /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
         public List<EquipDefine> GetEquipedDefines()
         {
             List<EquipDefine> equips = new List<EquipDefine>();
